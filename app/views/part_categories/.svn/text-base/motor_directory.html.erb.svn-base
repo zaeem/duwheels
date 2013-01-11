@@ -1,0 +1,88 @@
+<%= pluralize_helper(@part_categories.size,'part category','exists') %> <br />
+<%#= link_to 'New', new_part_category_path  %>
+<div id="contentDv">
+<%= render :partial => "/shared/search" %>
+
+<%= render :partial => "category_list" %>
+
+<div id="mdColLeft">
+<div class="mdRecommend">
+<h3><span>Recommended Merchants</span><%= link_to "View All", recommended_merchants_path %></h3>
+<ul>
+<% if @recommended_merchants.empty? %>
+  No recommended merchant found
+  <% else %>
+<% for merchant in @recommended_merchants[0,10] %>
+<li>
+<div class="mrchntCategory"><a href="/vendors/?category=<%= merchant[0].part_category_id %>"><%= merchant[1] %></a></div>
+<div class="mrchntRecomndDetail">
+<% if merchant[0].pictures.empty? %>
+  <img src="/images/mrchnt.jpg" alt="Merchant picture" style="width:100px;height:35px;" />
+<% else %>
+  <%= image_tag merchant[0].pictures.first.photo.url(:medium), :alt => "No image found", :id => 'primaryImage', :size => '100x35' %>
+<% end %>
+<a href="/vendors/<%= merchant[0].id %>"><%= merchant[0].name %></a><br />
+<%= merchant[0].description %>...
+</div>
+</li>
+<% end %>
+<% end %>
+
+</ul>
+</div>
+
+<div class="mdHotDeals" style="margin-bottom: 180px;">
+<h3><span>Hot Deals</span><%= link_to "View All", hotdeals_path %></h3>
+<ul>
+
+<% if @hot_deals[0,15].empty? %>
+  No hot deal found
+<% else %>
+<% for hot_deal in @hot_deals[0,15] %>
+<li>
+<% if hot_deal.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag hot_deal.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= hot_deal.vendor_id %>/car_items/<%= hot_deal.id %>"><%= hot_deal.name %></a><br />
+<%= currencify(hot_deal.price) %>
+</li>
+<% end %>
+<% end %>
+
+</ul>
+</div>
+</div>
+
+<div class="mdAction">
+<h3>Actions</h3>
+<p>
+<a href="/used_cars/new"></a>
+
+<%= link_to '<img src="/images/buttons/advertise.jpg" alt="advertise" />', advertise_vendors_path %>
+<%= link_to '<img src="/images/buttons/edit-shop.jpg" alt="edit-show" />', new_vendor_path %>
+<%= link_to '<img src="/images/buttons/merchant-btn.jpg" alt="merchant-btn" />', suggest_path %>
+</p>
+</div>
+
+
+<div class="forumsDv">
+<h3>Latest Merchant Reviews</h3>
+
+<% if @latest_reviews.empty? %>
+  No reviews found
+<% else %>
+<% for review in @latest_reviews[0,10] %>
+<div class="forumLst">
+<h4><a href="#"><%= review.title %></a></h4>
+<p><%= review.body %>...<a href="#">Read more</a></p>
+<span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Post By: <strong><% unless review.user.nil? %><%= review.user.login %><% end %></strong> <%= review.created_at.strftime(" %a %m/%Y") %></span>
+</div>
+<% end %>
+<% end %>
+
+<div class="viewforumDv"><%= link_to "View All", latest_reviews_path %></div>
+</div>
+
+</div>

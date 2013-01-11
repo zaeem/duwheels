@@ -1,0 +1,69 @@
+.hourglass {
+  background-repeat: no-repeat; }
+
+.hourglass000 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass000.gif?1287085728); }
+
+.hourglass001 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass001.gif?1287085728); }
+
+.hourglass002 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass002.gif?1287085728); }
+
+.hourglass003 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass003.gif?1287085728); }
+
+.hourglass004 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass004.gif?1287085728); }
+
+.hourglass005 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass005.gif?1287085728); }
+
+.hourglass006 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass006.gif?1287085728); }
+
+.hourglass007 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass007.gif?1287085728); }
+
+.hourglass008 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass008.gif?1287085728); }
+
+.hourglass009 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass009.gif?1287085728); }
+
+.hourglass010 {
+  background-image: url(/images/groupon/icons/hourglass/hourglass010.gif?1287085728); }
+
+.hourglassfinal {
+  background-image: url(/images/groupon/icons/hourglass/hourglassfinal.gif?1287085728); }
+
+.hourglasssoldout {
+  background-image: url(/images/groupon/icons/hourglass/hourglasssoldout.gif?1287085728); }
+
+.demographic_side_rail {
+  display: none; }
+
+.cached .logged_in {
+  display: none; }
+
+#nav .cached .rewards {
+  display: none; }
+
+.deal {
+  z-index: 10; }
+
+.email_subject {
+  display: none; }
+
+.merchant_info {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-left: 50px;
+  display: none; }
+  .merchant_info .merchant_name {
+    float: left;
+    color: #0981be; }
+  .merchant_info .location_name {
+    color: #b4b4b4;
+    float: left;
+    padding: 0 0 10px 6px; }

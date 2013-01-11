@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/head/!svn/ver/67/trunk/app/views/user_mailer
+END
+ask_question.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/67/trunk/app/views/user_mailer/ask_question.html.erb
+END
+advertise.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/65/trunk/app/views/user_mailer/advertise.html.erb
+END
+reset_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/head/!svn/ver/2/trunk/app/views/user_mailer/reset_notification.html.erb
+END
+used_car_ad.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/53/trunk/app/views/user_mailer/used_car_ad.html.erb
+END
+signup_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/app/views/user_mailer/signup_notification.html.erb
+END
+activation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/2/trunk/app/views/user_mailer/activation.html.erb
+END
+vendor_creation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/53/trunk/app/views/user_mailer/vendor_creation.html.erb
+END
+contact_us.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/64/trunk/app/views/user_mailer/contact_us.html.erb
+END
+new_car_ad.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/53/trunk/app/views/user_mailer/new_car_ad.html.erb
+END
+suggest_merchant.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/head/!svn/ver/53/trunk/app/views/user_mailer/suggest_merchant.html.erb
+END
+report_error.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/65/trunk/app/views/user_mailer/report_error.html.erb
+END

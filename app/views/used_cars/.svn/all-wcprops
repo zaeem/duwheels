@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/head/!svn/ver/72/trunk/app/views/used_cars
+END
+ask_question.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/53/trunk/app/views/used_cars/ask_question.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/72/trunk/app/views/used_cars/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/64/trunk/app/views/used_cars/search.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/64/trunk/app/views/used_cars/index.html.erb
+END
+home.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/72/trunk/app/views/used_cars/home.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/72/trunk/app/views/used_cars/new.html.erb
+END
+_areas.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/49/trunk/app/views/used_cars/_areas.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/67/trunk/app/views/used_cars/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/67/trunk/app/views/used_cars/_form.html.erb
+END

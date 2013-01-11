@@ -1,0 +1,145 @@
+/*ishfaque ahmad shahzad*/
+body {
+margin:0;
+font-size:12px;
+font-weight:normal;
+font-family:Arial, Helvetica, sans-serif;
+background:#fff;
+}
+a		{ font-size:12px; text-decoration:none; color:#f3870a; }
+a:hover { text-decoration:underline; color:#333; }
+form	{ padding:0; margin:0; }
+img		{ border:none; vertical-align:middle; }
+h1		{ margin:0; padding:0; font-size:18px; }
+h2		{ margin:0; padding:0; font-size:16px; }
+h3		{ margin:0; padding:0; font-size:14px; }
+h4		{ margin:0; padding:0; font-size:12px; }
+h5		{ margin:0; padding:0; }
+h6		{ margin:0; padding:0; font-size:11px; }
+textarea{ font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+p		{ margin:0; padding:0; }
+ul		{ margin:0; padding:0; list-style-type:none; }
+
+/*========= Header =========*/
+.marginR0	{ margin-right:0px !important; }
+.marginB0	{ margin-bottom:0px !important; }
+.marginR15	{ margin-right:15px !important; }
+.marginB15	{ margin-bottom:15px !important; }
+.listingBg	{ background:#fcefe1 !important; }
+
+#wraper				{ width:940px; margin:0 auto; overflow:hidden; clear:both; position:relative; }
+
+/*========= Header =========*/
+#wraper #header		{ float:left; width:100%; margin:15px 0; overflow:hidden; }
+#header .logo		{ float:left; width:224px; }
+#header .loginDv	{ float:right; width:224px; text-align:right; color:#999; font-size:14px; margin-bottom:43px; }
+.loginDv a			{ font-size:14px; font-weight:bold; }
+
+/*=== Navigation ===*/
+#header #nav		{ float:right; width:75%; clear:right; list-style:none; margin:0; padding:0; text-align:right; }
+#nav li				{ float:right; display:inline-block; margin-left:10px; background:#666; border:2px solid #f3870a; border-bottom:none; -moz-border-radius-topright:10px; -moz-border-radius-topleft:10px; -webkit-border-top-right-radius:10px; -webkit-border-top-left-radius:10px; }
+#nav li a			{ display:block; padding:8px 15px; font-weight:bold; color:#ccc; text-decoration:none; }
+#nav li a:hover, #nav li a.current { color:#000; background:#f3870a; }
+
+/*=== Search Box ===*/
+#header #search		{ float:left; width:98%; background:#f7c187; padding:10px; border:2px solid #f3870a; }
+#search h1			{ border-bottom:1px solid #666; padding-bottom:5px; margin-bottom:10px; }
+#search .txtFld		{ width:400px; border:1px solid #ccc; color:#666; padding:5px 10px; margin-right:10px; }
+#search .lstFld		{ width:190px; border:1px solid #ccc; color:#666; padding:4px 5px; margin-right:10px; }
+#search .seacrhBtn	{ color:#fff; background:#f3870a; border:none; font-weight:bold; font-size:14px; -moz-border-radius:5px; padding:5px 10px; cursor:pointer; }
+
+
+
+/*========= Page Content =========*/
+#wraper #container	{ float:left; width:100%; }
+#container .leftCol	{ float:left; width:185px; margin-right:15px; background:#f7c187; border:1px solid #666; }
+.leftCol h4			{ color:#fff; background:#f3870a; border-bottom:1px solid #666; margin-bottom:15px; padding:10px 15px; }
+.leftCol .categoryDv{ float:left; width:84%; margin:0 15px 15px; }
+.categoryDv ul		{ line-height:18px; }
+.categoryDv ul li	{ float:left; width:100%; display:block; }
+.categoryDv ul li img { float:left; margin-right:5px; margin-top:6px; }
+.categoryDv ul li a	{ float:left; color:#333; }
+.categoryDv ul li span { float:right; font-size:11px; color:#666; }
+
+#container .colrRight { float:left; width:738px; }
+.colrRight .infoDv	{ float:left; width:97%; background:#e6e6e6; border:1px solid #666; padding:5px 10px; color:#666; margin-bottom:15px; }
+.infoDv .itemCount	{ float:left; width:240px; font-weight:bold;  }
+.infoDv .sortP		{ float:right; width:250px; text-align:right; }
+.sortP select		{ border:1px solid #a5acb2; color:#666; width:150px; font-size:11px; }
+.colrRight .carsList{ float:left; width:100%; }
+.carsList li		{ float:left; display:inline-block; width:326px; padding:15px; margin:0 15px 15px 0; border:1px solid #ccc; }
+.carsList li img	{ float:left; margin-right:15px; border:1px solid #f3870a; }
+.carsList li .lstDesc{ float:left; width:150px; }
+.lstDesc p			{ margin-top:5px; color:#666; } 
+.lstDesc p.priceP	{ color:#000; font-size:14px; font-weight:bold; }
+.priceP span		{ color:#f3870a; }
+.pagination					{ float:left; width:100%; overflow:hidden; color:#666; margin:18px 0; }
+.pagination a				{ background:#e6e6e6; color:#666; font-size:11px; padding:2px 5px; border:1px solid #666; }
+.pagination a:hover, .pagination a.current { background:#f3870a; color:#fff; text-decoration:none; border:1px solid #000; }
+.pagination a.paginationLeft{ border:1px solid #999; color:#999; background:#fff; padding:2px 5px; }
+.pagination a.paginationLeft:hover { border:1px solid #999; color:#999; background:#fff; }
+
+
+/*========= Stock Listing =========*/
+.colrRight .stockDv	{ float:left; width:520px; }
+.stockDv .stockListing { float:left; width:100%; }
+.stockListing li	{ display:block; border-bottom:1px dotted #666; padding:10px 0; }
+.stockListing li img{ border:1px solid #666; }
+.stockListing li td { padding:5px; font-size:11px; color:#333; }
+.stockListing li a	{ font-size:11px; }
+.stockListing li .titleTd	{ font-size:14px; font-weight:bold; }
+.stockListing li .priceTd	{ font-size:18px; color:#f3870a; text-align:right; }
+.rightContactDv		{ float:right; width:200px; background:#e6e6e6; margin-left:15px; padding-bottom:15px; border:1px solid #f3870a; }
+.rightContactDv h4	{ color:#fff; background:#666; margin-bottom:15px; padding:10px 15px; }
+.rightContactDv .coAddress	{ float:left; width:85%; margin:0 15px 15px; color:#666; }
+.coAddress h2		{ color:#f3870a; margin-bottom:10px; }
+.coAddress p		{ line-height:18px; }
+.rightContactDv .contactFormR{ float:left; width:85%; margin:0 15px; border-top:1px solid #f3870a; padding-top:15px; } 
+.contactFormR .txtFld{ font-size:11px; color:#999; width:155px; padding:7px 5px; border:1px solid #c8c8c8; margin-bottom:15px; }
+.contactFormR textarea { font-size:11px; color:#999; width:155px; height:100px; padding:7px 5px; border:1px solid #c8c8c8; margin-bottom:15px; }
+.contactFormR .sbmtBtn{ float:right; background:#c8c8c8; border:1px solid #666; font-size:11px; color:#333; padding:2px 5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; cursor:pointer; }
+.contactFormR a		{ float:right; margin-left:5px; margin-top:3px; font-size:11px; }
+
+
+/*========= Detail Page =========*/
+#container .detailDv	{ float:left; width:720px; }
+.detailDv h1			{ text-transform:uppercase; padding-bottom:10px; margin-bottom:15px; border-bottom:1px solid #f3870a; font-weight:normal; }
+.detailDv h1 span		{ font-size:12px; }
+.detailDv h1 p			{ float:right; font-size:24px; font-weight:normal; color:#f3870a; }
+.detailDv .imageDv		{ float:left; width:293px; padding:15px; background:#e6e6e6; border:1px solid #666; margin-right:15px; }
+.imageDv img			{ border:1px solid #f3870a; }
+.imageDv .gallery		{ float:left; width:100%; border:1px solid #f3870a; background:#f7c187; margin-top:10px; }
+.gallery a.leftArrow	{ float:left; margin-right:6px; }
+.gallery a.rightArrow	{ float:right; }
+.gallery ul				{ float:left; margin:9px 0; }
+.gallery ul li			{ display:inline-block; }
+.gallery ul li a		{ border:1px solid #f3870a; display:block; }
+.detailDv .carDetail	{ float:left; width:380px; }
+.carDetail table		{ margin-bottom:10px; }
+.carDetail table th		{ padding:5px 0; text-align:left; border-bottom:1px solid #666; font-size:16px; font-weight:bold; color:#f3870a; }
+.carDetail table td		{ padding:5px 0; font-size:12px; color:#666; }
+.carDetail table td strong { color:#333; }
+.carDetail table td li	{ float:left; width:50%; display:inline-block; line-height:20px; }
+.carDetail td li img	{ margin-right:5px; margin-top:-2px; }
+.carDetail td.detailTxt { font-size:11px; text-align:justify; line-height:15px; }
+
+
+/*========= About Page =========*/
+#container .aboutDv		{ float:left; width:720px; }
+.aboutDv h2				{ color:#f3870a; margin-bottom:10px; }
+.aboutDv .aboutText		{ float:left; width:100%; line-height:18px; }
+.aboutDv p				{ margin-bottom:10px; color:#666; text-align:justify; }
+.aboutText span			{ color:#f3870a; }
+.aboutText td			{ padding:10px; font-size:14px; font-weight:bold; }
+.aboutText td .txtFld	{ color:#999; padding:10px; border:1px solid #c8c8c8; width:335px; }
+.aboutText td textarea	{ color:#999; padding:10px; border:1px solid #c8c8c8; width:500px; height:130px; }
+.aboutText td .sbmtBtn	{ background:#c8c8c8; border:1px solid #666; font-size:14px; color:#333; padding:2px 8px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; cursor:pointer; }
+.aboutText td a			{ color:#f3870a; font-size:14px; font-weight:normal; }
+
+
+/*========= Footer =========*/
+#wraper #footer				{ float:left; width:97%; background:#f7c187; border:1px solid #f3870a; padding:15px; margin-top:18px; color:#5f5943; font-size:11px; }
+#footer .linksP				{ float:left; margin-top:8px; }
+#footer a					{ font-size:11px; color:#5f5943; }
+#footer a:hover 			{ text-decoration:underline; color:#0093d2; }
+#footer p.poweredBy			{ float:right; }

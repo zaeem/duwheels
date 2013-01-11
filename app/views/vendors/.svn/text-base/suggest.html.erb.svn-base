@@ -1,0 +1,75 @@
+<h3>Suggest a Merchant</h3>
+<% form_tag(suggest_path, :method => "post") do %>
+<br />
+<br />
+<table>
+  <tr>
+    <td>Merchant's name</td>
+    <td><input type="text" class="textFld" name="merchant_name" style="width: 270px;" /></td>
+  </tr>
+  <tr>
+    <td>Category</td>
+    <td>
+      <select  class="textFld" name="category"  style="width: 270px;" >
+        <option value="0">Any</option>
+        <option value="Accessories Retail">Accessories Retail</option>
+        <option value="Accident Repair &amp; Claims">Accident Repair &amp; Claims</option>
+        <option value="Air Conditioning">Air Conditioning</option>
+        <option value="Audio System - In Car Entertainment">Audio System - In Car Entertainment</option>
+        <option value="Authorised Distributor Workshops">Authorised Distributor Workshops</option>
+        <option value="Bodykits &amp; Parts">Bodykits &amp; Parts</option>
+        <option value="Car Care Products">Car Care Products</option>
+        <option value="Car Grooming - Wash &amp; Polish">Car Grooming - Wash &amp; Polish</option>
+        <option value="Car Leasing">Car Leasing</option>
+        <option value="Car Mats">Car Mats</option>
+        <option value="Car Parts Stockists">Car Parts Stockists</option>
+        <option value="Car Rental">Car Rental</option>
+        <option value="Chauffeur &amp; Limousine Service">Chauffeur &amp; Limousine Service</option>
+        <option value="CNG Workshop">CNG Workshop</option>
+        <option value="Commercial Vehicle Rental">Commercial Vehicle Rental</option>
+        <option value="Decals &amp; Stickers">Decals &amp; Stickers</option>
+        <option value="Evaluation Centres">Evaluation Centres</option>
+        <option value="Finance Companies &amp; Banks">Finance Companies &amp; Banks</option>
+        <option value="Handling &amp; Safety">Handling &amp; Safety</option>
+        <option value="Inspection Centres">Inspection Centres</option>
+        <option value="Keys &amp; Remote">Keys &amp; Remote</option>
+        <option value="Mobile Car Grooming">Mobile Car Grooming</option>
+        <option value="Motor Insurance Companies">Motor Insurance Companies</option>
+        <option value="Movers &amp; Storage Services">Movers &amp; Storage Services</option>
+        <option value="New Car Dealers">New Car Dealers</option>
+        <option value="Paint Protection">Paint Protection</option>
+        <option value="Power Enhancement">Power Enhancement</option>
+        <option value="Racing &amp; Motorsports Equipment">Racing &amp; Motorsports Equipment</option>
+        <option value="Repair &amp; Servicing">Repair &amp; Servicing</option>
+        <option value="Scrap Yards">Scrap Yards</option>
+        <option value="Security System">Security System</option>
+        <option value="Solar Films &amp; Tinting">Solar Films &amp; Tinting</option>
+        <option value="Spray Painting">Spray Painting</option>
+        <option value="Towing Service">Towing Service</option>
+        <option value="Tracking &amp; Navigation">Tracking &amp; Navigation</option>
+        <option value="Tyres &amp; Rims">Tyres &amp; Rims</option>
+        <option value="Upholstery - Seats &amp; Tops">Upholstery - Seats &amp; Tops</option>
+        <option value="Used Car Dealers">Used Car Dealers</option>
+        <option value="Windscreen Repair">Windscreen Repair</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input type="text" class="textFld" name="phone"  style="width: 270px;" /></td>
+  </tr>
+  <tr>
+    <td>Comment(s)</td>
+    <td>
+      <textarea class="description" name="comments" cols="20" rows="4"  style="width: 270px;">
+      </textarea>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input type="image" src="/images/buttons/submit-btn.jpg" />
+    </td>
+  </tr>
+</table>
+<% end %>

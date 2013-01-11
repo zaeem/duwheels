@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/head/!svn/ver/65/trunk/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/3/trunk/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/3/trunk/config/initializers/session_store.rb
+END
+mail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/head/!svn/ver/65/trunk/config/initializers/mail.rb
+END
+global_init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/3/trunk/config/initializers/global_init.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/3/trunk/config/initializers/backtrace_silencers.rb
+END
+geokit_config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/head/!svn/ver/24/trunk/config/initializers/geokit_config.rb
+END
+new_rails_defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/3/trunk/config/initializers/new_rails_defaults.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/3/trunk/config/initializers/mime_types.rb
+END

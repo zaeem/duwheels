@@ -1,0 +1,60 @@
+<script type="text/javascript">
+<!--
+
+  $(document).ready(function(){
+
+    lengthoffeatures = $('#featuresTable input').length;
+    $('#featuresTable').change(function(){
+      str='';
+      for (var i = 0; i < lengthoffeatures ; ++i){
+        if ($('#featuresTable input')[i].checked){
+          str = str + '1';
+        }else{
+          str = str + '0';
+        }
+      }
+      $('#<%= object_type %>_feature').val(str);
+    });
+
+    features = '<%= object.feature %>';
+    for (var i = 0; i < lengthoffeatures ; ++i){
+      if (features[i] == '1'){
+        $('#featuresTable input')[i].checked = true;
+      } else {
+        $('#featuresTable input')[i].checked = false;
+      }
+    }
+
+  });
+
+//-->
+</script>
+
+<table id="featuresTable" width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><input type="checkbox" />Air Bags</td>
+    <td><input type="checkbox" />Air Conditioning</td>
+    <td><input type="checkbox" />Power Windows</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" />Power Steering</td>
+    <td><input type="checkbox" />Power Locks</td>
+    <td><input type="checkbox" />Power Mirror</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" />Keyless Entry</td>
+    <td><input type="checkbox" />Cruise Control</td>
+    <td><input type="checkbox" />Navigation System</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" />ABS</td>
+    <td><input type="checkbox" />FM/AM Radio</td>
+    <td><input type="checkbox" />Cassette Player</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" />CD Player </td>
+    <td><input type="checkbox" />Sun Roof</td>
+    <td><input type="checkbox" />Alloy Rims</td>
+  </tr>
+</table>
+

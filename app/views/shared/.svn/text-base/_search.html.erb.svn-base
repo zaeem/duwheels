@@ -1,0 +1,73 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#keyword').click(function(){
+      $('#keyword').val('');
+    });
+    $('#keyword').focusout(function(){
+      if ($('#keyword').val() == ''){
+        $('#keyword').val('Company name, product or brand');
+      }
+    });
+  });
+</script>
+
+<div id="mdSearchDv">
+<% form_tag(vendors_path, :method => "get") do %>
+<table width="100%" border="0" cellpadding="0" cellspacing="5">
+  <tr>
+    <th colspan="7" align="left" scope="col">
+      <h1>Search <span>Car Related Merchant Directory</span></h1>
+    </th>
+    <th width="178" rowspan="2" align="left" valign="top" scope="col">
+      <ul>
+        <li><%= link_to 'Suggest a Merchant', suggest_path %></li>
+        <li><%= link_to 'Advertise with Us', advertise_vendors_path %></li>
+        <li><%= link_to 'Edit Your Own Page', new_vendor_path %></li>
+      </ul>
+    </th>
+  </tr>
+  <tr>
+    <!--<td width="60" class="labelTd">Keyword :</td>-->
+    <td width="197">
+      <input type="text" name="keyword" id="keyword" class="txtFld" value="Company name, product or brand" />
+    </td>
+    <td style="width:128px;">
+      <select style="width:128px;" name="category" class="lstFld2">
+        <option selected>Any Category</option>
+        <% for part_category in @part_categories %>
+        <option value="<%= part_category.id %>"><%= part_category.name %></option>
+        <% end %>
+      </select>
+    </td>
+    <td style="width:128px;">
+      <select style="width:128px;" name="select_distance" class="lstFld">
+        <option selected>Any Distance</option>
+        <option value="1">Merchants within 1 km</option>
+        <option value="3">Merchants within 3 km</option>
+        <option value="5">Merchants within 5 km</option>
+        <option value="10">Merchants within 10 km</option>
+      </select>
+    </td>
+    <td style="width:24px;text-align: center;" class="labelTd">of</td>
+    <td style="width:197px;">
+      <select style="width:197px;" name="select_area" id="select_area" class="lstFld">
+        <option selected>Any Area</option>
+        <% for region in @regions %>
+        <option value="<%= region.latitude %>,<%= region.longitude %>"><%= region.name %></option>
+        <% end %>
+        <option value="25.27667669995565,55.30963897705078">Al Murar</option>
+        <option value="25.272718374808335,55.31290054321289">Naif</option>
+        <option value="25.269148010009072,55.31058311462402">Al Rigga (Grave Yard)</option>
+        <option value="25.272951221038216,55.304574966430664">Deira</option>
+        <option value="25.26697469305775,55.29376029968262">Al Ras</option>
+      </select>
+      <input type="hidden" name="longitude" />
+      <input type="hidden" name="latitude" />
+    </td>
+    <td width="117" scope="col">
+      <input type="image" src="/images/buttons/searchBtn.jpg" />
+    </td>
+  </tr>
+  </table>
+<% end %>
+</div>

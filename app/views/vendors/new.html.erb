@@ -1,0 +1,11 @@
+<% set_title "Create Vendor" %>
+
+<div id="container">
+  <div id="mainTtl"></div>
+
+<%= render :partial => "form", :locals => { :button_label => "Create" } %>
+
+  <div id="rightAd"><a href="#"><img src="/images/banner.jpg" /></a></div>
+</div>
+
+<%= render :partial => "/shared/location", :locals => {:object => @vendor, :object_type => 'vendor'} %>

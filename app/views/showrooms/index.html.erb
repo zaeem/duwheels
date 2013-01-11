@@ -1,0 +1,20 @@
+<h1>Listing Showroom</h1>
+
+<table>
+  <tr>
+    <th>Showroom Name</th>
+    <th>Merchant Name</th>
+  </tr>
+<% for showroom in @showrooms %>
+  <tr>
+    <td><%= showroom.name %></td>
+    <td><%= showroom.vendor.name %></td>
+    <td><%= link_to 'Show', showroom %></td>
+    <td><%= link_to 'Destroy', showroom, :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Showroom', new_showroom_path %>
+
+<p><%= link_to 'Back To Admin Page', admins_path %></p>

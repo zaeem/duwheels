@@ -1,0 +1,18 @@
+<% set_title "Create New Car" %>
+
+<% content_for :edit_used_car_javascript do %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    updateModels($('#new_car_make').val(), document.getElementById('new_car_model'));
+    <% if @new_car.model? %>
+    $('#new_car_model').val('<%= @new_car.model %>');
+    <% end %>
+  });
+</script>
+<% end %>
+
+<div id="mainTtl" >
+  <h1>Edit New Car</h1>
+</div>
+
+<%= render :partial => "form" %>

@@ -1,0 +1,420 @@
+body {
+    margin:0;
+    font-size:12px;
+    font-weight:normal;
+    font-family:Arial, Helvetica, sans-serif;
+}
+a		{ font-size:12px; text-decoration:none; color:#145E61;cursor: pointer; }
+a:hover         { text-decoration:underline; color:#145e61; }
+form            { padding:0; margin:0; }
+img             { border:none; vertical-align:middle; }
+h1              { margin:0; padding:0; font-size:17px; }
+h2		{ margin:0; padding:0; font-size:14px; }
+h3              { margin:0; padding:0; font-size:14px; color:#145e61; }
+h4              { margin:0; padding:0; }
+textarea        { font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+p               { margin:0; padding:0; }
+#map            { width:563px; height:200px; float: left; border:#0f404b solid 2px; }
+.fieldWithErrors        { width: 190px; float: left; }
+.fieldWithErrors input  { border: #a10000 solid 2px; }
+
+/*
+#wraper	 { width:980px; margin:0 auto; overflow:hidden; padding-top:0px; position:relative; }
+
+#topBar			{ float:left; width:98%; padding:5px 10px; height:23px; background:url(../images/backgrounds/top-bar-bg.jpg) top left no-repeat; margin-bottom: 14px;  }
+#topBar .loginForm	{ float:left; width:525px; font-size:11px; font-weight:bold; }
+.loginForm .textFld	{ font-size:11px; color:#333; padding:3px; background:#9fd2d1; border:1px solid #60b4b2; margin-right:6px; }
+.loginForm .loginBtn{ vertical-align:top; }
+#topBar .topLinks	{ float:right; width:250px; text-align:right; color:#666; margin-top:2px; }
+.topLinks a			{ font-weight:bold; margin-left:5px; color:#145E61; }
+*/
+#wraper                                 { width:980px; margin:0 auto; overflow:hidden; /*padding-top:18px;*/ position:relative; }
+#wraper #logo                           { float:left; width:200px; margin-top:12px; }
+#topBar                                 { float:right; width:220px; margin-bottom:18px; }
+#adminDiv                               { float:right; width:220px; margin-bottom:18px; }
+#topBar .topLinks                       { float:right; width:200px; text-align:left; color:#666; padding:3px 0 5px 10px; background:url(../images/backgrounds/topBar-bg.jpg) top left repeat-x; font-size:11px; }
+.topLinks a                             { font-weight:bold; margin-left:5px; color:#145E61; }
+#topBar .topRightDv                     { float:right; width:10px; background:#c8ebe9; }
+#topBar .langaugeDv                     { float:right; clear:right; width:100%; text-align:right; font-size:11px; color:#666; }
+.langaugeDv a                           { font-size:11px; color:#666; }
+
+/*
+#wraper	#nav                            { float:left; width:100%; list-style-type:none; margin:0; padding:0; background:url(../images/nav-bg.jpg) top left repeat-x; margin-bottom:18px; _position:relative; }
+#wraper #nav                            { -moz-background-clip: border; -moz-background-origin: padding; -moz-background-size: auto auto; background-attachment: scroll; background-color: transparent; background-image: url("../images/nav-bg.jpg"); background-position: left top; background-repeat: repeat-x; float: left; list-style-type: none; margin-bottom: 18px; margin-left: 0; margin-right: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; width: 100%;}*/
+
+#wraper #nav                            { float:right; width:72%; list-style-type:none; margin:0; padding:0; background:url(../images/nav-bg.jpg) top left repeat-x; margin-bottom:18px; _position:relative; }
+#nav .leftBrdr                          { float:left; }
+#nav .rightBrdr                         { float:right; _position:absolute; _top:0px; _right:0; }
+#nav li                                 { display:inline-block; float:left; margin:0; padding:0; }
+#nav li a                               { display:block; padding:9px 20px 10px; color:#000; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; border-left:1px solid #1f6f71; font-weight:bold; }
+#nav li a:hover, #nav li a.current	{ text-decoration:none; color:#fff; background:#1f6f71; }
+
+#wraper .threeBox                       { float:left; clear:left; width:100%; padding-top:18px; margin-bottom:18px; border-top:1px solid #359594; }
+.threeBox table th                      { padding:5px; text-align:left; font-size:18px; color:#145e61; }
+.threeBox table td                      { padding:5px; font-weight:bold; color:#145e61; }
+.threeBox table .lableTd                { text-align:right; }
+.threeBox .lstBx                        { width:189px; padding:2px; font-size:12px; color:#666; border:1px solid #66bfba; margin:0; }
+.threeBox .lstBx2                       { width:80px; padding:2px; margin-right:5px; font-size:12px; color:#666; border:1px solid #66bfba; margin:0 5px 0 0; }
+.threeBox .txtBx                        { width:183px; padding:3px 2px 4px 2px; font-size:12px; color:#666; border:1px solid #66bfba; margin:0; }
+.threeBox .newCarBox                    { float:left; width:285px; height:202px; background:url(../images/backgrounds/newcar-bg.jpg) top left no-repeat; margin-right:17px; padding:5px 15px; }
+.threeBox .usedCarBox                   { float:left; width:285px; height:202px; background:url(../images/backgrounds/usedcar-bg.jpg) top left no-repeat; margin-right:17px; padding:5px 15px; }
+.threeBox .motorCarBox                  { float:left; width:285px; height:202px; background:url(../images/backgrounds/search-bg.jpg) top left no-repeat; padding:5px 15px; }
+
+#wraper .fourBoxes                      { float:left; clear:left; width:100%; margin-bottom:18px; }
+.fourBoxes a				{ display:inline-block; font-size:16px; font-weight:bold; color:#135e61; text-decoration:none; padding:15px 0 16px 7px; }
+.fourBoxes a:hover			{ text-decoration:none; }
+.fourBoxes .sellCarLink                 { float:left; width:225px; background:url(../images/backgrounds/sellCar-bg.jpg) top left no-repeat; }
+.fourBoxes .sellCarLink:hover           { background:url(../images/backgrounds/sellCar-bgover.jpg) top left no-repeat; color:#a10000; }
+.fourBoxes .showroomLink		{ float:left; width:262px; background:url(../images/backgrounds/showroom-bg.jpg) top left no-repeat; margin-left:8px; }
+.fourBoxes .showroomLink:hover          { background:url(../images/backgrounds/showroom-bg-over.jpg) top left no-repeat; color:#a10000; }
+.fourBoxes .rgstBznsLink		{ float:left; width:230px; background:url(../images/backgrounds/business-bg.jpg) top left no-repeat; margin-left:8px; }
+.fourBoxes .rgstBznsLink:hover          { background:url(../images/backgrounds/business-bg-over.jpg) top left no-repeat; color:#a10000; }
+.fourBoxes .advertiseLink		{ float:left; width:199px; background:url(../images/backgrounds/advertise-bg.jpg) top left no-repeat; margin-left:8px; }
+.fourBoxes .advertiseLink:hover         { background:url(../images/backgrounds/advertise-bg-over.jpg) top left no-repeat; color:#a10000; }
+
+#wraper .sliderDv                       { float:left; width:690px; height:210px; margin-right:18px; margin-bottom:18px; }
+.sliderDv h3                            { float:left; width:98.5%; height:18px; padding:13px 0px 9px 10px; background:url(/images/h1Bg.jpg) top left repeat-x; margin-bottom:18px; }
+.sliderDv h3 p                          { color:#145E61; float:right; font-size: 14px; font-weight: normal;  }
+.sliderDv h3 label                      { color:red; font-size: 14px; font-weight: normal;  }
+.forumsDv                               { float:right; width:270px; }
+.forumsDv h3                            { float:left; width:98%; height:18px; padding:13px 0px 9px 5px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+.forumsDv .forumLst                     { float:right; width:98%; color:#999; font-size:11px;font-family:Verdana, Arial, Helvetica, sans-serif; padding-bottom:7px; border-bottom:1px dashed#999; margin-bottom:5px; margin-left:5px; }
+.forumLst h4                            { float:left; width:100%; font-size:12px;background:url(../images/arrow-icn.jpg) 0 2px no-repeat; padding-left:15px; word-wrap:break-word; }
+.forumLst p                             { float:left; width:100%; clear:left;margin-top:5px; color:#666; }
+.forumLst p a                           { font-size:11px; }
+.forumLst span                          { float:left; font-size:10px; margin-top:5px;color:#999; }
+.forumLst span strong                   { color:#666; margin-right:2px; }
+.forumsDv .viewforumDv                  { float:left; width:100%; text-align:right; margin-top:10px; }
+.viewforumDv a                          { font-weight:bold; color:#145e61; }
+
+/*========= Footer =========*/
+.roundedCorners                         { -moz-border-radius:10px; -webkit-border-radius:10px; }
+#footerContainer                        { float:left; width:100%; background:url(../images/ftr.jpg) top left no-repeat #538b82; margin-top:36px; padding-top:620px; padding-bottom:25px; }
+#footerContainer #footer                { margin:0 auto; width:980px; background:#c8ebe9; /*padding:40px 18px 15px;*/ }
+#footer h1                  { font-size:17px; color:#145e61; margin-bottom:10px; }
+#footer ul                  { list-style-type:none; margin:0; padding:0; }
+#footer ul li               { line-height:18px; }
+#footer ul li a             { color:#333; }
+#footer .ftrBlockBg         {  }
+#footer .col1               { float:left; width:160px; margin-right:15px; _margin-right:0px; }
+#footer .col1 div           { padding:10px; background:#a0d2d1; }
+
+.col1 .supportDv            { float:left; clear:left; width:140px; height:67px; margin-bottom:18px; margin-right:18px; }
+.col1 .companyDv            { float:left; clear:left; width:140px; height:123px; }
+#footer .col2               { float:left; width:300px; margin-right:15px; }
+#footer .col2 div           { padding:10px; background:#a0d2d1; }
+.col2 .newcarsDv            { float:left; width:121px; height:104px; }
+.col2 .usedcarsDv           { float:left; width:121px; height:104px; margin-left:18px; }
+.col2 .motorDv              { float:left; width:280px; height:86px; margin-top:18px; }
+.motorDv h1                 { margin-bottom:5px !important; }
+.motorDv ul                 { width:100%; }
+.motorDv ul li              { float:left; width:50% !important; line-height:16px !important; }
+#footer .copyBg             { float:left; clear:left; width:468px; height:8px; padding:8px 0 12px 10px; margin-top:18px; font-size:11px; letter-spacing:2px; color:#666; background:#a0d2d1; }
+#footer .col3               { float:right; width:484px; }
+#footer .col3 div           { padding:10px; background:#a0d2d1; }
+.col3 .connectDv            { float:left; width:251px; height:71px; margin-right:18px; }
+.connectDv a                { margin:0 24px; display:inline-block; }
+.col3 .languageDv           { float:right; width:175px; height:72px;  }
+.languageDv h1              { margin-bottom:20px !important; }
+.languageDv a               { margin:0 4px; display:inline-block; color:#333; }
+
+.cntctDv                    { float:right; width:464px; height:165px; margin-top:18px; }
+.cntctDv h1                 { margin-bottom:5px !important; }
+.cntctDv td                 { padding:2px 5px; vertical-align:top; }
+.cntctDv .textFld           { width:314px; background:#69b3b3; border:1px solid #349595; padding:2px; color:#333; font-size:12px;  }
+.cntctDv .txtarea           { width:315px; height:51px; background:#69b3b3; border:1px solid #349595; padding:2px; color:#333; }
+
+.categryDv                  { float:left; display:block; background:url(/images/backgrounds/rollover1bg.png) top left no-repeat; width:472px; height:226px; padding:24px; position:absolute; top:213px; right:200px; }
+.categryDv a                { display:inline-block; margin-right:15px; margin-bottom:15px; }
+.sbCtgries                  { float:left; display:block; background:url(/images/backgrounds/rollover2bg.png) top left no-repeat; width:313px; height:102px; padding:24px; position:absolute; top:338px; right:620px; }
+.sbCtgries p                { color:#fff; margin-bottom:7px; }
+.sbCtgries p strong         { font-weight:bold; color:#ffff00; }
+.sbCtgries ul               { list-style-image:url(/images/sbctgry-blt.jpg); margin:0; padding:0; }
+.sbCtgries ul li            { float:left; width:42% !important; line-height:25px !important; margin-left:18px; }
+.sbCtgries ul li a          { color:#fff; }
+
+
+/*========= My Style =========*/
+#usedCarAdImage { float: right; }
+.alertExplanation { float: left;color: green; }
+h4 { color: #238787; font-family: Arial,Helvetica,sans-serif; font-size: 14px; font-weight: bold; }
+
+/*========= Table Style =========*/
+table.helpT                    { text-align: center; font-family: Verdana; font-weight: normal; font-size: 11px; color: #404040; width: 500px; background-color: #fafafa; border: 1px #6699CC solid; border-collapse: collapse; border-spacing: 0px; }
+td.helpHed                     { border-bottom: 2px solid #6699CC;border-left: 1px solid #6699CC;background-color: #BEC8D1;text-align: left;text-indent: 5px;font-family: Verdana;font-weight: bold;font-size: 11px;color: #404040; }
+td.helpBod                     { border-bottom: 1px solid #9CF;border-top: 0px;border-left: 1px solid #9CF;border-right: 0px;text-align: left;text-indent: 10px;font-family: Verdana, sans-serif, Arial;font-weight: normal;font-size: 11px;color: #404040;background-color: #fafafa; }
+table.sofT                     { text-align: center;font-family: Verdana;font-weight: normal;font-size: 11px;color: #404040;width: 580px;background-color: #fafafa;border: 1px #6699CC solid;border-collapse: collapse;border-spacing: 0px; }
+
+/*========= Detail Page =========*/
+.carTitle				{ float:left; width:100%; clear:both; overflow:hidden; padding:10px 0 0; border-top:1px solid #145e61; border-bottom:1px solid #145e61; margin-bottom:18px; }
+.carTitle .carPrice			{ float:right; width:180px; text-align:right; font-size:30px; color:#1f6f71; padding:6px 0; }
+.carTitle h1				{ float:left; width:795px; font-size:22px; }
+.carTitle p                             { float:left; width:795px; color:#666; margin:5px 0 8px; }
+.DetailLeftCol				{ float:left; width:312px; margin-right:18px; }
+.carPictureDv				{ float:left; width:93%; padding:10px; background:#c8eae9; border:1px solid #238787; -moz-border-radius:12px; border-radius:12px; }
+.carPictureDv .carPicture	{ margin-bottom:10px; border:1px solid #238787; }
+.carPicture img                 { height:"193px"; width:"288px"; }
+.carImage img                   { height:"30px"; width:"46px"; }
+.carPictureDv .carGallery	{ float:left; width:100%; background:#97d1cf; }
+.carGallery a			{ float:left; display:inline-block; margin:8px 4px 8px 0; _margin-right:3px; border:1px solid #51b9b9; }
+.carGallery a.leftArrow		{ float:left; border:none; margin:0; margin-right:4px; }
+.carGallery a.rightArrow	{ float:right; border:none; margin:0; }
+.DetailLeftCol .ShareDv		{ float:left; width:93%; background:#f6f6f6; -moz-border-radius:8px; border-radius:8px; border:1px solid #ccc; margin:18px 0; padding:10px; }
+.ShareDv h4			{ font-size:12px; color:#238787; margin-bottom:10px; }
+.DetailLeftCol .quickLinks	{ float:left; width:100%; }
+.quickLinks p				{ float:left; margin-bottom:10px; }
+.quickLinks p img			{ margin-right:5px; }
+.quickLinks p a				{ color:#666; }
+.quickLinks p.email			{ width:52%; margin-right:10px; }
+.quickLinks p.print			{ width:40%; }
+.DetailLeftCol .sellCarDv               { float:left; width:100%; _margin-top:10px; }
+.sellCarDv h2				{ color:#238787; background:url(../images/backgrounds/sell-car-bg.jpg) top left repeat-x; padding:10px 0; border-bottom:1px solid #ccc; }
+.sellCarDv h3				{ color:#B84608; margin:10px 0 10px; }
+.sellCarDv ul 				{ line-height:20px; color:#2669bb; _margin-left:15px; padding-left:13px; _padding-left:0; }
+
+
+.DetailRightCol				{ float:right; width:642px; _width:630px; }
+.DetailRightCol .carDetailDv            { float:left; width:100%; height:272px; _height:280px; }
+.carDetailDv ul.detailTab               { float:left; width:98%; _width:100%; list-style-type:none; margin:0; padding:0; padding-left:10px; border-bottom:1px solid #238787; }
+.carDetailDv ul.detailTab li            { float:left; display:inline-block; margin-right:3px; }
+.carDetailDv ul.detailTab li a		{ padding:5px 10px; -moz-border-radius:8px 8px 0 0; border-radius:8px 8px 0 0; text-align:center; display:block; background:url(../images/detail-tab-bg.jpg) top left repeat-x; border:1px solid #238787; border-bottom:none; color:#145e61; font-size:11px; }
+.carDetailDv ul.detailTab li a:hover	{ background:#fff; text-decoration:none; }
+.carDetailDv ul.detailTab li a.current  { font-weight:bold; background:#fff; border-bottom:1px solid #fff; z-index:5000; margin-bottom:-1px; }
+.carDetailDv p				{ float:left; width:97%; margin:4px 0 10px 10px; }
+.carDetailDv h1.featureTtl	{ float:left; width:97%; color:#b84608; margin-left:10px; margin-bottom:5px; }
+.carDetailDv ul.features	{ float:left; clear:left; width:95%; margin:0 0 0 25px; padding-left:0; _margin-left:0; _padding-left:25px; }
+.carDetailDv ul.features li	{ float:left; width:45%; line-height:20px; }
+.carDetailDv .carDetailTbl	{ float:left; clear:left; width:100%; margin-top:18px; }
+.carDetailTbl th			{ text-align:left; font-size:14px; color:#b84608; }
+.carDetailTbl .bgRow		{ background:#d8f1ee; }
+.carDetailTbl .labelTd		{ width:150px; font-weight:bold; }
+
+#list_of_features ul.features       { float:left; clear:left; width:95%; margin:0 0 0 25px; padding-left:0; _margin-left:0; _padding-left:25px; }
+#list_of_features ul.features li    { float:left; width:45%; line-height:20px; }
+
+.askForm			{ float:left; width:93%; border:5px solid #238787; padding:18px; -moz-border-radius:15px; border-radius:15px; background:url(../images/backgrounds/ask-form-bg.jpg) top left repeat-y; margin-top:18px; height:268px; _height:282px; }
+.askForm .askFormLeft		{ float:left; width:400px; }
+.askFormLeft .askQuestion	{ padding-bottom:14px; margin-bottom:0px; background:url(../images/backgrounds/sell-car-bg.jpg) bottom left repeat-x; }
+.askForm h2			{ color:#238787; }
+.askForm th			{ padding-bottom:0px; }
+.askFormTable td		{ padding:5px; font-weight:bold; }
+.askFormTable td .textField	{ width:247px; padding:2px 0 4px 2px; color:#666; font-size:12px; border:1px solid #238787; }
+.askForm .contactInfoRight	{ float:right; width:160px; }
+.contactInfoRight td		{ padding:5px 0; }
+.contactInfoRight h3		{ color:#000; }
+
+.carDetailDv .reviewTitle       { float:left; width:97.7%; padding:5px; margin-top:10px; background:#def3f2; border:1px solid #238787; }
+.mrchntDetailDv .reviewTitle       { float:left; width:97.7%; padding:5px; margin-top:10px; background:#def3f2; border:1px solid #238787; }
+.reviewTitle h3                 { float:left; width:50%; margin-top:0px; padding-top: 5px;padding-bottom: 0px;margin-bottom:0px;background-image:none; }
+.reviewTitle a                  { float:right; width:155px; text-align:right; }
+.carDetailDv .reviewFilters     { float:left; width:99.5%; margin:10px 0; }
+.mrchntDetailDv .reviewFilters     { float:left; width:99.5%; margin:10px 0; }
+.reviewFilters p                { margin:0 !important; font-size:11px; }
+.reviewFilters select           { font-size:11px; color:#666; }
+.reviewFilters .sortP           { float:left; width:50%; }
+.reviewFilters .reviewResults   { float:right; width:40%; text-align:right; }
+.mrchntDetailDv .reviews        { float:left; width:99.5%; padding:10px 0; border-top:1px solid #97D1CF; }
+.carDetailDv .reviews        { float:left; width:99.5%; padding:10px 0; border-top:1px solid #97D1CF; }
+.reviews .RevTtl                { font-size:13px; color:#333; }
+.reviews td                     { padding:5px; color:#333; }
+.reviews .reviewDate            { color:#999; font-size:11px; }
+.reviews a                      { font-size:11px; }
+
+/*========= Search Page =========*/
+#searchContainer			{ float:left; width:99.5%; border-top:1px solid #145E61; padding-top:5px; margin-bottom:18px; /*border-top:1px solid #145e61;*/ }
+#searchContainer h1			{ float:left; width:100%; font-size:24px; font-weight:normal; margin-bottom:18px; padding-bottom:5px; border-bottom:1px solid #145E61; color:#990000; }
+#searchContainer #searchLeft{ float:left; width:205px; margin-right:18px; padding:10px; }
+#searchLeft .searchFilter	{ float:left; width:100%; background:url(../images/backgrounds/yloBg.gif) bottom left repeat-x #EFE475;border:1px solid #B1770B; margin-bottom:10px; }
+.searchFilter .fltrHdng		{ font-weight:bold; font-size:11px; color:#333; }
+.searchFilter .srchFltrLnk	{ font-size:11px; color:#578CCA; }
+#searchLeft h1				{ font-size:18px; color:#990000; border:none; }
+#searchLeft .refineResult	{ float:left; width:100%; overflow:hidden; display:block; padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #c8c8c8; }
+.refineResult h3 a			{ font-size:14px; color:#000; }
+.refineResult h3 a:hover	{ text-decoration:none; color:#000; }
+.refineResult h3 a img		{ margin-bottom:3px; _margin-bottom:0; margin-right:5px;}
+.refineResult table			{ width:100%; }
+.refineResult table td		{ padding:1px; }
+.refineResult .refineTetx	{ width:133px; padding-left:15px; }
+.refineTetx a				{ color:#145E61; }
+.refineResult .refineNmbr	{ width:35px; text-align:right; font-size:11px; color:#777; }
+.refineNmbr a				{ font-weight:bold; font-size:11px; color:#444; }
+
+#searchCenter				{ float:left; width:548px; }
+#searchCenter .searchFltrBox{ float:left; width:100%; margin-bottom:10px; text-align:right; }
+#searchCenter .searchResult	{ float:left; width:100%; clear:both; overflow:hidden; padding-bottom:10px; margin-bottom:10px; border-bottom:1px dotted #ccc; }
+.searchResult .searchRecord	{ width:100%; }
+.searchRecord td			{ padding:2px; }
+.searchRecord h3 a			{ font-size:16px; color:#145E61; }
+/*.searchRecord .leftTd		{ width:250px; }*/
+/*.searchRecord .rightTd		{ width:150px; }*/
+.searchRecord .price		{ float:right; background:#F3FFEA; border:1px solid #C9DAB4; text-align:center; padding:5px 15px; font-size:18px; color:#333; }
+.searchRecord a				{ font-size:11px; color:#145e61; }
+.searchRecord .carPic img	{ border:1px solid #4eb7e6; }
+.searchRecord .dateTd		{ text-align:right; color:#666; font-size:11px; }
+.featuredLabel				{ float:right; color:#990000; font-weight:bold; margin:5px; }
+.featuredBg					{ background:#fffde0; }
+.featuredMargin				{ margin-bottom:0 !important; }
+
+.pagination					{ float:left; width:100%; overflow:hidden; color:#666; }
+.pagination a				{ color:#145e61; font-size:12px; }
+#searchRight				{ float:right; width:160px; margin-left:18px; }
+
+/*========= PostAd Form =========*/
+#container					{ float:left; width:100%; margin-bottom:18px; }
+/*#container h1				{ float:left; width:98.8%; overflow:hidden; padding:5px; background:#c8eae9; margin-bottom:10px; border:1px solid #145E61; color:#145E61; }*/
+#container #postFormDv		{ float:left; width:793px; margin-right:18px; }
+#postFormDv td				{ padding:5px; }
+#postFormDv .titleTd		{ padding:0; }
+#container h3				{ float:left; width:100%; height:18px; padding:13px 0px 9px 0px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+#postFormDv .postMessage	{ background:#FFFFCC; padding:5px; font-size:11px; font-weight:bold; }
+#postFormDv .bgRow			{ background:#def6f5; }
+#postFormDv .labelTd		{ width:130px; }
+#container .txtFld			{ width:180px; padding:2px; font-size:12px; border:1px solid #999; }
+#container .lstFld			{ width:187px; font-size:12px; border:1px solid #999; background-color: #ffffff; }
+#container .lstFld2			{ width:100px; font-size:12px; border:1px solid #999; }
+#postFormDv .textArea		{ width:350px; height:100px; border:1px solid #999; }
+#postFormDv .spanLabel		{ color:#999; font-size:11px; margin-top:3px; }
+#postFormDv .spanCompulsry	{ color:#CC0000; font-size:14px; font-weight:bold }
+#postFormDv a				{ color:#145E61; }
+#container .inputBtn		{ vertical-align:middle; }
+#container #rightAd			{ float:right; width:160px; border:1px solid #00ff00; }
+
+.errorExplanation						{ float:left; width:95.7%; padding:7px 10px 10px 30px; margin-bottom:18px; color:#cc0000; background:url(../images/icons/error.png) 5px 3px no-repeat #fbd1dd; font-size:14px; font-weight:bold; border:1px solid #cc0000; }
+.errorExplanation h4					{ color:#333; font-size:14px; margin-bottom:5px; }
+
+/*========= PostAd Form =========*/
+ #container .signInLeft		{ float:left; width:477px; color:#666; }
+.signInLeft .titleTd		{ padding:0; }
+.signInLeft td				{ padding:5px; }
+.signInLeft .labelTd		{ width:130px; font-size:14px; font-weight:bold; color:#145E61; }
+.signInLeft a				{ color:#145E61; }
+#container .signInSep		{ float:left; width:6px; margin:0 18px; }
+#container .signInRight		{ float:right; width:450px; color:#666; }
+.signInRight p				{ margin-bottom:10px; color:#333; }
+.signInRight p strong		{ color:#145E61; font-size:14px; }
+.signInRight h4				{ font-size:16px; color:#145E61; margin:15px 0 10px 0; }
+.signInRight .jointBtnP		{ text-align:center; }
+
+#container .forgorPwdDv		{ float:left; width:100%; color:#666; font-size:16px; color:#999; font-weight:bold; }
+.forgorPwdDv h4				{ float:left; width:98%; font-size:12px; background:#FFFFCC; padding:10px; margin-bottom:18px; color:#000; }
+.forgorPwdDv h2				{ font-size:20px; color:#333; font-weight:normal; margin-bottom:18px; }
+.forgorPwdDv .forgotFld		{ width:300px; font-size:18px; padding:2px; border:1px solid #999; color:#333; }
+
+/*========= Motor Directory =========*/
+#contentDv					{ float:left; width:99.5%; margin-bottom:18px; }
+#contentDv #mdSearchDv		{ float:left; width:100%; background:#c8eae9; margin-bottom:18px; border:1px solid #359594; }
+#mdSearchDv h1				{ color:#145E61; border-bottom:1px solid #145E61; padding-bottom:5px; }
+#mdSearchDv h1 span			{ font-size:12px; color:#359594; }
+#mdSearchDv .labelTd		{ width:60px; text-align:right; color:#145E61; }
+#mdSearchDv .txtFld			{ width:200px; font-size:12px; color:#666; border:1px solid #359594; }
+#mdSearchDv .lstFld			{ width:110px; font-size:12px; color:#666; border:1px solid #359594; }
+#mdSearchDv .lstFld2		{ width:200px; font-size:12px; color:#666; border:1px solid #359594; }
+#mdSearchDv ul				{ line-height:18px; margin-top:0; margin-left:15px; padding-left:10px }
+#mdSearchDv ul a			{ color:#333; font-weight:normal; color:#145E61; }
+#mdCategory					{ float:left; width:100%; margin-bottom:18px; }
+#mdCategory h3				{ float:left; width:100%; height:18px; padding:13px 0px 9px 0px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+#mdCategory ul                  { float:left; width:100%; margin:0; padding:0;line-height:18px; }
+#mdCategory ul li               { display:inline-block; float:left; width:200px;margin-right:5px; font-size:10px; color:#666;  background:url(../images/md-blt.jpg) 0 6px no-repeat;padding-left:10px; }
+#mdCategory ul li a             { color:#145E61; font-size:11px; }
+#contentDv .mdListing		{ float:left; width:795px; }
+.mdListing h3				{ float:left; width:100%; height:18px; padding:13px 0px 9px 0px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+.mdListing h3 span			{ color:#333; font-size:12px; }
+.mdListing .mdFeature		{ float:left; clear:left; width:100%; font-size:11px; padding:10px 0; border-bottom:1px solid #359594; background:#c8eae9; }
+.mdListing th				{ font-size:14px; color:#145E61; }
+.mdListing .mdListLabel		{ font-weight:bold; width:100px; }
+.mdListing a				{ font-size:11px; }
+.mdListing .mdImage			{ width:150px; vertical-align:top; text-align:right; }
+.mdListing .mdRecord		{ float:left; clear:left; width:100%; font-size:11px; padding-bottom:10px; margin-top:10px; border-bottom:1px solid #359594; }
+.mdListing .pageLinks		{ float:left; clear:left; margin-bottom:5px; margin-top:5px; width:100%; }
+.pageLinks select			{ font-size:11px; }
+
+.mdListing .mdList			{ float:left; width:100%; font-size:11px; margin:5px 0; }
+.mdList th					{ background:#C8EAE9; }
+.mdList td					{ border-bottom:1px solid #359594; }
+.mdList h4 a				{ font-size:14px; }
+.mdList p					{ margin-top:3px; }
+.mdList a.postedLink		{ color:#888; text-decoration:underline; }
+.mdList .postedDate			{ color:#999; }
+.mdList .viewsSpan			{ color:#990000; }
+.mdList .priceTd			{ color:#990000; font-size:16px; font-weight:bold; }
+.mdList .priceTd span		{ clear:both; font-size:11px; font-weight:normal; color:#666; }
+.mdList .availableTd		{ color:#266D0A; font-size:12px; font-weight:bold; }
+/*.marginTop-18				{ margin-top:18px; }					*/
+
+.mdTitle					{ float:left; width:100%; padding:10px 0; margin-bottom:18px; border-top:1px solid #145E61; border-bottom:1px solid #145E61; }
+.mdTitle h1					{ float:left; width:600px; font-size:20px; color:#145E61; }
+.mdTitle .reportLinks		{ float:right; width:322px; }
+.mdPictureDv				{ float:left; width:290px; margin-right:18px; padding:10px; _padding-bottom:0; background:#c8eae9; border:1px solid #238787; -moz-border-radius:12px; border-radius:12px; }
+.mdPictureDv .mdPicture	{ margin-bottom:10px; text-align:center; }
+.mdPictureDv .mdGallery	{ float:left; width:100%; background:#97d1cf; }
+.mdGallery a				{ float:left; display:inline-block; margin:8px 4px 8px 0; _margin-right:3px; border:1px solid #51b9b9; }
+.mdGallery a.leftArrow		{ float:left; border:none; margin:0; margin-right:4px; }
+.mdGallery a.rightArrow		{ float:right; border:none; margin:0; }
+.mdLeftCol .merchentInfo	{ float:left; width:100%; margin-top:18px; height:200px; border:1px solid #0033cc; }
+
+#contentDv .mdDetail		{ float:right; width:645px; _width:645px; }
+.mdDetail td				{ border-bottom:1px solid #c8c8c8; }
+.mdDetail .mdLabel			{ font-weight:bold; width:80px; }
+.mdDetail .priceTd			{ font-size:16px; font-weight:bold; color:#990000; }
+.mdDetail .availableTd		{ color:#266D0A; font-size:12px; font-weight:bold; }
+.mdDetail .postedTd			{ font-size:11px; color:#888; }
+
+.merchentInfo				{ float:left; width:100%; margin-top:18px; border:1px solid #145E61; }
+.merchentInfo .btmLinks a	{ font-size:11px; font-weight:normal; }
+.merchentInfo .merchentTitle{ font-size:14px; font-weight:bold; background:#145E61; color:#fff; }
+
+/*========= Merchant Detail Page =========*/
+.mrchntTitle				{ float:left; width:100%; clear:both; overflow:hidden; padding:10px 0 0; border-top:1px solid #145e61; border-bottom:1px solid #145e61; margin-bottom:18px; }
+.mrchntTitle h1				{ float:left; width:560px; font-size:18px; }
+.mrchntTitle .quickLinks	{ float:right; width:365px; color:#999; padding:5px 0; }
+.quickLinks a				{ font-size:11px; color:#666; padding:5px 0 5px 18px; }
+.quickLinks .editLnk		{ background:url(../images/icons/edit.png) 0 4px no-repeat; }
+.quickLinks .reportLnk		{ background:url(../images/icons/report2.png) 0 4px no-repeat; }
+.quickLinks .emailLnk		{ background:url(../images/icons/email.jpg) 0 6px no-repeat; }
+.quickLinks .shareLink		{ background:url(../images/icons/fb2.png) 0 4px no-repeat; }
+
+
+
+.mrchntLeftCol				{ float:left; width:795px; _width:785px; }
+.mrchntLeftCol .mrchntDetailDv	{ float:left; width:100%; /*height:272px; _height:280px;*/ }
+.mrchntDetailDv ul.mrchntTab	{ float:left; width:98%; _width:100%; list-style-type:none; margin:0; padding:0; padding-left:10px; border-bottom:1px solid #238787; }
+.mrchntDetailDv ul.mrchntTab li				{ float:left; display:inline-block; margin-right:3px; }
+.mrchntDetailDv ul.mrchntTab li a			{ padding:5px 10px; -moz-border-radius:8px 8px 0 0; border-radius:8px 8px 0 0; text-align:center; display:block; background:url(../images/detail-tab-bg.jpg) top left repeat-x; border:1px solid #238787; border-bottom:none; color:#145e61; font-size:11px; }
+.mrchntDetailDv ul.mrchntTab li a:hover		{ background:#fff; text-decoration:none; }
+.mrchntDetailDv ul.mrchntTab li a.current	{ font-weight:bold; background:#fff; border-bottom:1px solid #fff; z-index:5000; margin-bottom:-1px; }
+
+.mrchntDetailDv .mrchntDetailTbl{ float:left; clear:left; width:100%; margin-top:18px; }
+.mrchntDetailTbl th				{ text-align:left; font-size:14px; color:#b84608; }
+.mrchntDetailTbl .labelTd		{ width:150px; font-weight:bold; vertical-align:top }
+.mrchntLeftCol .mrchntCntct		{ float:left; width:94.5%; background:#96d1cf; border:5px solid #238787; margin-top:18px; padding:18px; }
+.mrchntCntct th					{ text-align:left; font-size:18px; }
+
+
+/*========= Merchant Main Page =========*/
+#contentDv #mdColLeft		{ float:left; width:680px; margin-right:18px; _width:668px; }
+#mdColLeft .mdRecommend		{ float:left; width:100%; margin-bottom:18px; }
+.mdRecommend h3				{ float:left; width:100%; height:18px; padding:13px 0px 9px 0px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+.mdRecommend h3 span		{ float:left; }
+.mdRecommend h3 a			{ float:right; color:#145E61; font-weight:normal; font-size:12px; }
+.mdRecommend ul				{ float:left; width:100%; margin:0; padding:0; }
+.mdRecommend ul li			{ float:left; width:340px; _width:334px; display:inline-block; list-style-type:none; color:#666; font-size:11px; margin-bottom:10px; }
+.mdRecommend ul li .mrchntCategory { float:left; width:96%; background:#dff3f2; border:1px solid #C8EAE9; font-size:12px; color:#145E61; font-weight:bold; padding:5px; }
+.mrchntCategory a			{ color:#000; }
+.mdRecommend ul li .mrchntRecomndDetail { float:left; width:97%; margin-top:5px; padding-right:10px; }
+.mdRecommend ul li img                  { float:left; margin-right:5px; }
+.mrchntRecomndDetail a                  { color:#145E61; font-weight:bold; font-size:11px; clear:both; }
+
+#contentDv .mdHotDeals                  { float:left; width:100%; margin-bottom:18px; }
+.mdHotDeals h3				{ float:left; width:100%; height:18px; padding:13px 0px 9px 0px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+.mdHotDeals h3 span			{ float:left; }
+.mdHotDeals h3 a			{ float:right; color:#145E61; font-weight:normal; font-size:12px; }
+.mdHotDeals ul				{ float:left; width:100%; margin:0; padding:0; }
+.mdHotDeals ul li			{ float:left; width:205px; display:inline-block; color:#333; margin-bottom:10px; font-weight:bold;  margin-right:10px; }
+.mdHotDeals ul li img                   { float:left; margin-right:5px; }
+.mdHotDeals ul li a			{ font-size:11px; font-weight:normal; }
+
+
+#contentDv .mdAction		{ float:right; width:270px; margin-bottom:18px; }
+.mdAction h3				{ float:left; width:100%; height:18px; padding:13px 0px 9px 0px; background:url(../images/h1Bg.jpg) top left repeat-x; margin-bottom:10px; }
+.mdAction p					{ float:left; width:100%; text-align:center; line-height:25px; }
+.mdAction p a				{ display:block; margin-bottom:15px; }

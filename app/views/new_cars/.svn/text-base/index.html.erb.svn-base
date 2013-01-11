@@ -1,0 +1,56 @@
+<%= pluralize_helper(@new_cars.size,'car','has been found') %> <br />
+
+<% if @new_cars.empty? %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#searchContainer').hide();
+  });
+</script>
+<% end %>
+<div id="searchContainer">
+<div id="searchCenter">
+<% for car in @new_cars %>
+  <div class="searchResult">
+    <table border="0" cellpadding="0" cellspacing="0" class="searchRecord">
+      <tr>
+        <td width="70%"><h3><a href="#"><%= car.make %></a></h3></td>
+        <td width="30%"><div class="price"><%= currencify(car.asking_price) %></div></td>
+      </tr>
+      <tr>
+        <td>
+          <table width="100%" border="0" cellpadding="0" cellspacing="3">
+            <tr>
+              <td><strong>Mileage :</strong> <%= car.milage %> km</td>
+              <td><strong>Transmission :</strong> <%= car.transmission %></td>
+            </tr>
+            <tr>
+              <td><strong>Model :</strong> <%= car.model %></td>
+              <td><strong>Fuel Type :</strong> <%= car.fuel_type %></td>
+            </tr>
+          </table>
+        </td>
+        <td align="right" valign="middle">
+          <a href="/used_cars/<%= car.id %>" class="carPic">
+          <% if car.pictures.empty? %>
+            <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="100px" height="75px" />
+          <% else %>
+            <%= image_tag car.pictures.first.photo.url(:thumb), :alt => 'No image for this car!' %>
+          <% end %>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td><%= link_to 'View Details',  new_car_path(car) %><% if admin_logged_in? %> | <%= link_to 'Delete',  car, :method => :delete %><% end %></td>
+    
+      </tr>
+    </table>
+  </div>
+<% end %>
+<%= will_paginate @new_cars %>
+</div>
+</div>
+
+<% if admin_logged_in? %>
+  <p><%= link_to 'Post New Car', new_new_car_path, :id => 'postUsedCarButton' %></p>
+<% end %>
+

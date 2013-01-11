@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test
+END
+acts_as_mappable_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/acts_as_mappable_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/test_helper.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/schema.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/boot.rb
+END
+tasks.rake
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/tasks.rake
+END
+ip_geocode_lookup_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/test/ip_geocode_lookup_test.rb
+END

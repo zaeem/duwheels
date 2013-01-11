@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/MIT-LICENSE
+END
+about.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/about.yml
+END
+CHANGELOG.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/CHANGELOG.rdoc
+END
+README.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/README.markdown
+END

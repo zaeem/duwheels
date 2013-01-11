@@ -1,0 +1,106 @@
+<% content_for :car_comparison_javascript do %>
+<%= javascript_include_tag :defaults %>
+<% end %>
+
+<%= render :partial => "/shared/makes_and_models" %>
+
+<div style="float: left; width: 250px">
+<% form_remote_for(@new_car, :url => car_comparison_ajax_new_cars_path, :method => "get") do |f| %>
+<table>
+  <tr>
+    <td>Make</td>
+    <td>
+      <%= f.select :make, @makes, {}, :onchange => "updateModels(this.value, document.getElementById('new_car_model_1'))", :class => 'lstFld' %>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td>model</td>
+    <td>
+      <select name="new_car_model_1" id="new_car_model_1" class="lstFld" >
+        <option value="">--Any--</option>
+      </select>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input type="image" src="/images/buttons/submit-btn.jpg" class="inputBtn" />
+    </td>
+  </tr>
+</table>
+<% end %>
+</div>
+
+<div style="float: left; width: 250px">
+<% form_remote_for(@new_car, :url => car_comparison_ajax_new_cars_path, :method => "get") do |f| %>
+<table>
+  <tr>
+    <td>Make</td>
+    <td>
+      <%= f.select :make, @makes, {}, :onchange => "updateModels(this.value, document.getElementById('new_car_model_2'))", :class => 'lstFld' %>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td>model</td>
+    <td>
+      <select name="new_car_model_2" id="new_car_model_2" class="lstFld" >
+        <option value="">--Any--</option>
+      </select>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input type="image" src="/images/buttons/submit-btn.jpg" class="inputBtn" />
+    </td>
+  </tr>
+</table>
+<% end %>
+</div>
+
+<div style="float: left; width: 250px">
+<% form_remote_for(@new_car, :url => car_comparison_ajax_new_cars_path, :method => "get") do |f| %>
+<table>
+  <tr>
+    <td>Make</td>
+    <td>
+      <%= f.select :make, @makes, {}, :onchange => "updateModels(this.value, document.getElementById('new_car_model_3'))", :class => 'lstFld' %>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td>model</td>
+    <td>
+      <select name="new_car_model_3" id="new_car_model_3" class="lstFld" >
+        <option value="">--Any--</option>
+      </select>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input type="image" src="/images/buttons/submit-btn.jpg" class="inputBtn" />
+    </td>
+  </tr>
+</table>
+<% end %>
+</div>
+
+<br />
+<div  id="car_detail1" style="float: left; width: 250px;"
+  <% @elementId = '1' %>
+  <%= render :partial => 'car_detail', :member => [@new_car1, @elementId] %>
+</div>
+<div  id="car_detail2" style="float: left; width: 250px;">
+  <% @elementId = '2' %>
+  <%= render :partial => 'car_detail', :member => [@new_car1, @elementId] %>
+</div>
+<div  id="car_detail3" style="float: left; width: 250px;">
+  <% @elementId = '3' %>
+  <%= render :partial => 'car_detail', :member => [@new_car1, @elementId] %>
+</div>

@@ -1,0 +1,214 @@
+<script type="text/javascript">
+<!--
+
+  ( function($) {
+
+  $(document).ready(function(){
+
+    if (<%= @car_item.pictures.size %> >= 6){
+
+      $('a.leftArrow').click(function(){
+        if (current_image_id == 'primaryImage'){
+          prevsrc = $('#primaryImage').attr('src');
+          $('#primaryImage').attr('src', $('#carImage5').attr('src'));
+          current_image_id = 'carImage5';
+          $('#carImage5').attr('src', prevsrc);
+        } else {
+          image_index = current_image_id[current_image_id.length-1];
+          if (image_index == '1'){
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#carImage5').attr('src'));
+            current_image_id = 'carImage5';
+            $('#carImage5').attr('src', prevsrc);
+          }else{
+            image_index = parseInt(image_index) - 1;
+            newId = 'carImage' + image_index;
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#'+newId).attr('src'));
+            current_image_id = newId;
+            $('#'+newId).attr('src', prevsrc);
+          }
+        }
+      });
+
+      $('a.rightArrow').click(function(){
+        if (current_image_id == 'primaryImage'){
+          prevsrc = $('#primaryImage').attr('src');
+          $('#primaryImage').attr('src', $('#carImage1').attr('src'));
+          current_image_id = 'carImage1';
+          $('#carImage1').attr('src', prevsrc);
+        }else{
+          image_index = current_image_id[current_image_id.length-1];
+          if (image_index == '5'){
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#carImage1').attr('src'));
+            current_image_id = 'carImage1';
+            $('#carImage1').attr('src', prevsrc);
+          }else{
+            image_index = parseInt(image_index) + 1;
+            newId = 'carImage' + image_index;
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#'+newId).attr('src'));
+            current_image_id = newId;
+            $('#'+newId).attr('src', prevsrc);
+          }
+        }
+      });
+
+    }else{
+      $('a.rightArrow').hide();
+      $('a.leftArrow').hide();
+    }
+
+    current_image_id = 'primaryImage';
+    $('div#usedCarsImages img').click(function(){
+      prevsrc = $('#primaryImage').attr( 'src');
+      $('#primaryImage').attr( 'src',$(this).attr('src'));
+      current_image_id = this.id;
+      $(this).attr('src',prevsrc);
+    });
+
+  });
+
+  } ) ( jQuery );
+
+//-->
+</script>
+
+<div id="contentDv">
+
+<%= render :partial => "/shared/search" %>
+
+<div class="mdTitle">
+  <h1><%= @car_item.name.capitalize %></h1>
+  <div class="reportLinks">
+    <img src="/images/icons/report.png" alt="Report Error" /> <%= link_to 'Report Error', report_error_vendors_path %>
+    <% if logged_in? && @car_item.user.id == current_user.id %>
+    <img src="/images/icons/edit.png" alt="email me" /> <%= link_to 'Edit this Car Item', edit_vendor_car_item_path(@vendor, @car_item) %>
+    <img src="/images/icons/shortlist.jpg" alt="shortlist" /> <%= link_to 'Destroy Car Item', [@vendor, @car_item], :action=>"destroy", :confirm => "Are you sure?" %><% else %>
+    <img src="/images/icons/edit.png" alt="email me" /> <a>Edit this Car Item</a>
+    <img src="/images/icons/shortlist.jpg" alt="shortlist" /> <a>Destroy Car Item</a><% end %>
+  </div>
+</div>
+
+<div class="mdPictureDv">
+<div class="mdPicture">
+  <% if @car_item.pictures.empty? %>
+    <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="288px" height="193px" />
+  <% else %>
+    <%= image_tag  @car_item.pictures.first.photo.url(:medium), :alt => 'No image for this car item!', :id => 'primaryImage', :size => '288x193' %>
+  <% end %>
+</div>
+<div class="mdGallery">
+<a href="#" class="leftArrow"><img src="/images/left-gallery-arrow.jpg" alt="" /></a>
+<div id="usedCarsImages">
+  <% unless @car_item.pictures.empty? %>
+    <% @car_item.pictures.each_with_index do |picture, ind| %>
+      <% if picture.photo.url() != @car_item.pictures.first.photo.url() %>
+        <a><%= image_tag picture.photo.url(:medium), :alt => "No image found", :id => 'carImage'+ind.to_s, :size => '46x30' %></a>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<a href="#" class="rightArrow"><img src="/images/right-gallery-arrow.jpg" alt="" /></a>
+</div>
+</div>
+
+<div class="mdDetail">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td class="mdLabel">Price :</td>
+    <td>
+      <table cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="99%" class="priceTd"><%= currencify(@car_item.price) %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdLabel">Condition :</td>
+    <td><img src="/images/icons/star.gif" /><%= @car_item.condition %></td>
+  </tr>
+  <tr>
+    <td class="mdLabel">Availability :</td>
+    <td class="availableTd">
+    <% if  @car_item.availability %>
+      Available
+    <% else %>
+      Not Available
+    <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdLabel">Posted By :</td>
+    <td><a href="#"><%= @car_item.user.login %></a></td>
+  </tr>
+  <tr>
+    <td class="mdLabel">View :</td>
+    <td><%= link_to @car_item.vendor.car_items.size.to_s+' items for sale by this merchant', vendor_car_items_path(@car_item.vendor) %></td>
+  </tr>
+  <tr>
+    <td class="mdLabel">Category :</td>
+    <td><%= link_to @car_item.part_category.name, vendors_path(:category => @car_item.part_category.id) %></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="postedTd">
+      Posted on: <%= @car_item.created_at.strftime("%d %b %Y") %> | Updated on: <%= @car_item.updated_at.strftime("%d %b %Y") %>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="merchentInfo">
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td class="merchentTitle" colspan="3">Merchant Information</td>
+  </tr>
+  <tr>
+    <th width="12%" align="left" scope="row">Name :</th>
+    <td width="65%"><%= @car_item.vendor.name %></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Address :</th>
+    <td><%= @car_item.vendor.address %><!--<a href="#">(Map)</a>--></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Office No :</th>
+    <td><%= @car_item.vendor.phone %></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Description :</th>
+    <td>
+      <% if @car_item.vendor.description.empty? %>
+        No description available
+      <% else %>
+        <%= @car_item.vendor.description %>
+      <% end %>
+    </td>
+  </tr>
+  <!--
+  <tr>
+    <th align="left" scope="row">Contact Person :</th>
+    <td>Warren</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Contact No :</th>
+    <td>63923252</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Best time to call :</th>
+    <td>Afternoon</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Message :</th>
+    <td><a href="#">Send Enquiry to Merchant</a></td>
+  </tr>
+  -->
+  <tr>
+    <th colspan="3" align="left" scope="row" class="btmLinks"><%= link_to 'View all Ads from this merchant', vendor_car_items_path %><!-- | <a href="#">Read merchant’s reviews</a>--> | <%= link_to 'View merchant’s profile', vendor_path(@car_item.vendor) %></th>
+  </tr>
+</table>
+</div>
+
+</div>

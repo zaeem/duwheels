@@ -1,0 +1,11 @@
+<% set_title "Update Vendor" %>
+
+<div id="container">
+  <div id="mainTtl"></div>
+
+  <%= render :partial => "form", :locals => { :button_label => "Update" } %>
+
+  <div id="rightAd"><a href=""><img src="/images/banner.jpg" alt="ad" /></a></div>
+</div>
+
+<%= render :partial => "/shared/location", :locals => {:object => @vendor, :object_type => 'vendor'} %>

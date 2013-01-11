@@ -1,0 +1,24 @@
+
+#sliderContent { height: 198px; margin: 50px 10px 10px; padding: 0px 0pt 0px 0px; width: 690px; background:url("../images/slider/slider-bg.jpg") no-repeat scroll left top transparent; border:1px solid #898989; }
+#sliderContent h2 { text-align:center; font:normal 150% Georgia; }
+#sliderContent #slider { width: 650px; margin-left: 20px; margin-right: 20px; }
+
+#sliderContent2 { height: 198px; width: 690px; margin: 50px 10px 10px; padding: 0px 0pt 0px 0px;background:url("../images/slider/slider-bg.jpg") no-repeat scroll left top transparent; border:1px solid #898989; }
+#sliderContent2 h2 { text-align:center; font:normal 150% Georgia; }
+#sliderContent2 #slider2 { width: 650px; margin-left: 20px; margin-right: 20px; }
+.viewer { width: 670px; height:343px; margin:0 auto 40px; padding:1px; overflow:hidden; position:relative; border:1px solid #898989; }
+.content-conveyor { width:610px; height:335px; position:relative; }
+div.item { width:150px;height:150px; float:left; font-family:Tahoma; text-align:center; }
+div.item img { height:72px;width:109px; }
+.item h2 { font-size:100%; margin:10px 0; }
+.item h5 { font-size:100%; font:12px/18px Arial,Helvetica,sans-serif;font-weight: bold;font-style: normal;color:#FFFFFF;margin: 0px;padding: 0px;text-decoration: none;text-align: center; }
+.item h6 { font-size:100%; color: #FFFFFF;font-size: 11px;font-style: normal;font-weight: normal;margin: 0px;padding: 0px;text-decoration: none;text-align: center;list-style: none outside none;line-height: 18px;font: 12px/18px Arial,Helvetica,sans-serif; }
+.item h4 { font-size:100%; color:#FFFF00;font:bold 12px/18px Arial,Helvetica,sans-serif;margin: 0px;padding: 0px;text-align:center;text-decoration: none;font-family: Tahoma; }
+.item dl { margin:10px 0; }
+.item dt, .item dd { float:left; width:149px; text-align:right; margin:0; font-size:70%; }
+.item dt { font-weight:bold; margin-right:5px; }
+.item dd { text-align:left; }
+.item img { border:1px solid #898989; background-color:#ffffff; padding:1px; }
+div.content-conveyor {height: 160px;}
+div.viewer {height: 150px;margin:0 auto 10px;}
+div.sliderDv {height:250px;}

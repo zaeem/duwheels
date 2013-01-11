@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/lib/geokit-rails/adapters
+END
+abstract.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/lib/geokit-rails/adapters/abstract.rb
+END
+postgresql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/lib/geokit-rails/adapters/postgresql.rb
+END
+mysql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/lib/geokit-rails/adapters/mysql.rb
+END
+sqlserver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/head/!svn/ver/23/trunk/vendor/plugins/geokit-rails/lib/geokit-rails/adapters/sqlserver.rb
+END

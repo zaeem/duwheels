@@ -1,0 +1,19 @@
+<h1><%= pluralize_helper(@brands.size,'brand','exists') %></h1>
+
+<table>
+
+  <tr>
+      <th>Name</th>
+  </tr>
+
+<% for brand in @brands %>
+  
+  <tr>
+    <td><%= brand.name %></td>
+  </tr>
+  
+<% end %>
+  
+</table>
+<p><%= link_to 'Create a New Brand', new_brand_path %></p>
+<p><%= link_to 'Back To Admin Page', admins_path %></p>

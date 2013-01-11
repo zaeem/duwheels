@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/lib/paperclip/storage
+END
+filesystem.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/lib/paperclip/storage/filesystem.rb
+END
+s3.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/lib/paperclip/storage/s3.rb
+END

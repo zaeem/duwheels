@@ -1,0 +1,3 @@
+Dear Admin,
+             You have successfully posted an ad for new car:
+<%= @make %>, <%= @model %>.

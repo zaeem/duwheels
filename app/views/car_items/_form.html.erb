@@ -1,0 +1,98 @@
+<script type="text/javascript">
+<!--
+
+  $(document).ready(function(){
+
+    $('#car_item_availability').attr('checked', 'checked');
+
+  });
+
+//-->
+</script>
+
+<%= javascript_include_tag "select_form_field_javascript" %>
+
+<div class="clr"></div>
+
+<%= error_messages_for :car_item %>
+
+<div id="postFormDv">
+
+<% form_for([@vendor, @car_item], :html => { :multipart => true }) do |f| %><br />
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td colspan="2" class="titleTd"><h3><%= button_label %> Car Item</h3></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="postMessage">Please fill in the form below to provide complete details of your car item. The details should be absolutely accurate and up to date.</td>
+    </tr>
+    <tr>
+      <td class="labelTd"><label for="name">Name</label></td>
+      <td>
+        <%= f.text_field :name, :class => 'txtFld' %><span class="spanCompulsry">*</span>
+      </td>
+    </tr>
+    
+    <tr class="bgRow">
+      <td class="labelTd"><label for="price">Price</label></td>
+      <td>
+        <%= f.text_field :price, :class => 'txtFld' %><span class="spanCompulsry">*</span> <span class="spanLabel">$</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="labelTd"><label for="condition">Condition</label></td>
+      <td>
+        <%= f.select :condition, [['Brand New', 'Brand New'],['Excellent [5/5]',
+        'Excellent [5/5]'],['Very Good [4/5]', 'Very Good [4/5]'], ['Good [3/5]',
+        'Good [3/5]'], ['Fair [2/5]', 'Fair [2/5]'], ['Poor [1/5]', 'Poor [1/5]']] %>
+      </td>
+    </tr>
+
+    <tr class="bgRow">
+      <td class="labelTd"><label for="availability">Availability</label></td>
+      <td>
+        <%= f.check_box :availability %>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="labelTd"><label for="deal_type">Type of Deal</label></td>
+      <td>
+        <%= f.select :deal_type, [['Normal',false],['Hot Deal',true]] %>
+      </td>
+    </tr>
+
+    <tr class="bgRow">
+      <td class="labelTd"><label for="part_category_id">Car Part Category</label></td>
+      <td>
+        <%= f.select :part_category_id, @part_categories %>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="labelTd"><label for="brand_id">Brand</label></td>
+      <td>
+        <%= f.select :brand_id, @brands %>
+      </td>
+    </tr>
+
+    <tr class="bgRow">
+      <td class="labelTd"><%= f.label :upload_picture %></td>
+      <td>
+        <%= render :partial => '/shared/pictures_javascript', :locals => {:object => @car_item, :object_type => 'car_item'} %>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td valign="middle">
+        <input type="image" src="/images/buttons/submit-btn.jpg" class="inputBtn" />
+      </td>
+    </tr>
+
+  </table>
+
+<% end %>
+</div>

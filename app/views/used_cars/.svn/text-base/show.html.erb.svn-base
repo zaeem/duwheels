@@ -1,0 +1,475 @@
+<div class="carTitle">
+  <div class="carPrice"><%= currencify(@used_car.asking_price) %></div>
+  <h1><%= @used_car.make  %>, <%= @used_car.model %> for sale</h1>
+  <p><%= @used_car.type_of_vehicle %>, <%= @used_car.registration_date.year %></p>
+</div>
+
+<%= render :partial => '/shared/gmap' %>
+
+<script type="text/javascript">
+<!--
+
+  $(document).ready(function(){
+
+    $('#4thquestion').hide();
+    $('#otherQuestion').change(function(){
+      if ($('#otherQuestion').attr('checked')){
+        $('#4thquestion').show();
+      }else{
+        $('#4thquestion').hide();
+      }
+    });
+
+    if (<%= @used_car.pictures.size %> >= 6){
+
+      $('a.leftArrow').click(function(){
+        if (current_image_id == 'primaryImage'){
+          prevsrc = $('#primaryImage').attr('src');
+          $('#primaryImage').attr('src', $('#carImage5').attr('src'));
+          current_image_id = 'carImage5';
+          $('#carImage5').attr('src', prevsrc);
+        } else {
+          image_index = current_image_id[current_image_id.length-1];
+          if (image_index == '1'){
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#carImage5').attr('src'));
+            current_image_id = 'carImage5';
+            $('#carImage5').attr('src', prevsrc);
+          }else{
+            image_index = parseInt(image_index) - 1;
+            newId = 'carImage' + image_index;
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#'+newId).attr('src'));
+            current_image_id = newId;
+            $('#'+newId).attr('src', prevsrc);
+          }
+        }
+      });
+
+      $('a.rightArrow').click(function(){
+        if (current_image_id == 'primaryImage'){
+          prevsrc = $('#primaryImage').attr('src');
+          $('#primaryImage').attr('src', $('#carImage1').attr('src'));
+          current_image_id = 'carImage1';
+          $('#carImage1').attr('src', prevsrc);
+        }else{
+          image_index = current_image_id[current_image_id.length-1];
+          if (image_index == '5'){
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#carImage1').attr('src'));
+            current_image_id = 'carImage1';
+            $('#carImage1').attr('src', prevsrc);
+          }else{
+            image_index = parseInt(image_index) + 1;
+            newId = 'carImage' + image_index;
+            prevsrc = $('#primaryImage').attr('src');
+            $('#primaryImage').attr('src', $('#'+newId).attr('src'));
+            current_image_id = newId;
+            $('#'+newId).attr('src', prevsrc);
+          }
+        }
+      });
+
+    }else{
+      $('a.rightArrow').hide();
+      $('a.leftArrow').hide();
+    }
+
+    current_image_id = 'primaryImage';
+    $('div#usedCarsImages img').click(function(){
+      prevsrc = $('#primaryImage').attr( 'src');
+      $('#primaryImage').attr( 'src',$(this).attr('src'));
+      current_image_id = this.id;
+      $(this).attr('src',prevsrc);
+    });
+
+    arrayOfFeatures = ['<li>Air Bags</li>', '<li>Air Conditioning</li>', 
+      '<li>Power Windows</li>', '<li>Power Steering</li>', '<li>Power Locks</li>',
+      '<li>Power Mirror</li>', '<li>Keyless Entry</li>', '<li>Cruise Control</li>',
+      '<li>Navigation System</li>', '<li>ABS</li>', '<li>FM/AM Radio</li>',
+      '<li>Cassette Player</li>', '<li>CD Player</li>', '<li>Sun Roof</li>',
+      '<li>Alloy Rims</li>']
+    features = '<%= @used_car.feature %>';
+    lengthOfFeatures = <%= @used_car.feature.size %>;
+    featureHtml = '';
+    for (var i = 0 ; i < lengthOfFeatures; ++i){
+      if (features[i] == '1'){
+        featureHtml = featureHtml + arrayOfFeatures[i];
+      }
+    }
+    if (featureHtml == ''){
+      $('#usedCarSpecifications .features').html('<li>No features available</li>');
+    } else {
+      $('#usedCarSpecifications .features').html(featureHtml);
+    }
+
+    $('#showDetailsOfUsedCar').click(function(){
+      $(this).addClass('current');
+      $('#showSpecificationsOfUsedCar').removeClass('current');
+      $('#showMapOfUsedCar').removeClass('current');
+      $('#showReviewsOfUsedCar').removeClass('current');
+      $('#usedCarSpecifications').css('display','none');
+      $('#map').css('display','none');
+      $('#usedCarReviews').css('display','none');
+      $('#usedCarDetail').css('display','block');
+    });
+
+    $('#showSpecificationsOfUsedCar').click(function(){
+      $(this).addClass('current');
+      $('#showDetailsOfUsedCar').removeClass('current');
+      $('#showMapOfUsedCar').removeClass('current');
+      $('#showReviewsOfUsedCar').removeClass('current');
+      $('#usedCarDetail').css('display','none');
+      $('#map').css('display','none');
+      $('#usedCarReviews').css('display','none');
+      $('#usedCarSpecifications').css('display','block');
+    });
+
+    $('#showMapOfUsedCar').click(function(){
+      $(this).addClass('current');
+      $('#showDetailsOfUsedCar').removeClass('current');
+      $('#showSpecificationsOfUsedCar').removeClass('current');
+      $('#showReviewsOfUsedCar').removeClass('current');
+      $('#usedCarSpecifications').css('display','none');
+      $('#usedCarDetail').css('display','none');
+      $('#usedCarReviews').css('display','none');
+      $('#map').css('display','block');
+    });
+
+    $('#showReviewsOfUsedCar').click(function(){
+      $(this).addClass('current');
+      $('#showDetailsOfUsedCar').removeClass('current');
+      $('#showSpecificationsOfUsedCar').removeClass('current');
+      $('#showMapOfUsedCar').removeClass('current');
+      $('#usedCarSpecifications').css('display','none');
+      $('#usedCarDetail').css('display','none');
+      $('#map').css('display','none');
+      $('#usedCarReviews').css('display','block');
+    });
+
+    var map = new GMap2(document.getElementById('map'));
+    <% if @used_car.gmaps == true %>
+    var Dubai = new GLatLng(<%= @used_car.latitude.to_f %>, <%= @used_car.longitude.to_f %>);
+    <% else %>
+    var Dubai = new GLatLng(25.094110, 55.170850);
+    <% end %>
+    map.setCenter(Dubai, 12);
+    map.setUIToDefault();
+    var marker = null;
+    marker = new GMarker(Dubai);
+    map.addOverlay(marker);
+
+    <% if @review %>
+      $('#usedCarSpecifications').hide();
+      $('#map').hide();
+      $('#usedCarDetail').hide();
+    <% elsif @map %>
+      $('#usedCarDetail').hide();
+      $('#usedCarSpecifications').hide();
+      $('#usedCarReviews').hide();
+    <% else %>
+      $('#usedCarSpecifications').hide();
+      $('#map').hide();
+      $('#usedCarReviews').hide();
+    <% end %>
+
+    $('img#ratingStarImages0').attr("src","/images/blank.png");
+    $('img#ratingStarImages1').attr("src","/images/1star.png");
+    $('img#ratingStarImages2').attr("src","/images/2star.png");
+    $('img#ratingStarImages3').attr("src","/images/3star.png");
+    $('img#ratingStarImages4').attr("src","/images/4star.png");
+    $('img#ratingStarImages5').attr("src","/images/5star.png");
+
+    $('#ask_a_question').submit(function(){
+      if ($('#user_name').val() == ''){
+        $('#user_name').css('border','red 2px solid');
+      }else{
+        $('#user_name').css('border','');
+      }
+      if ($('#email').val() == ''){
+        $('#email').css('border','red 2px solid');
+      }else{
+        $('#email').css('border','');
+      }
+      if ($('#number').val() == ''){
+        $('#number').css('border','red 2px solid');
+      }else{
+        $('#number').css('border','');
+      }
+      attribute_checked = false;
+      $('#ask_a_question input[type="checkbox"]').each(function(){
+        if (this.checked && attribute_checked == false){
+          attribute_checked = true;
+        }
+      });
+      if ($('#user_name').val() == '' || $('#email').val() == '' || $('#number').val() == '' || attribute_checked == false){
+        return false;
+      }else{
+        return true;
+      }
+    });
+
+  });
+
+//-->
+</script>
+
+<div class="DetailLeftCol">
+<div class="carPictureDv">
+<div class="carPicture">
+  <% if @used_car.pictures.empty? %>
+    <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="288px" height="193px" />
+  <% else %>
+    <%= image_tag @used_car.pictures.first.photo.url(:medium), :alt => "No image found", :id => 'primaryImage', :size => '288x193' %>
+  <% end %>
+</div>
+<div class="carGallery">
+<a class="leftArrow"><img src="/images/left-gallery-arrow.jpg" alt="" /></a>
+<div id="usedCarsImages">
+  <% unless @used_car.pictures.empty? %>
+    <% @used_car.pictures.each_with_index do |picture, ind| %>
+      <% if picture.photo.url() != @used_car.pictures.first.photo.url() %>
+        <a><%= image_tag picture.photo.url(:medium), :alt => "No image found", :id => 'carImage'+ind.to_s, :size => '46x30' %></a>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<a class="rightArrow"><img src="/images/right-gallery-arrow.jpg" alt="" /></a>
+</div>
+</div>
+<div class="ShareDv">
+<h4>Do you like this? Share it</h4>
+<p>
+<a href="#"><img src="/images/icons/fb.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/twtr.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/mail.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/blog.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/delta.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/digg.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/google.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/social.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/stmbl.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/bb.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/cartoon.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/green.jpg" alt="" /></a>
+<a href="#"><img src="/images/icons/rss.jpg" alt="" /></a>
+</p>
+</div>
+<div class="quickLinks">
+<% if logged_in? && current_user.id == @used_car.user.id %><p class="email"><img src="/images/icons/edit.png" alt="email me" style="height: 16px;width: 16px;" /><%= link_to 'Edit this Used Car', edit_used_car_path(@used_car) %></p><% else %>
+<p class="email"><img src="/images/icons/email.jpg" alt="email me" /><a href="#">Email me similar cars</a></p><% end %>
+<% if logged_in? && current_user.id == @used_car.user.id %><p class="email"><img src="/images/icons/shortlist.jpg" alt="shortlist" /><%= link_to 'Destroy this Used Car', @used_car, :action=>"destroy" %></p><% else %>
+<p class="print"><img src="/images/icons/shortlist.jpg" alt="shortlist" /><a href="#">Add to Shortlist</a></p><% end %>
+<p class="email"><img src="/images/icons/report.png" alt="Report Error" style="height: 16px;width: 16px;" /><%= link_to 'Report Error', report_error_vendors_path %></p>
+<p class="print"><img src="/images/icons/print.jpg" alt="print" /><a href="#">Print this Page</a></p>
+</div>
+<div class="sellCarDv">
+<h2>Sell your Car</h2>
+<h3>Place a car ad from just</h3>
+<ul>
+<li>Exposure to up to 1 million potential buyers</li>
+<li>Unlimited changes</li>
+<li>Advertised until sold</li>
+</ul>
+<p><%= link_to '<img src="/images/buttons/postAd-btn2.jpg" alt="post button" />', new_used_car_path %></p>
+</div>
+</div>
+
+<div class="DetailRightCol">
+<div class="carDetailDv">
+<ul class="detailTab">
+<li><a <% if !@map && !@review %>class="current"<% end %> id="showDetailsOfUsedCar">Details</a></li>
+<li><a id="showSpecificationsOfUsedCar">Specifications</a></li>
+<li><a <% if @map %>class="current"<% end %> id="showMapOfUsedCar">Map</a></li>
+<li><a <% if @review %>class="current"<% end %> id="showReviewsOfUsedCar">Reviews</a></li>
+<!--<li><a href="#" id="showReviewsOfUsedCar">Reviews</a></li>-->
+</ul>
+  
+<div id="usedCarDetail">
+<table cellspacing="0" cellpadding="5" border="0" width="450" class="carDetailTbl">
+    <tr>
+      <th colspan="2">Model & Registration Details</th>
+      <th colspan="2">Technical Details</th>
+    </tr>
+    <tr class="bgRow">
+      <td class="labelTd">Make:</td>
+      <td><%= @used_car.make %></td>
+      <td class="labelTd">Engine Type:</td>
+      <td><%= @used_car.engine_capacity %></td>
+    </tr>
+    <tr>
+      <td class="labelTd">Model:</td>
+      <td><%= @used_car.model %></td>
+      <td class="labelTd">Transmission:</td>
+      <td><%= @used_car.transmission %></td>
+    </tr>
+    <tr class="bgRow">
+      <td  class="labelTd">Year:</td>
+      <td><%= @used_car.model_year %></td>
+      <td class="labelTd">Engine Capacity:</td>
+      <td><%= @used_car.engine_capacity %></td>
+    </tr>
+    <tr>
+      <td class="labelTd">Location:</td>
+      <td><%= @used_car.registration_city %></td>
+      <td class="labelTd">Cylinders:</td>
+      <td>4</td>
+    </tr>
+    <tr class="bgRow">
+      <td class="labelTd">Mileage:</td>
+      <td><%= @used_car.milage %> <span class="hint">Km</span></td>
+      <td class="labelTd">Car Registration City:</td>
+      <td><%= @used_car.registration_city %></td>
+    </tr>
+
+</table>
+  <% if @used_car.user.cell_no? %>
+    <p>For a free obligation enquiry call <%= @used_car.user.cell_no %></p>
+  <% end %>
+</div>
+  
+<div id="usedCarSpecifications">
+  <h1 class="featureTtl" style="margin-top: 20px;">Features</h1>
+  <ul class="features">
+  </ul>
+  <h1 class="featureTtl" style="margin-top: 20px;">Description</h1>
+  <p><%= @used_car.description? ? @used_car.description : 'No description for now!' %></p>
+</div>
+
+<div id="map" style=" margin-top:25px;margin-left:10px; "></div>
+
+<div id="usedCarReviews">
+<div class="reviewTitle">
+  <h3 style="float:left; width:50%; margin-top:0px; padding-top: 5px;padding-bottom: 0px;margin-bottom:0px;background-image:none;"><%= @reviews.uniq.size %> Reviews</h3>
+  <%= link_to '<img src="/images/buttons/sbmit-review-btn.jpg" alt="submit a review button" />', new_review_path(:used_car_id => @used_car.id) %>
+</div>
+<!--
+<div class="reviewFilters">
+  <p class="sortP">Sort by
+  <select>
+    <option>Date</option>
+    <option>Day</option>
+    <option>Records</option>
+  </select>
+  </p>
+  <p class="reviewResults">
+  <select>
+    <option>10</option>
+    <option>15</option>
+    <option>25</option>
+  </select>
+  Results / Page
+  </p>
+</div>
+-->
+<% if @reviews.empty? %>
+  No Reviews till now!
+<% else %>
+  <% for review in @reviews %>
+    <div class="reviews">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th width="7%" rowspan="3" align="left" valign="top" scope="col">
+            <a href=""><img src="/images/reviews.jpg" alt="userPic" /></a>
+          </th>
+          <th width="78%" align="left" scope="col"><a href="#" class="RevTtl"><%= review.title %></a></th>
+          <th width="15%" align="right" scope="col"><img id="ratingStarImages<%= review.rating %>" src="" alt="rating star" /></th>
+        </tr>
+        <tr>
+          <td colspan="2"><%= review.body %></td>
+        </tr>
+        <tr>
+          <td class="reviewDate"><%= review.created_at.strftime("%B %d,%Y") %></td>
+          <td align="right"><a href=""></a></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+  <%= will_paginate @reviews %>
+<% end %>
+</div>
+
+</div>
+<div class="askForm">
+<div class="askFormLeft">
+<% form_tag(ask_question_used_car_path, :method => "get" , :id => "ask_a_question") do %>
+<div class="askQuestion">
+<table width="300" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <th colspan="2" align="left"><h2>Ask a Question</h2></th>
+  </tr>
+  <tr>
+    <td width="26"><input type="checkbox" name="question1" value="Can I book a test drive?" /></td>
+    <td width="274">Can I book a test drive?</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="question2" value="Do you provide car finance?"  /></td>
+    <td>Do you provide car finance?</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="question3" value="What is your address and opening hours?" /></td>
+    <td>What is your address and opening hours?</td>
+  </tr>
+  <tr>
+    <td><input id="otherQuestion" type="checkbox" /></td>
+    <td>Other </td>
+  </tr>
+</table>
+</div>
+<table width="364" border="0" cellpadding="0" cellspacing="0" class="askFormTable">
+  <tr>
+    <td>Your Name :</td>
+    <td><input type="text" name="user_name" id="user_name" class="textField" value="" /></td>
+  </tr>
+  <tr>
+    <td>Your Email :</td>
+    <td><input type="text" name="email" id="email" class="textField" value="" /></td>
+  </tr>
+  <tr>
+    <td>Your Phone :</td>
+    <td><input type="text" name="number" id="number" class="textField" value="" /></td>
+  </tr>
+  <tr id="4thquestion">
+    <td>Other Question :</td>
+    <td><input type="text" name="question" id="question" class="textField" value="" />
+      <input type="hidden" name="used_car_id" id="used_car_id" class="textField" value="<%= @used_car.id %>" /></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="image" src="/images/buttons/send-enquiry-btn.jpg" /></td>
+  </tr>
+</table>
+<% end %>
+</div>
+<div class="contactInfoRight">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <th colspan="2" align="left"><h2>Contact the Seller</h2></th>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <h4>Car Points</h4>
+    Barbagallo Alfa Romeo,<br />
+    Fiat , Ssang Young &amp; F<br />
+    Trucks</td>
+    </tr>
+  <tr><td height="10" colspan="2"></td></tr>
+  <tr>
+    <td><img src="/images/icons/phone.jpg" /></td>
+    <td> <strong> <%= @used_car.user.cell_no %></strong></td>
+  </tr>
+  <tr><td height="10" colspan="2"></td></tr>
+  <!--<tr>
+    <td><img src="/images/icons/fax.jpg" /></td>
+    <td><strong>-92 42 575 3997</strong></td>
+  </tr>-->
+  <tr><td height="10" colspan="2"></td></tr>
+  <tr>
+    <td><img src="/images/icons/email3.jpg" /></td>
+    <td> <strong> <%= @used_car.user.email %></strong></td>
+  </tr>
+</table>
+
+</div>
+</div>
+</div>

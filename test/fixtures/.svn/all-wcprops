@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/head/!svn/ver/57/trunk/test/fixtures
+END
+vendors.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/head/!svn/ver/2/trunk/test/fixtures/vendors.yml
+END
+reviews.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/head/!svn/ver/23/trunk/test/fixtures/reviews.yml
+END
+abstract_users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/2/trunk/test/fixtures/abstract_users.yml
+END
+comments.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/head/!svn/ver/2/trunk/test/fixtures/comments.yml
+END
+pictures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/head/!svn/ver/2/trunk/test/fixtures/pictures.yml
+END
+showrooms.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/head/!svn/ver/49/trunk/test/fixtures/showrooms.yml
+END
+makes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/head/!svn/ver/57/trunk/test/fixtures/makes.yml
+END
+new_cars.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/head/!svn/ver/53/trunk/test/fixtures/new_cars.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/head/!svn/ver/55/trunk/test/fixtures/users.yml
+END
+movies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/head/!svn/ver/2/trunk/test/fixtures/movies.yml
+END
+regions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/head/!svn/ver/49/trunk/test/fixtures/regions.yml
+END
+car_items.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/head/!svn/ver/2/trunk/test/fixtures/car_items.yml
+END
+ads.yml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/head/!svn/ver/2/trunk/test/fixtures/ads.yml
+END
+car_models.yml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/head/!svn/ver/57/trunk/test/fixtures/car_models.yml
+END
+used_cars.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/head/!svn/ver/2/trunk/test/fixtures/used_cars.yml
+END
+brands.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/head/!svn/ver/2/trunk/test/fixtures/brands.yml
+END
+anonymous_users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/2/trunk/test/fixtures/anonymous_users.yml
+END
+part_categories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/2/trunk/test/fixtures/part_categories.yml
+END
+transaction_histories.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/2/trunk/test/fixtures/transaction_histories.yml
+END

@@ -1,0 +1,169 @@
+<%= pluralize_helper(@vendors.size,'vendor','exists') %> <br />
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('img#ratingStarImages0').attr("src","/images/blank.png");
+    $('img#ratingStarImages1').attr("src","/images/1star.png");
+    $('img#ratingStarImages2').attr("src","/images/2star.png");
+    $('img#ratingStarImages3').attr("src","/images/3star.png");
+    $('img#ratingStarImages4').attr("src","/images/4star.png");
+    $('img#ratingStarImages5').attr("src","/images/5star.png");
+  });
+
+</script>
+
+<div id="contentDv">
+<%= render :partial => "/shared/search" %>
+
+<div class="mdListing">
+<h3><%= @category_title %> <span>(<%= @vendors.size %> Listings)</span></h3>
+
+<% for vendor in @vendors %>
+<% if vendor.vendor_type == 'recommended' %>
+<div class="mdFeature">
+<table width="100%" border="0" cellspacing="5" cellpadding="0">
+  <tr>
+    <th colspan="3" align="left"><%= link_to vendor.name, vendor_path(vendor) %></th>
+  </tr>
+  <tr>
+    <td width="100" class="mdListLabel">Address :</td>
+    <td width="600"><%= vendor.address %> (<%= link_to 'map', vendor_path(vendor, :map => 'true') %>)</td>
+    <td width="67" class="mdImage" rowspan="8">
+      <% if vendor.pictures.empty? %>
+        <img src="/images/md-logo.gif" alt="logo of merchant" style="width: 150px;height: 50px;" />
+      <% else %>
+        <%= image_tag vendor.pictures.first.photo.url(:thumb), :alt => "logo of merchant", :id => 'primaryImage', :size => '150x50' %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Phone :</td>
+    <td><%= vendor.phone %></td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Category :</td>
+    <td>
+      <% for category in vendor.part_categories.uniq %>
+        <% if vendor.part_categories.uniq.last == category %>
+          <%= link_to category.name, vendors_path(:category => category.id) %>
+        <% else %>
+          <%= link_to category.name, vendors_path(:category => category.id) %> |
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Brands Carried :</td>
+    <td>
+      <% for brand in vendor.brands.uniq %>
+        <% if vendor.brands.uniq.last == brand %>
+          <%= link_to brand.name, vendors_path(:keyword => brand.name) %>
+        <% else %>
+          <%= link_to brand.name, vendors_path(:keyword => brand.name) %> |
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Description :</td>
+    <td>
+      <% if vendor.description.empty? %>
+        No Description
+      <% else %>
+        <%= vendor.description %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Rating :</td>
+    <% if vendor.reviews.uniq.empty? %>
+      <td>No Rating Yet <%= link_to '(Post A Review)', new_review_path(:vendor_id => vendor.id) %></td>
+    <% else %>
+      <td><img src="/images/ratings-star.png" alt="Rating star image" id="ratingStarImages<%= vendor.rating_star %>" align="left" />&nbsp;&nbsp; <%= link_to  '('+vendor.reviews.uniq.size.to_s+' Reviews)', vendor_path(vendor, :review => 'true') %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><%= link_to 'View '+vendor.car_items.size.to_s+' items for sale', vendor_car_items_path(vendor) %></td>
+  </tr>
+</table>
+</div>
+<% else %>
+<div class="mdRecord">
+<table width="100%" border="0" cellspacing="5" cellpadding="0">
+  <tr>
+    <th colspan="3" align="left"><%= link_to vendor.name, vendor_path(vendor) %></th>
+  </tr>
+  <tr>
+    <td width="100" class="mdListLabel">Address :</td>
+    <td width="600"><%= vendor.address %> (<%= link_to 'map', vendor_path(vendor, :map => 'true') %>)</td>
+    <td width="67" rowspan="4" class="mdImage">
+      <% if vendor.pictures.empty? %>
+        <img src="/images/md-logo.gif" alt="logo of merchant" style="width: 150px;height: 50px;" />
+      <% else %>
+        <%= image_tag vendor.pictures.first.photo.url(:thumb), :alt => "logo of merchant", :id => 'primaryImage', :size => '150x50' %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Phone :</td>
+    <td><%= vendor.phone %></td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Category :</td>
+    <td>
+      <% for category in vendor.part_categories.uniq %>
+      <% if vendor.part_categories.uniq.last == category %>
+      <%= link_to category.name, vendors_path(:category => category.id) %>
+      <% else %>
+      <%= link_to category.name, vendors_path(:category => category.id) %> |
+      <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td class="mdListLabel">Brands Carried :</td>
+    <td>
+      <% for brand in vendor.brands.uniq %>
+      <% if vendor.brands.uniq.last == brand %>
+      <%= link_to brand.name, vendors_path(:keyword => brand.name) %>
+      <% else %>
+      <%= link_to brand.name, vendors_path(:keyword => brand.name) %> |
+      <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><%= link_to 'View '+vendor.car_items.size.to_s+' items for sale', vendor_car_items_path(vendor) %></td>
+  </tr>
+</table>
+</div>
+<% end %>
+<% end %>
+<%= will_paginate @vendors %>
+
+<!--
+<div class="pageLinks">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">Sort by :
+    <select>
+    <option>Default</option>
+    </select>
+    </td>
+    <td align="center">Back 1 2 3 4 5 .... 11 Next</td>
+    <td align="right"><select>
+    <option>Default</option>
+    </select>
+    Result / Page
+    </td>
+  </tr>
+</table>
+</div>
+-->
+</div>
+
+<div id="searchRight"><a href="#"><img src="/images/banner.jpg" /></a></div>
+</div>

@@ -1,0 +1,11 @@
+<select  name="select_area" id="select_area" class="<%= class_name %>">
+  <option selected>Any Area</option>
+  <% for region in @regions %>
+  <option value="<%= region.latitude %>,<%= region.longitude %>"><%= region.name %></option>
+  <% end %>
+  <option value="25.27667669995565,55.30963897705078">Al Murar</option>
+  <option value="25.272718374808335,55.31290054321289">Naif</option>
+  <option value="25.269148010009072,55.31058311462402">Al Rigga (Grave Yard)</option>
+  <option value="25.272951221038216,55.304574966430664">Deira</option>
+  <option value="25.26697469305775,55.29376029968262">Al Ras</option>
+</select>

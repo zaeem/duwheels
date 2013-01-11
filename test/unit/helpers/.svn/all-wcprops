@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/head/!svn/ver/57/trunk/test/unit/helpers
+END
+makes_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/57/trunk/test/unit/helpers/makes_helper_test.rb
+END
+showrooms_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/49/trunk/test/unit/helpers/showrooms_helper_test.rb
+END
+vendors_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/head/!svn/ver/2/trunk/test/unit/helpers/vendors_helper_test.rb
+END
+new_cars_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/53/trunk/test/unit/helpers/new_cars_helper_test.rb
+END
+movies_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/2/trunk/test/unit/helpers/movies_helper_test.rb
+END
+reviews_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/23/trunk/test/unit/helpers/reviews_helper_test.rb
+END
+comments_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/2/trunk/test/unit/helpers/comments_helper_test.rb
+END
+car_items_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/2/trunk/test/unit/helpers/car_items_helper_test.rb
+END
+regions_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/49/trunk/test/unit/helpers/regions_helper_test.rb
+END
+transactions_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/head/!svn/ver/2/trunk/test/unit/helpers/transactions_helper_test.rb
+END
+used_cars_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/2/trunk/test/unit/helpers/used_cars_helper_test.rb
+END
+brands_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/2/trunk/test/unit/helpers/brands_helper_test.rb
+END
+admins_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/head/!svn/ver/49/trunk/test/unit/helpers/admins_helper_test.rb
+END
+part_categories_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/head/!svn/ver/2/trunk/test/unit/helpers/part_categories_helper_test.rb
+END

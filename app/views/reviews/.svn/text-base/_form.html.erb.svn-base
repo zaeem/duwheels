@@ -1,0 +1,23 @@
+<% form_for(@review) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :rating %><br />
+    <%= f.select :rating, [['1 star',1],['2 star',2],['3 star',3],['4 star',4],['5 star',5]] %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+    <input type="hidden" name="review[used_car_id]" value="<%= @review.used_car_id %>"/>
+    <input type="hidden" name="review[new_car_id]" value="<%= @review.new_car_id %>"/>
+    <input type="hidden" name="review[vendor_id]" value="<%= @review.vendor_id %>"/>
+    <input type="hidden" name="review[user_id]" value="<%= @review.user_id %>"/>
+  <p>
+    <%= submit_tag button_label %>
+  </p>
+<% end %>

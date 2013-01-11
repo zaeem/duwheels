@@ -1,0 +1,8 @@
+<% set_title "Edit Showroom" %>
+
+<%= link_to 'Back', showroom_path(@showroom) %>
+
+<div id="mainTtl" >
+  <h1>Edit Showroom</h1>
+</div>
+<%= render :partial => "form", :locals => { :button_label => "Update" } %>

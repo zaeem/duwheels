@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/head/!svn/ver/57/trunk/app/views/makes
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/head/!svn/ver/57/trunk/app/views/makes/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/57/trunk/app/views/makes/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/head/!svn/ver/57/trunk/app/views/makes/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/head/!svn/ver/57/trunk/app/views/makes/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/57/trunk/app/views/makes/_form.html.erb
+END
+_car_model.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/57/trunk/app/views/makes/_car_model.html.erb
+END

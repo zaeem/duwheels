@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/head/!svn/ver/70/trunk/app/views/admins
+END
+feature_a_merchant.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/head/!svn/ver/70/trunk/app/views/admins/feature_a_merchant.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/70/trunk/app/views/admins/show.html.erb
+END

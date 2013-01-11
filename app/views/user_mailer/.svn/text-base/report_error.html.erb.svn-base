@@ -1,0 +1,7 @@
+Dear Admin,
+           The <%= @user %> has reported following error(s):
+
+<%= @error %>.
+
+You can contact him. His phone number is: <%= @contact_no %>
+

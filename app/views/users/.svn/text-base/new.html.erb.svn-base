@@ -1,0 +1,77 @@
+<div style="float:right;">If you already have an account, you can 
+  <%= link_to "sign in here.", login_path %>
+</div>
+
+<div id="mainTtl">
+  <h1 style="font-size: 36px; font-weight: bold; color: rgb(1, 72, 91); font-style: normal;">
+    Create an Account</h1>
+</div>
+
+<div class="clr"></div>
+<%= error_messages_for :user %>
+
+<div id="userRegisterFormDiv" style="float:left;width:100%;">
+<% form_for :user, :url => users_path do |f| %>
+<table width = "100%" class="sign-up-tbl" >
+  <tr>
+    <td ><label for="login">Login</label></td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :login %></td>
+  </tr>
+
+  <tr>
+    <td><label for="email">Email</label></td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :email %></td>
+  </tr>
+
+  <tr>
+    <td><label for="name">Name</label></td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :name %></td>
+  </tr>
+
+  <tr>
+    <td><label for="cell_no">Cell No</label></td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :cell_no %></td>
+  </tr>
+
+  <tr>
+    <td><label for="city">City</label></td>
+  </tr>
+  <tr>
+    <td><%= f.text_field :city %></td>
+  </tr>
+
+  <tr>
+    <td><label for="password">Password</label></td>
+  </tr>
+  <tr>
+    <td><%= f.password_field :password %></td>
+  </tr>
+
+  <tr>
+    <td><label for="password_confirmation">Confirm Password</label></td>
+  </tr>
+  <tr>
+    <td><%= f.password_field :password_confirmation %></td>
+  </tr>
+
+  <tr>
+    <td><%= f.radio_button :gender, "male" %>&nbsp;Male &nbsp;&nbsp;<%= f.radio_button :gender, "female" %>&nbsp;Female</td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><%= submit_tag 'Sign up' %></td>
+  </tr>
+</table>
+<% end %>
+</div>

@@ -1,0 +1,8 @@
+<div id="mdCategory">
+<h3>Categories</h3>
+<ul>
+<% for part_category in @part_categories %>
+  <li><a href="/vendors/?category=<%= part_category.id %>"><%= part_category.name %></a> (<%= part_category.vendors.uniq.size %>)</li>
+<% end %>
+</ul>
+</div>

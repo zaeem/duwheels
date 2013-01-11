@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  make: MyString
+  model: MyString
+  asking_price: 1
+  engine_capacity: MyString
+  transmission: MyString
+  type_of_vehicle: MyString
+  fuel_type: MyString
+  milage: MyString
+  feature: MyString
+  accessories: MyText
+  description: MyText
+  user_id: 1
+  model_year: MyString
+
+two:
+  make: MyString
+  model: MyString
+  asking_price: 1
+  engine_capacity: MyString
+  transmission: MyString
+  type_of_vehicle: MyString
+  fuel_type: MyString
+  milage: MyString
+  feature: MyString
+  accessories: MyText
+  description: MyText
+  user_id: 1
+  model_year: MyString

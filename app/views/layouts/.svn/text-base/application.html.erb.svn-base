@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>DuWheels</title>
+
+  <%= javascript_include_tag "jquery-1.4.4" %>
+  
+  <%= yield :car_comparison_javascript %>
+  <%= yield :popup_menu_javascript %>
+  <%= yield :slider_Style_and_jquery %>
+
+  <%= javascript_include_tag "application_layout_javascript" %>
+
+  <script type="text/javascript">
+  <!--
+
+  ( function($) {
+
+    $(document).ready(function(){
+
+      <% if logged_in? %>
+      if (<%= current_user.login.size %> > 8){
+        increase = (<%= current_user.login.size %> - 8)*6;
+        actualWidthParent = parseInt($('#topBar').css('width'));
+        actualWidthChild = parseInt($('#topBar .topLinks').css('width'));
+        actualWidthParent += increase;
+        actualWidthChild += increase;
+        $('#topBar').css('width', actualWidthParent+'px');
+        $('#topBar .topLinks').css('width', actualWidthChild+'px');
+      }
+      <% end %>
+
+    });
+
+  } ) ( jQuery );
+
+  //-->
+  </script>
+
+  <%= stylesheet_link_tag "style" %>
+</head>
+
+<body>
+<!--Start of the Header -->
+  <div id="wraper">
+
+    <div id="logo">
+      <a href="/"><img src="/images/duwheels-logo.jpg" alt="Duwheels" /></a>
+    </div>
+
+    <div id="topBar">
+      <div class="topRightDv"><img src="/images/backgrounds/topBar-bg-right.jpg" alt="topbar" /></div>
+      <div class="topLinks">Welcome <% if logged_in? %><%= current_user.login %>,<% else %>Guest,<% end %>
+      <% if logged_in? %>
+      <%= link_to "Logout", session_path, :method => :delete %><% else %><%= link_to "Login", login_path %><% end %> | <%= link_to 'Register', new_user_path %></div>
+      <div class="langaugeDv"><a href="#">English</a> | <a href="#">Arabic</a></div>
+    </div>
+
+    <div id="adminDiv">
+      <% if admin_logged_in? %>
+      <%= link_to "Go To Admin Control Panel", admins_path, :class => "admin_page_pop", :title => 'Admin' %>
+      <% end %>
+    </div>
+
+    <ul id="nav">
+      <span class="leftBrdr"><img src="/images/nav-left.jpg" alt="navigation left image" /></span>
+        <li><img src="/images/home-logo.jpg" alt="home button" id="home_image" /></li>
+        <li><%= link_to 'New Cars', new_cars_path %></li>
+        <li><%= link_to 'Used Cars', used_cars_path %></li>
+        <li><%= link_to 'Sell Cars', new_used_car_path %></li>
+        <li><%= link_to 'Motor Directory', motor_directory_path %></li>
+        <li><a href="#">Forums</a></li>
+        <li><%= link_to 'Showroom', home_showrooms_path %></li>
+      <span class="rightBrdr"><img src="/images/nav-right.jpg" alt="navigation right image" /></span>
+    </ul>
+
+<!-- Start of the Body -->
+    <div id="body_bg">
+      <div id="wrapper">
+        <div class="body_tbl_top"></div>
+        <div class="body_tbl_mid">
+          <div id="container" style="clear:both;">
+          <% unless flash[:notice].blank? %>
+            <div class="alertExplanation"><%= flash[:notice] %></div>
+            <div class="clr"></div>
+          <% end %>
+          <% unless flash[:alert].blank? %>
+            <div class="errorExplanation"><%= flash[:alert] %></div>
+            <div class="clr"></div>
+          <% end %>
+
+          <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--Start of the Fotter -->
+ 
+
+<div id="footerContainer">
+<div id="footer">
+<div class="col1">
+<div class="supportDv">
+<h1>Support</h1>
+<ul>
+<li><a href="#">How to</a></li>
+<li><a href="#">Help</a></li>
+</ul>
+</div>
+<div class="companyDv">
+<h1>Company</h1>
+<ul>
+<li><a href="#">companyDv</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Advertising</a></li>
+<li><a href="#">Terms of Use</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="col2">
+<div class="newcarsDv">
+<h1>New Cars</h1>
+<ul>
+<li><%= link_to 'Top New Cars', new_cars_path %></li>
+<li><%= link_to 'New Car Pricelist', price_list_new_cars_path %></li>
+<li><%= link_to 'New Car Make Ferrari', search_new_cars_path(:new_car_make => 'ferrari') %></li>
+<li><%= link_to 'New Car Comparison', car_comparison_new_cars_path %></li>
+</ul>
+</div>
+<div class="usedcarsDv">
+<h1>Used Cars</h1>
+<ul>
+<li><%= link_to 'Top Used Cars', used_cars_path %></li>
+<li><%= link_to 'Used Cars in Dubai', search_used_cars_path(:used_car_city => 'dubai') %></li>
+<li><%= link_to 'Used Car Ferrari', search_used_cars_path(:used_car_make => 'ferrari') %></li>
+<li><%= link_to 'Used Car Honda', search_used_cars_path(:used_car_make => 'honda') %></li>
+</ul>
+</div>
+<div class="motorDv">
+<h1>Motor Directory</h1>
+<ul>
+<li><%= link_to 'Accessories', category_type_vendors_path(:type => 'accessories') %></li>
+<li><%= link_to 'Performance', category_type_vendors_path(:type => 'performance') %></li>
+<li><%= link_to 'Cosmetic', category_type_vendors_path(:type => 'cosmetic') %></li>
+<li><%= link_to 'Grooming', category_type_vendors_path(:type => 'grooming') %></li>
+<li><%= link_to 'Maintanance', category_type_vendors_path(:type => 'maintainence') %></li>
+<li><%= link_to 'Car Sales / Rental', category_type_vendors_path(:type => 'car_sales') %></li>
+<li><%= link_to 'General Info', category_type_vendors_path(:type => 'general_info') %></li>
+<li><%= link_to 'Hot Deals', hotdeals_path %></li>
+</ul>
+</div>
+</div>
+
+<div class="col3">
+<div class="connectDv">
+<h1>Connect with us</h1>
+<a href="#"><img src="/images/fb-icn.jpg" /></a>
+<a href="#"><img src="/images/twtr-icn.jpg" /></a>
+<a href="#"><img src="/images/utube-icn.jpg" /></a></div>
+<div class="languageDv">
+<h1>Languages</h1>
+<a href="#">English</a>
+<a href="#"><img src="/images/alarbia.jpg" /></a></div>
+<div class="cntctDv">
+<h1>Contact Us</h1>
+<% form_tag(contact_us_used_cars_path, :id => "cantact_us_form", :method => "get") do %>
+<table width="401" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>Name :</td>
+    <td><input type="text" id="contact_user_name" name="user_name" class="textFld" value="" /></td>
+  </tr>
+  <tr>
+    <td>Email :</td>
+    <td><input type="text" id="contact_user_email" name="user_email"  class="textFld" value="" /></td>
+  </tr>
+  <tr>
+    <td>Message :</td>
+    <td><textarea class="txtarea" id="contact_user_message" name="message"></textarea></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="right"><input type="image" id="contact_form_submit" src="/images/buttons/senbtn.jpg" /></td>
+  </tr>
+</table>
+<% end %>
+</div>
+</div>
+
+
+<div class="copyBg">
+&copy; DuWheels.com 2011, All Rights Reserved
+</div>
+</div>
+</div>
+
+</body>
+</html>

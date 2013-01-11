@@ -1,0 +1,83 @@
+<script type="text/javascript">
+<!--
+  ( function($) {
+  $(document).ready(function(){
+    arrayOfFeatures = ['<tr><td>Air Bags</td>', '<tr><td>Air Conditioning</td>', '<tr><td>Power Windows</td>',
+      '<tr><td>Power Steering</td>', '<tr><td>Power Locks</td>', '<tr><td>Power Mirror</td>', '<tr><td>Keyless Entry</td>',
+      '<tr><td>Cruise Control</td>', '<tr><td>Navigation System</td>', '<tr><td>ABS</td>', '<tr><td>FM/AM Radio</td>',
+      '<tr><td>Cassette Player</td>', '<tr><td>CD Player</td>', '<tr><td>Sun Roof</td>', '<tr><td>Alloy Rims</td>']
+    features = '<%= @new_car1.feature %>';
+    lengthOfFeatures = <%= @new_car1.feature.size %>;
+    featureHtml = '';
+    for (var i = 0 ; i < lengthOfFeatures; ++i){
+      if (features[i] == '1'){
+        featureHtml = featureHtml + arrayOfFeatures[i] + '<td>Yes</td></tr>';
+      }else{
+        featureHtml = featureHtml + arrayOfFeatures[i] + '<td>No</td></tr>';
+      }
+    }
+    if (featureHtml == ''){
+      $('#usedCarSpecifications<%= @elementId %> .features<%= @elementId %>').html('<tr><td>Air Bags</td><td>No</td></tr>\n\
+        <tr><td>Air Conditioning</td><td>No</td></tr><tr><td>Power Windows</td><td>No</td></tr> \n\
+        <tr><td>Power Steering</td><td>No</td></tr><tr><td>Power Locks</td><td>No</td></tr>\n\
+        <tr><td>Power Mirror</td><td>No</td></tr><tr><td>Keyless Entry</td><td>No</td></tr>\n\
+        <tr><td>Cruise Control</td><td>No</td></tr><tr><td>Navigation System</td><td>No</td></tr>\n\
+        <tr><td>ABS</td><td>No</td></tr><tr><td>FM/AM Radio</td><td>No</td></tr>\n\
+        <tr><td>Cassette Player</td><td>No</td></tr><tr><td>CD Player</td><td>No</td></tr>\n\
+        <tr><td>Sun Roof</td><td>No</td></tr><tr><td>Alloy Rims</td><td>No</td></tr>');
+    } else {
+      $('#usedCarSpecifications<%= @elementId %> .features<%= @elementId %>').html(featureHtml);
+    }
+  });
+  } ) ( jQuery );
+//-->
+</script>
+
+<table>
+  <tr>
+    <td>make</td>
+    <td><%= @new_car1.make %></td>
+  </tr>
+  <tr>
+    <td>model</td>
+    <td><%= @new_car1.model %></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td><%= @new_car1.asking_price %></td>
+  </tr>
+  <tr>
+    <td>engine capacity</td>
+    <td><%= @new_car1.engine_capacity %></td>
+  </tr>
+  <tr>
+    <td>transmission</td>
+    <td><%= @new_car1.transmission %></td>
+  </tr>
+  <tr>
+    <td>Type Of Vehicle</td>
+    <td><%= @new_car1.type_of_vehicle %></td>
+  </tr>
+  <tr>
+    <td>fuel type</td>
+    <td><%= @new_car1.fuel_type %></td>
+  </tr>
+  <tr>
+    <td>milage</td>
+    <td><%= @new_car1.milage %></td>
+  </tr>
+  <tr>
+    <td>accessories</td>
+    <td><%= @new_car1.accessories %></td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td><%= @new_car1.description %></td>
+  </tr>
+</table>
+
+<div id="usedCarSpecifications<%= @elementId %>">
+  <h1 class="featureTtl<%= @elementId %>" style="margin-top: 20px;">Features</h1>
+  <table class="features<%= @elementId %>">
+  </table>
+</div>

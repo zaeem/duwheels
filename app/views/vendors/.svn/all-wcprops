@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/head/!svn/ver/68/trunk/app/views/vendors
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/67/trunk/app/views/vendors/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/19/trunk/app/views/vendors/search.html.erb
+END
+advertise.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/head/!svn/ver/67/trunk/app/views/vendors/advertise.html.erb
+END
+recommended_merchants.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/head/!svn/ver/43/trunk/app/views/vendors/recommended_merchants.html.erb
+END
+_category_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/43/trunk/app/views/vendors/_category_list.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/67/trunk/app/views/vendors/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/67/trunk/app/views/vendors/new.html.erb
+END
+all_reviews.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/67/trunk/app/views/vendors/all_reviews.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/68/trunk/app/views/vendors/show.html.erb
+END
+suggest.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/53/trunk/app/views/vendors/suggest.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/67/trunk/app/views/vendors/_form.html.erb
+END
+hotdeals.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/43/trunk/app/views/vendors/hotdeals.html.erb
+END
+report_error.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/head/!svn/ver/67/trunk/app/views/vendors/report_error.html.erb
+END

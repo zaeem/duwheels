@@ -1,0 +1,333 @@
+<%= render :partial => '/shared/gmap' %>
+
+<script type="text/javascript">
+<!--
+
+  $(document).ready(function(){
+    var map = new GMap2(document.getElementById('map'));
+    <% if @vendor.gmaps == true %>
+    var Dubai = new GLatLng(<%= @vendor.latitude.to_f %>, <%= @vendor.longitude.to_f %>);
+    <% else %>
+    var Dubai = new GLatLng(25.094110, 55.170850);
+    <% end %>
+    map.setCenter(Dubai, 12);
+    map.setUIToDefault();
+    var marker = null;
+    marker = new GMarker(Dubai);
+    map.addOverlay(marker);
+
+    $('#showMerchantMap').click(function(){
+      $(this).addClass('current');
+      $('#showMerchantProfile').removeClass('current');
+      $('#showMerchantReviews').removeClass('current');
+      $('#showMerchantProducts').removeClass('current');
+      $('#merchantProfile').css('display','none');
+      $('#merchantReviews').css('display','none');
+      $('#merchantProducts').css('display','none');
+      $('#map').css('display','block');
+    });
+
+    $('#showMerchantProfile').click(function(){
+      $(this).addClass('current');
+      $('#showMerchantMap').removeClass('current');
+      $('#showMerchantReviews').removeClass('current');
+      $('#showMerchantProducts').removeClass('current');
+      $('#map').css('display','none');
+      $('#merchantReviews').css('display','none');
+      $('#merchantProducts').css('display','none');
+      $('#merchantProfile').css('display','block');
+    });
+
+    $('#showMerchantReviews').click(function(){
+      $(this).addClass('current');
+      $('#showMerchantMap').removeClass('current');
+      $('#showMerchantProfile').removeClass('current');
+      $('#showMerchantProducts').removeClass('current');
+      $('#map').css('display','none');
+      $('#merchantProfile').css('display','none');
+      $('#merchantProducts').css('display','none');
+      $('#merchantReviews').css('display','block');
+    });
+
+    $('#showMerchantProducts').click(function(){
+      $(this).addClass('current');
+      $('#showMerchantMap').removeClass('current');
+      $('#showMerchantProfile').removeClass('current');
+      $('#showMerchantReviews').removeClass('current');
+      $('#map').css('display','none');
+      $('#merchantProfile').css('display','none');
+      $('#merchantReviews').css('display','none');
+      $('#merchantProducts').css('display','block');
+    });
+    /*************************************************************************/
+
+    $('#showMap').click(function(){
+      $('#showMerchantMap').addClass('current');
+      $('#showMerchantProfile').removeClass('current');
+      $('#showMerchantReviews').removeClass('current');
+      $('#showMerchantProducts').removeClass('current');
+      $('#merchantProfile').css('display','none');
+      $('#merchantReviews').css('display','none');
+      $('#merchantProducts').css('display','none');
+      $('#map').css('display','block');
+    });
+
+    $('#showReview').click(function(){
+      $('#showMerchantReviews').addClass('current');
+      $('#showMerchantMap').removeClass('current');
+      $('#showMerchantProfile').removeClass('current');
+      $('#showMerchantProducts').removeClass('current');
+      $('#map').css('display','none');
+      $('#merchantProfile').css('display','none');
+      $('#merchantProducts').css('display','none');
+      $('#merchantReviews').css('display','block');
+    });
+
+    <% if @map %>
+    $('#merchantProfile').hide();
+    $('#merchantReviews').hide();
+    $('#merchantProducts').hide();
+    <% elsif @review %>
+    $('#merchantProfile').hide();
+    $('#map').hide();
+    $('#merchantProducts').hide();
+    <% else %>
+    $('#merchantReviews').hide();
+    $('#map').hide();
+    $('#merchantProducts').hide();
+    <% end %>
+
+    $('img#ratingStarImages0').attr("src","/images/blank.png");
+    $('img#ratingStarImages1').attr("src","/images/1star.png");
+    $('img#ratingStarImages2').attr("src","/images/2star.png");
+    $('img#ratingStarImages3').attr("src","/images/3star.png");
+    $('img#ratingStarImages4').attr("src","/images/4star.png");
+    $('img#ratingStarImages5').attr("src","/images/5star.png");
+
+  });
+
+//-->
+</script>
+
+<%= link_to 'Back', showroom_path(@vendor.showroom) %>
+
+<div id="contentDv">
+
+<div class="mrchntTitle">
+  <h1><%= @vendor.name %></h1>
+  <div class="quickLinks">
+    <% if current_user %>
+    <% if current_user.id == @vendor.user.id %>
+      <%= link_to 'Edit Your Own Shop', vendor_edit_showroom_path(@vendor, :showroom_id => @vendor.showroom.id), :class => 'editLnk' %><% end %><% end %> <!--| <a href="#" class="reportLnk">Report Error</a> | <a href="#" class="emailLnk">Email this Page</a> | <a href="#" class="shareLink">Share</a>-->
+  </div>
+</div>
+
+<div class="mrchntLeftCol">
+  <div class="mrchntDetailDv">
+    <ul class="mrchntTab">
+      <li><a <% if !@map && !@review %>class="current"<% end %> id="showMerchantProfile">Profile</a></li>
+      <li><a id="showMerchantProducts">Products/Services</a></li>
+      <li><a <% if @review %>class="current"<% end %> id="showMerchantReviews">User Reviews</a></li>
+      <li><a <% if @map %>class="current"<% end %> id="showMerchantMap">Maps</a></li>
+    </ul>
+    <div id="merchantProfile">
+    <table cellspacing="0" cellpadding="5" border="0" width="450" class="mrchntDetailTbl">
+      <tr>
+        <td class="labelTd">Address :</td>
+        <td><%= @vendor.address %> (<a id="showMap">map</a>)</td>
+        <td width="67" class="mdImage" rowspan="8">
+          <% if @vendor.pictures.empty? %>
+            <img src="/images/md-logo.gif" alt="logo of merchant" style="width: 150px;height: 50px;" />
+          <% else %>
+            <%= image_tag @vendor.pictures.first.photo.url(:thumb), :alt => "logo of merchant", :id => 'primaryImage', :size => '150x50' %>
+          <% end %>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="labelTd">Phone :</td>
+        <td><%= @vendor.phone %></td>
+      </tr>
+      <tr>
+        <td class="labelTd">Category :</td>
+        <td>
+          <% for category in @vendor.part_categories.uniq %>
+            <a href="#"><%= category.name %>,</a>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="labelTd">Brands Carried :</td>
+        <td>
+          <% for brand in @vendor.brands.uniq %>
+            <a href="#"><%= brand.name %></a>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="labelTd">Description :</td>
+        <td>
+          <% if @vendor.description.empty? %>
+          No Description Available
+          <% else %>
+          <%= @vendor.description %>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="labelTd">Merchant Rating :</td>
+        <% if @vendor.reviews.uniq.empty? %>
+        <td>No Rating Yet <a id="showReview">(0 Reviews)</a></td>
+        <% else %>
+          <td><img src="/images/ratings-star.png" alt="Rating star image" id="ratingStarImages<%= @vendor.rating_star %>" align="left" />&nbsp;&nbsp; <a id="showReview"> (<%= @vendor.reviews.uniq.size %> Reviews)</a></td>
+        <% end %>
+      </tr>
+    </table>
+    </div>
+
+<div id="map"></div>
+<style media="screen"type="text/css">#map { width:500px; height:250px; margin-top:30px;margin-left:10px; }</style>
+
+<div id="merchantReviews">
+  <div class="reviewTitle">
+    <h3 style="float:left; width:50%; margin-top:0px; padding-top: 5px;padding-bottom: 0px;margin-bottom:0px;background-image:none;"><%= @vendor.reviews.uniq.size %> Reviews</h3>
+    <a href="/reviews/new?vendor_id=<%= @vendor.id %>">
+      <img src="/images/buttons/sbmit-review-btn.jpg" alt="submit a review button" />
+    </a>
+  </div>
+  <!--
+  <div class="reviewFilters">
+    <p class="sortP">Sort by
+    <select>
+      <option>Date</option>
+      <option>Day</option>
+      <option>Records</option>
+    </select>
+    </p>
+    <p class="reviewResults">
+    <select>
+      <option>10</option>
+      <option>15</option>
+      <option>25</option>
+    </select>
+    Results / Page
+    </p>
+  </div>
+  -->
+<% if @reviews.empty? %>
+  No Reviews till now!
+<% else %>
+  <% for review in @reviews %>
+    <div class="reviews">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th width="7%" rowspan="3" align="left" valign="top" scope="col">
+            <a href=""><img src="/images/reviews.jpg" alt="userPic" /></a>
+          </th>
+          <th width="78%" align="left" scope="col">
+            <a href="#" class="RevTtl"><%= review.title %></a>
+          </th>
+          <th width="15%" align="right" scope="col">
+            <img id="ratingStarImages<%= review.rating %>" src="" alt="rating star" />
+          </th>
+        </tr>
+        <tr>
+          <td colspan="2"><%= review.body %></td>
+        </tr>
+        <tr>
+          <td class="reviewDate"><%= review.created_at.strftime("%B %d,%Y") %></td>
+          <td align="right"><a href=""></a></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+  <%= will_paginate @reviews %>
+<% end %>
+</div>
+
+<div id="merchantProducts">
+
+<div class="mdHotDeals" style="margin-bottom: 20px;">
+<h3><span>Hot Deals</span> </h3>
+<ul>
+
+<% if @vendor.hot_deals.empty? %>
+  No hot deal found
+<% else %>
+  <% for hot_deal in @vendor.hot_deals %>
+  <li>
+    <% if hot_deal.pictures.empty? %>
+      <img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+    <% else %>
+      <%= image_tag hot_deal.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+    <% end %>
+    <a href="/vendors/<%= hot_deal.vendor_id %>/car_items/<%= hot_deal.id %>"><%= hot_deal.name %></a><br />
+    Price <%= currencify(hot_deal.price) %>
+  </li>
+  <% end %>
+<% end %>
+
+</ul>
+</div>
+
+
+<div class="mdHotDeals" style="margin-bottom: 20px;">
+<h3><span>Other products</span> </h3>
+<ul>
+
+<% if @vendor.normal_products.empty? %>
+  No product found
+<% else %>
+<% for product in @vendor.normal_products %>
+<li>
+<% if product.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag product.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= product.vendor_id %>/car_items/<%= product.id %>"><%= product.name %></a><br />
+<%= currencify(product.price) %>
+</li>
+<% end %>
+<% end %>
+
+</ul>
+</div>
+
+</div>
+
+<div class="mrchntCntct">
+<table width="96%" border="0" cellpadding="0" cellspacing="5">
+  <tr>
+    <th scope="col" colspan="3">Oversea Union Motor Accessories Co.</th>
+  </tr>
+  <tr>
+    <td width="21%" rowspan="4"><% if @vendor.pictures.empty? %><img src="/images/mrchnt.jpg" alt="Merchant picture" /><% else %>
+    <%= image_tag @vendor.pictures.first.photo.url(:medium), :alt => "No image found", :id => 'primaryImage', :size => '150x111' %><% end %></td>
+    <td width="15%"><strong>Address :</strong></td>
+    <td width="64%"><%= @vendor.address %> <!--(<a href="#">map</a>)--></td>
+  </tr>
+  <!--<tr>
+    <td><strong>Operating Hour :</strong></td>
+    <td>9am - 6pm (Monday to Saturday)</td>
+  </tr>
+  --><tr>
+    <td><strong>Hot Line :</strong></td>
+    <td><%= @vendor.phone %></td>
+  </tr><!--
+  <tr>
+    <td valign="top"><strong>Email :</strong></td>
+    <td valign="top">prum.1970@hotmail.com</td>
+  </tr>-->
+</table>
+</div>
+
+<div id="searchRight"><a href="#"><!--<img src="/images/banner.jpg" alt="ad banner" />--></a></div></div>
+</div>
+
+<!--
+<span><%= link_to 'Add Item', new_vendor_car_item_path(@vendor) %></span>
+
+<a href="/vendors/<%= @vendor.id %>/car_items">View items</a>-->
+
+</div>

@@ -1,0 +1,99 @@
+<% set_title "Update Vendor" %>
+
+<%= link_to 'Back', showroom_path(@showroom) %>
+
+<div id="container">
+  <div id="mainTtl"></div>
+
+<%= render :partial => '/shared/gmap' %>
+
+<%= javascript_include_tag "select_form_field_javascript" %>
+
+<div class="clr"></div>
+
+<%= error_messages_for :vendor %>
+
+<br />
+
+<div id="postFormDv">
+
+<% form_for(@vendor, :url => vendor_update_showroom_path(@vendor) ,:html => { :multipart => true }) do |f| %>
+ <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+
+    <tr>
+      <td colspan="2" class="titleTd"><h3>Edit Merchant</h3></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="postMessage">Please fill in the form below to provide complete details of your business. The details should be absolutely accurate and up to date.</td>
+    </tr>
+
+    <tr class="bgRow">
+      <td><label for="name" >Name :</label></td>
+      <td><%= f.text_field :name, :class => 'txtFld' %><span class="spanCompulsry">*</span></td>
+    </tr>
+
+    <tr>
+      <td><label for="address">Address :</label></td>
+      <td><%= f.text_field :address, :class => 'txtFld' %><span class="spanCompulsry">*</span></td>
+    </tr>
+
+    <tr class="bgRow">
+      <td><label for="phone">Phone :</label></td>
+      <td><%= f.text_field :phone, :class => 'txtFld'  %><span class="spanCompulsry">*</span></td>
+    </tr>
+
+    <tr>
+      <td><label for="description">Description :</label></td>
+      <td><%= f.text_area :description, :cols => 29, :rows => 8, :class => 'textArea'  %></td>
+    </tr>
+
+    <tr class="bgRow">
+      <td><label for="part_category_id">Special Working Category :</label></td>
+      <td><%= f.select :part_category_id, @list_of_categories, :class => 'lstFld' %></td>
+    </tr>
+
+    <tr>
+      <td><label for="description">Merchant Logo :</label></td>
+      <td>
+        <p>
+          <% if @vendor.new_record? || @vendor.pictures.size == 0 %>
+          <input type="file" size="30" name="vendor[picture_attributes][][photo]" id="vendor_picture_attributes__photo" />
+          <% else %>
+          Logo has been selected.
+          <% end %>
+        </p>
+        <span class="spanLabel">Pictures should be in "jpeg, jpg, pjpeg, png, gif, bmp" format only.</span>
+      </td>
+    </tr>
+
+    <tr class="bgRow">
+      <td><label for="description">Merchant Posters :</label></td>
+      <td>
+        <%= render :partial => '/shared/pictures_javascript', :locals => {:object => @vendor, :object_type => 'vendor'} %>
+      </td>
+    </tr>
+
+    <tr>
+      <td><label for="description">Your location please :</label></td>
+      <td>
+        <input type="hidden" name="showroom_id" value="<%= @showroom.id %>" />
+        <%= f.hidden_field :latitude %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :gmaps %>
+        <div id="map"></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><input type="image" src="/images/buttons/submit-btn.jpg" class="inputBtn" /></td>
+    </tr>
+  </table>
+<% end %>
+</div>
+
+<div id="rightAd"><a href=""><img src="/images/banner.jpg" alt="ad" /></a></div>
+</div>
+
+<%= render :partial => "/shared/location", :locals => {:object => @vendor, :object_type => 'vendor'} %>
+

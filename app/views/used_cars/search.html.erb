@@ -1,0 +1,266 @@
+<%= pluralize_helper(@used_cars.size,'car','found') %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  
+  $('div.refineResult img').click(function(){
+    var id = $(this).attr('alt').valueOf();
+    if ($(this).attr('src').valueOf() == '/images/icons/minus.jpg'){
+      $('#'+id).hide('slow');
+      $(this).attr('src','/images/icons/plus.jpg');
+    } else {
+      $('#'+id).show('slow');
+      $(this).attr('src','/images/icons/minus.jpg');
+    }
+  });
+  
+  $('#sort_filter').change(function(){
+    window.location.href = "/used_cars/search<%= @search_query %>&&sort_filter="+$('#sort_filter').val();
+  });
+  
+});
+</script>
+
+<div id="searchContainer">
+<h1>Vehicles for Sale</h1>
+<div id="searchLeft">
+<div class="searchFilter">
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+<tr>
+<td align="left" width="71%" class="fltrHdng">Filtering  by:</td>
+<td align="right" width="29%"><!--[ <a href="#" class="srchFltrLnk">Reset</a> ]--></td>
+</tr>
+<tr>
+<td class="fltrHdng" align="left"><% if @filter_by.empty? %>No Filter Applied<% else %><%= @filter_by %><% end %></td>
+<td class="adDtl" align="right"><!--<a href="#"><img src="/images/icons/blt_cncl.gif" alt="cancel filter" height="9" width="9" /></a>--></td>
+</tr>
+</table>
+</div>
+<h1>Refine your search</h1>
+<div class="refineResult">
+<h3><a><img src="/images/icons/minus.jpg" alt="date_posted" />Date Posted</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" id="date_posted">
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=last_24_hours">Last 24 hours</a></td><td align="right" class="refineNmbr">(<%= @last_24_hours %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=last_week">Last 7 days</a></td><td align="right" class="refineNmbr">(<%= @last_week %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=last_14_days">Last 14 days</a></td><td align="right" class="refineNmbr">(<%= @last_14_days %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=last_30_days">Last 30 days</a></td><td align="right" class="refineNmbr">(<%= @last_30_days %>)</td></tr>
+</table>
+</p>
+</div>
+
+<!--
+<div class="refineResult">
+<h3><a href="#"><img src="images/icons/minus.jpg" />User Type</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td class="refineTetx"><a href="#">Owner</a></td><td align="right" class="refineNmbr">(24)</td></tr>
+<tr><td class="refineTetx"><a href="#">Buyer</a></td><td align="right" class="refineNmbr">(36)</td></tr>
+</table>
+</p>
+</div>
+-->
+
+<div class="refineResult">
+<h3><a><img src="/images/icons/minus.jpg" alt="vehicle_type" />Vehicle Type</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" id="vehicle_type">
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=car">Car</a></td><td align="right" class="refineNmbr">(<%= @car %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=van">Van</a></td><td align="right" class="refineNmbr">(<%= @van %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=truck">Truck</a></td><td align="right" class="refineNmbr">(<%= @truck %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=sports">Sports</a></td><td align="right" class="refineNmbr">(<%= @sports %>)</td></tr>
+</table>
+</p>
+</div>
+
+<div class="refineResult">
+<h3><a><img src="/images/icons/minus.jpg" alt="make" />Make (Manufacturer)</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" id="make">
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=honda">Honda</a></td><td align="right" class="refineNmbr"><a href="#">(<%= @honda %>)</a></td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=toyota">Toyota</a></td><td align="right" class="refineNmbr">(<%= @toyota %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=suzuki">Suzuki</a></td><td align="right" class="refineNmbr">(<%= @suzuki %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=mitsubishi">Mitsubishi</a></td><td align="right" class="refineNmbr">(<%= @mitsubishi %>)</td></tr>
+</table>
+</p>
+</div>
+
+<div class="refineResult">
+<h3><a><img src="/images/icons/minus.jpg" alt="model" />Model</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" id="model">
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=accord">Accord</a></td><td align="right" class="refineNmbr">(<%= @accord %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=city">City</a></td><td align="right" class="refineNmbr">(<%= @city %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=civic">Civic</a></td><td align="right" class="refineNmbr">(<%= @civic %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=land_cruiser">Cruise</a></td><td align="right" class="refineNmbr">(<%= @land_cruiser %>)</td></tr>
+</table>
+</p>
+</div>
+<!--
+<div class="refineResult">
+<h3><a href="#"><img src="/images/icons/minus.jpg" />Manufacture Year</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td class="refineTetx"><a href="#">2005 - 2011</a></td><td align="right" class="refineNmbr">(21)</td></tr>
+<tr><td class="refineTetx"><a href="#">2000 - 2005</a></td><td align="right" class="refineNmbr">(36)</td></tr>
+<tr><td class="refineTetx"><a href="#">1995 - 2000</a></td><td align="right" class="refineNmbr">(42)</td></tr>
+<tr><td class="refineTetx"><a href="#">1990 - 1995</a></td><td align="right" class="refineNmbr">(117)</td></tr>
+</table>
+</p>
+</div>
+-->
+<!--
+<div class="refineResult">
+<h3><a href="#"><img src="/images/icons/minus.jpg" />Location</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td class="refineTetx"><a href="#">lahore</a></td><td align="right" class="refineNmbr"><a href="#">(Undo)</a></td></tr>
+<tr><td class="refineTetx"><a href="#">Karachi</a></td><td align="right" class="refineNmbr">(36)</td></tr>
+<tr><td class="refineTetx"><a href="#">Islamabad</a></td><td align="right" class="refineNmbr">(42)</td></tr>
+<tr><td class="refineTetx"><a href="#">Peshawer</a></td><td align="right" class="refineNmbr">(117)</td></tr>
+<tr><td class="refineTetx"><a href="#">More &gt;&gt;</a></td><td align="right" class="refineNmbr">&nbsp;</td></tr>
+</table>
+</p>
+</div>
+-->
+
+<div class="refineResult">
+<h3><a><img src="/images/icons/minus.jpg" alt="price_range" />Price Range (Rs.)</a></h3>
+<p>
+<table border="0" cellpadding="0" cellspacing="0" id="price_range">
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=less_than_1">Less than 100,000</a></td><td align="right" class="refineNmbr">(<%= @less_than_1 %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=between_1_and_4">100,000 - 400,000</a></td><td align="right" class="refineNmbr">(<%= @between_1_and_4 %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=between_4_and_6">400,000 - 600,000</a></td><td align="right" class="refineNmbr">(<%= @between_4_and_6 %>)</td></tr>
+<tr><td class="refineTetx"><a href="/used_cars/search?search_filter=above_6">Above 600,000</a></td><td align="right" class="refineNmbr">(<%= @above_6 %>)</td></tr>
+</table>
+</p>
+</div>
+
+</div>
+<div id="searchCenter">
+  <form action="/used_cars/search" id="sort_filter_form" class="searchFltrBox">
+<select id="sort_filter" name="sort_filter">
+<option>Sort By Price</option>
+<option value="DES">Price : High to Low</option>
+<option value="ASC">Price : Low to High</option>
+</select>
+</form>
+<!--<div class="searchResult featuredBg featuredMargin">
+<table border="0" cellpadding="0" cellspacing="0" class="searchRecord">
+  <tr>
+    <td width="70%">&nbsp;</td>
+    <td width="30%"><span class="featuredLabel">Featured Vehicles</span></td>
+  </tr>
+  <tr>
+    <td width="70%"><h3><a href="#">Honda City</a></h3></td>
+    <td width="30%">
+    <div class="price">Rs. 2,400,000</div></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="3">
+      <tr>
+        <td><strong>Color :</strong> Black</td>
+        <td><strong>Transmission :</strong> Manual</td>
+      </tr>
+      <tr>
+        <td><strong>Model :</strong> 2010</td>
+        <td><strong>Fuel Type :</strong> Petrol / CNG</td>
+      </tr>
+      <tr>
+        <td><strong>Mileage :</strong> 15,000km</td>
+        <td><strong>Location :</strong> Lahore</td>
+      </tr>
+    </table></td>
+    <td align="right" valign="middle"><a href="#" class="carPic"><img src="/images/car/car.jpg" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="#">View Details</a> | <a href="#">Save Auto</a></td>
+    <td class="dateTd">January 12, 2011</td>
+  </tr>
+</table>
+</div>
+<div class="searchResult featuredBg">
+<table border="0" cellpadding="0" cellspacing="0" class="searchRecord">
+  <tr>
+    <td width="70%"><h3><a href="#">Honda City</a></h3></td>
+    <td width="30%">
+    <div class="price">Rs. 2,400,000</div></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="3">
+      <tr>
+        <td><strong>Color :</strong> Black</td>
+        <td><strong>Transmission :</strong> Manual</td>
+      </tr>
+      <tr>
+        <td><strong>Model :</strong> 2010</td>
+        <td><strong>Fuel Type :</strong> Petrol / CNG</td>
+      </tr>
+      <tr>
+        <td><strong>Mileage :</strong> 15,000km</td>
+        <td><strong>Location :</strong> Lahore</td>
+      </tr>
+    </table></td>
+    <td align="right" valign="middle"><a href="#" class="carPic"><img src="/images/car/car.jpg" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="#">View Details</a> | <a href="#">Save Auto</a></td>
+    <td class="dateTd">January 12, 2011</td>
+  </tr>
+</table>
+</div>-->
+<% for car in @used_cars %>
+  <div class="searchResult">
+    <table border="0" cellpadding="0" cellspacing="0" class="searchRecord">
+      <tr>
+        <td width="70%"><h3><a href="#"><%= car.make %></a></h3></td>
+        <td width="30%"><div class="price"><%= currency_helper(car.asking_price) %></div></td>
+      </tr>
+      <tr>
+        <td>
+          <table width="100%" border="0" cellpadding="0" cellspacing="3">
+            <tr>
+              <td><strong>Color :</strong> <%=  'No Color Mentioned' %></td>
+              <td><strong>Transmission :</strong> <%= car.transmission %></td>
+            </tr>
+            <tr>
+              <td><strong>Model :</strong> <%= car.model %></td>
+              <td><strong>Fuel Type :</strong> <%= car.fuel_type %></td>
+            </tr>
+            <tr>
+              <td><strong>Mileage :</strong> <%= mileage_helper(car.milage) %></td>
+              <td><strong>Location :</strong> <%= car.registration_city %></td>
+            </tr>
+          </table>
+        </td>
+        <td align="right" valign="middle">
+          <a href="#" class="carPic">
+          <% if car.pictures.empty? %>
+            <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="100px" height="75px" />
+          <% else %>
+             <%= image_tag car.pictures.first.photo.url(:thumb), :alt => 'No image for this car!' %>
+          <% end %>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td><%= link_to 'View Details',  used_car_path(car) %><!-- <a href="#">Save Auto</a>--></td>
+        <td class="dateTd"><%= car.registration_date.strftime("%B %d,%Y") %></td>
+      </tr>
+    </table>
+  </div>
+<% end %>
+<%= will_paginate @used_cars %>
+<!--
+<div class="pagination">
+<table width="100%" border="0" cellpadding="5" cellspacing="0" >
+<tr>
+<td><strong>Results 1 - 10</strong></td>
+<td align="right">Page : <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a> <a href="#">Next ></a></td>
+</tr>
+</table>
+</div>
+-->
+</div>
+<div id="searchRight"><a href="#"><img src="/images/banner.jpg" alt="ad banner" /></a></div>
+</div>

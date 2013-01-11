@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/head/!svn/ver/57/trunk/app/helpers
+END
+makes_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/head/!svn/ver/57/trunk/app/helpers/makes_helper.rb
+END
+showrooms_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/49/trunk/app/helpers/showrooms_helper.rb
+END
+vendors_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/head/!svn/ver/2/trunk/app/helpers/vendors_helper.rb
+END
+new_cars_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/53/trunk/app/helpers/new_cars_helper.rb
+END
+users_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/head/!svn/ver/2/trunk/app/helpers/users_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/49/trunk/app/helpers/application_helper.rb
+END
+reviews_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/head/!svn/ver/23/trunk/app/helpers/reviews_helper.rb
+END
+car_items_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/2/trunk/app/helpers/car_items_helper.rb
+END
+regions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/head/!svn/ver/49/trunk/app/helpers/regions_helper.rb
+END
+sessions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/head/!svn/ver/2/trunk/app/helpers/sessions_helper.rb
+END
+used_cars_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/head/!svn/ver/2/trunk/app/helpers/used_cars_helper.rb
+END
+brands_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/head/!svn/ver/2/trunk/app/helpers/brands_helper.rb
+END
+admins_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/head/!svn/ver/49/trunk/app/helpers/admins_helper.rb
+END
+part_categories_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/head/!svn/ver/2/trunk/app/helpers/part_categories_helper.rb
+END

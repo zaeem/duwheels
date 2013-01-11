@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/head/!svn/ver/2/trunk/vendor/plugins/restful_authentication/generators/authenticated
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/head/!svn/ver/2/trunk/vendor/plugins/restful_authentication/generators/authenticated/USAGE
+END
+authenticated_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/head/!svn/ver/2/trunk/vendor/plugins/restful_authentication/generators/authenticated/authenticated_generator.rb
+END

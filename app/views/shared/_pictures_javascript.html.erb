@@ -1,0 +1,39 @@
+<script type="text/javascript">
+<!--
+  var myIds = new Array();
+
+  $(document).ready(function(){
+
+    limitToAddImage = <% if object.new_record? %>0<% else %><%= object.pictures.size %><% end %>;
+    $('#clickToCreateImageField').click(function(){
+      if (limitToAddImage < 5 && myIds.length == 0){
+        $('#imageMultipleFields').append('<p id="extraImage'+limitToAddImage+'"><input type="file" size="30" name="<%= object_type %>[picture_attributes][][photo]" id="<%= object_type %>_picture_attributes__photo"> <a onclick="removeImage(\'extraImage'+limitToAddImage+'\');">Remove me</a></p>');
+        limitToAddImage += 1;
+      } else if (myIds.length > 0){
+        var object=document.getElementById(myIds.pop());
+        object.childNodes[0].disabled = false;
+        object.style.display = "block";
+      }
+    });
+
+  });
+
+  function removeImage(obj){
+    myIds.push(obj);
+    document.getElementById(obj).childNodes[0].disabled = true;
+    document.getElementById(obj).style.display = "none";
+  }
+//-->
+</script>
+
+<div id="imageMultipleFields">
+  <% if object.new_record? %>
+  <%= render :partial => '/shared/picture', :collection => object.pictures, :locals => {:object_type => object_type} %>
+  <% else %>
+  <p><input type="file" size="30" name="<%= object_type %>[picture_attributes][][photo]" id="<%= object_type %>_picture_attributes__photo" <% if object.pictures.size > 5 %>disabled<% end %> /></p>
+  <% end %>
+  <% if object.pictures.size < 5 %>
+  <a id="clickToCreateImageField">Add Another Image</a>
+  <% end %>
+</div>
+<span class="spanLabel">Pictures should be in "jpeg, jpg, pjpeg, png, gif, bmp" format only.</span>

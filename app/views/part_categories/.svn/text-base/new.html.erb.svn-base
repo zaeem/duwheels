@@ -1,0 +1,5 @@
+<% set_title "Create Car Part Category" %>
+<div id="mainTtl" >
+  <h1 >Create Car Part Category</h1>
+</div>
+<%= render :partial => "form", :locals => { :button_label => "Create" } %>

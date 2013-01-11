@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>DuWheels</title>
+
+  <%= javascript_include_tag "jquery-1.4.4" %>
+
+  <%= stylesheet_link_tag "style" %>
+
+</head>
+<body>
+
+<!--Start of the Header -->
+<div id="wraper">
+<!--Start of the Body   -->
+    <div id="body_bg">
+      <div id="wrapper">
+        <div class="body_tbl_top"></div>
+        <div class="body_tbl_mid">
+          <div id="container" style="clear:both;">
+          <% unless flash[:notice].blank? %>
+            <div class="alertExplanation"><%= flash[:notice] %></div>
+            <div class="clr"></div>
+          <% end %>
+          <% unless flash[:alert].blank? %>
+            <div class="errorExplanation"><%= flash[:alert] %></div>
+            <div class="clr"></div>
+          <% end %>
+
+          <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Start of the Fotter -->
+
+  <div id="footer">
+    <div class="copyBg">
+      &copy; DuWheels.com 2010, All Rights Reserved
+    </div>
+  </div>
+
+
+</body>
+</html>

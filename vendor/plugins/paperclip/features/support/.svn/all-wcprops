@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/support
+END
+paths.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/support/paths.rb
+END
+s3.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/support/s3.rb
+END
+env.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/support/env.rb
+END
+rails.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/support/rails.rb
+END

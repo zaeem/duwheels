@@ -1,0 +1,5 @@
+<% fields_for object_type+'[picture_attributes][]', picture do |picture_form| %>
+<p>
+  <%= picture_form.file_field :photo %>
+</p>
+<% end %>

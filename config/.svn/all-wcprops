@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/head/!svn/ver/65/trunk/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/head/!svn/ver/65/trunk/config/routes.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/head/!svn/ver/3/trunk/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/head/!svn/ver/23/trunk/config/environment.rb
+END

@@ -1,0 +1,85 @@
+body {
+  font-family: Helvetica, Arial, sans-serif; }
+
+a {
+  color: #0981be; }
+
+p {
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0; }
+
+.header {
+  margin-bottom: 15px; }
+
+img, .drawer, .drawer_links, .nav, .login, .share, .photos, .comment_bubble, .footer {
+  display: none; }
+
+.deal {
+  border-top: 3px "dotted" #dddddd;
+  padding: 25px 0; }
+  .deal h2 {
+    font-size: 28px;
+    margin-bottom: 25px; }
+
+.primary {
+  width: 550px;
+  margin: 0 auto 25px auto;
+  font-weight: 700;
+  height: auto;
+  padding: 25px;
+  border: 2px "solid" #cccccc; }
+  .primary .price {
+    font-size: 30px;
+    float: left;
+    margin: 0 10px;
+    line-height: 40px; }
+  .primary .buy {
+    float: left; }
+    .primary .buy dl {
+      float: left;
+      margin: 0 15px;
+      text-align: center; }
+      .primary .buy dl dt {
+        font-weight: normal;
+        margin-bottom: 5px; }
+      .primary .buy dl dd {
+        margin: 0; }
+  .primary #remaining_time_container {
+    display: none; }
+  .primary #number_sold_container {
+    float: left; }
+
+.secondary {
+  border-top: 3px "dotted" #dddddd;
+  clear: left;
+  width: 800px;
+  margin: auto;
+  padding-top: 20px; }
+
+.fine_print, .highlights {
+  float: left;
+  width: 400px; }
+
+.write_up {
+  border-top: 3px "dotted" #dddddd;
+  border-bottom: 3px "dotted" #dddddd;
+  clear: left; }
+
+.article p {
+  margin: 10px 0; }
+.article h3 {
+  margin-top: 30px; }
+
+.company {
+  border-top: 3px "dotted" #dddddd;
+  padding-top: 25px; }
+
+.rail {
+  padding: 25px;
+  border-bottom: 3px "dotted" #dddddd; }
+  .rail ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }

@@ -1,0 +1,145 @@
+<%= render :partial => "/shared/makes_and_models" %>
+
+<%= render :partial => '/shared/gmap' %>
+
+<%= javascript_include_tag "select_form_field_javascript" %>
+
+<div class="clr"></div>
+
+<%= error_messages_for :used_car %>
+
+<div id="postFormDv">
+
+<% form_for(@used_car, :html => { :multipart => true }) do |f| %>
+  
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="titleTd"><h3>Basic Information</h3></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="postMessage">Please fill in the form below to provide complete details of your car. The details should be absolutely accurate and up to date. We also need to know your contact information to enable potential buyers reach you.</td>
+  </tr>
+  <tr>
+    <td class="labelTd">Car Make :</td>
+    <td>
+      <%= f.select :make, @makes, {}, :onchange => "updateModels(this.value, document.getElementById('used_car_model'))", :class => 'lstFld' %>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr class="bgRow">
+    <td>Car Model :</td>
+    <td>
+      <%= f.select :model, {}, :class => 'lstFld' %>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Year Model :</td>
+    <td>
+      <%= f.select :model_year, ['----','1980','1981','1982','1983','1984','1985','1986','1987','1988','1989','1990','1991','1992','1993','1994','1995','1996','1997','1998','1999','2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011'], :class => 'lstFld' %>
+      <span class="spanCompulsry">*</span>
+    </td>
+  </tr>
+  <tr class="bgRow">
+    <td>Price :</td>
+    <td><%= f.text_field :asking_price, :class => 'txtFld' %> <span class="spanCompulsry">*</span> <span class="spanLabel">$.</span></td>
+  </tr>
+  <tr>
+    <td>Car Plate Number :</td>
+    <td><%= f.text_field :car_plate_no, :class => 'txtFld' %> <span class="spanCompulsry">*</span></td>
+  </tr>
+  <tr class="bgRow">
+    <td>Car Registration City :</td>
+    <td><%= f.text_field :registration_city, :class => 'txtFld' %> <span class="spanCompulsry">*</span></td>
+  </tr>
+  <tr>
+    <td>Mileage : </td>
+    <td><%= f.text_field :milage, :class => 'txtFld' %> <span class="spanCompulsry">*</span> <span class="spanLabel">Kilometers</span></td>
+  </tr>
+  <tr class="bgRow">
+    <td>Transmission : </td>
+    <td><%= f.select :transmission, [["Manual", "manual"], ["Auto", "auto"]], :class => 'lstFld' %> <span class="spanCompulsry">*</span></td>
+  </tr>
+  <tr>
+    <td>Fuel Type :</td>
+    <td><%= f.select :fuel_type, [["Petrol", "petrol"], ["Diesel", "diesel"]], :class => 'lstFld' %> <span class="spanCompulsry">*</span></td>
+  </tr>
+  <tr class="bgRow">
+    <td>Type of Vehicle :</td>
+    <td><%= f.select :type_of_vehicle, [["Luxury Sedan", "luxury_sedan"], ["Mid Sized Sedan", "mid_sized_sedan"], ["Hatchback","hatchback"], ["Stationwagon","stationwagon"], ["SUV","suv"], ["Hybrid","hybrid"], ["Van","van"], ["MPV", "mpv"], ["Truck","truck"], ["Sports", "sports"], ["Others", "others"] ], :class => 'lstFld' %> <span class="spanCompulsry">*</span></td>
+  </tr>
+
+  <tr>
+    <td>Engine Capacity :</td>
+    <td><%= f.text_field :engine_capacity, :class => 'txtFld' %> <span class="spanCompulsry">*</span> <span class="spanLabel">CC</span></td>
+  </tr>
+
+  <tr class="bgRow">
+    <td>Number of Owners :</td>
+    <td><%= f.text_field :no_of_owners, :class => 'txtFld' %> <span class="spanCompulsry">*</span></td>
+  </tr>
+  <tr>
+    <td>Car Registration Date :</td>
+    <td><%= f.date_select :registration_date %> <span class="spanCompulsry">*</span></td>
+  </tr>
+  <tr class="bgRow">
+    <td>Your location please :</td>
+    <td>
+      <%= f.hidden_field :latitude %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :gmaps %>
+      <div id="map"></div>
+    </td>
+  </tr>
+  </table>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" class="titleTd"><h3>Additional Information</h3></td>
+  </tr>
+  <tr class="bgRow">
+    <td valign="top">Features :</td>
+    <td>
+      <%= render :partial => "/shared/features", :locals => {:object_type => 'used_car', :object => @used_car} %>
+      <%= f.text_area :feature, :cols => 29, :rows => 8, :style => 'display:none;' %>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">Additional Description : </td>
+    <td> <%= f.text_area :description, :cols => 29, :rows => 8, :class => 'textArea' %></td>
+  </tr>
+  <tr class="bgRow">
+    <td valign="top">Upload Pictures :</td>
+    <td>
+      <%= render :partial => '/shared/pictures_javascript', :locals => {:object => @used_car, :object_type => 'used_car'} %>
+    </td>
+  </tr>
+  <!--
+  <tr>
+    <td colspan="2" class="titleTd"><h3>Contact Information</h3></td>
+  </tr>
+  <tr class="bgRow">
+    <td>Display Name :</td>
+    <td><input type="text" class="txtFld" /> <span class="spanLabel">Nasir Ali</span></td>
+  </tr>
+  <tr>
+    <td>Email :</td>
+    <td><input type="text" class="txtFld" /> <span class="spanLabel">abc@mail.com</span></td>
+  </tr>
+  <tr class="bgRow">
+    <td>Contact Number :</td>
+    <td><input type="text" class="txtFld" /> <span class="spanLabel">e.g 0300-4655467</span></td>
+  </tr>
+  <tr>
+    <td valign="top">Human?</td>
+    <td><img src="/images/capcha.jpg" /></td>
+  </tr>
+  -->
+  <tr>
+    <td></td>
+    <td valign="middle">
+      <input type="image" src="/images/buttons/submit-btn.jpg" class="inputBtn" />
+    </td>
+  </tr>
+</table>
+<% end %>
+</div>

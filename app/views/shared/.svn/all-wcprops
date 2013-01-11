@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/head/!svn/ver/67/trunk/app/views/shared
+END
+_location.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/67/trunk/app/views/shared/_location.html.erb
+END
+_picture.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/67/trunk/app/views/shared/_picture.html.erb
+END
+_features.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/head/!svn/ver/67/trunk/app/views/shared/_features.html.erb
+END
+_gmap.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/67/trunk/app/views/shared/_gmap.html.erb
+END
+_pictures_javascript.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/67/trunk/app/views/shared/_pictures_javascript.html.erb
+END
+_makes_and_models.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/67/trunk/app/views/shared/_makes_and_models.html.erb
+END
+_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/67/trunk/app/views/shared/_search.html.erb
+END

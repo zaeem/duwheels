@@ -1,0 +1,19 @@
+<div class="clr"></div>
+<%= error_messages_for :part_category %>
+<% form_for :part_category, :url => part_categories_path do |f| %>
+<br />
+<table width = "100%" class="sign-up-tbl" >
+
+    <tr>
+      <td><label for="name">Name</label></td>
+    </tr>
+
+    <tr>
+      <td><%= f.text_field :name %></td>
+    </tr>
+
+    <tr><td></td></tr>
+    <tr><td><%= submit_tag button_label %></td></tr>
+</table>
+<% end %>
+

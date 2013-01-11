@@ -1,0 +1,30 @@
+
+<div id="mdColLeft">
+
+<% for part_category in @part_categories %>
+<% unless part_category.recommended_merchants.empty? %>
+
+<div class="mdRecommend">
+<h3><span><%= part_category.name %></span></h3>
+<ul>
+<% for merchant in part_category.recommended_merchants.uniq[0,10] %>
+<li>
+<div class="mrchntCategory"><a href="/vendors/?category=<%= merchant.part_category_id %>"><%= merchant.name %></a></div>
+<div class="mrchntRecomndDetail">
+<% if merchant.pictures.empty? %>
+  <img src="/images/mrchnt.jpg" alt="Merchant picture" style="width:100px;height:35px;" />
+<% else %>
+  <%= image_tag merchant.pictures.first.photo.url(:medium), :alt => "No image found", :id => 'primaryImage', :size => '100x35' %>
+<% end %>
+<a href="/vendors/<%= merchant.id %>"><%= merchant.name %></a><br />
+<%= merchant.description %>...
+</div>
+</li>
+<% end %>
+</ul>
+</div>
+
+<% end %>
+<% end %>
+
+</div>

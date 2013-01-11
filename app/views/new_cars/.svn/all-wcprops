@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/head/!svn/ver/71/trunk/app/views/new_cars
+END
+car_comparison_ajax.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/60/trunk/app/views/new_cars/car_comparison_ajax.rjs
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/53/trunk/app/views/new_cars/edit.html.erb
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/71/trunk/app/views/new_cars/search.html.erb
+END
+_car_detail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/head/!svn/ver/60/trunk/app/views/new_cars/_car_detail.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/64/trunk/app/views/new_cars/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/53/trunk/app/views/new_cars/new.html.erb
+END
+price_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/57/trunk/app/views/new_cars/price_list.html.erb
+END
+car_comparison.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/63/trunk/app/views/new_cars/car_comparison.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/67/trunk/app/views/new_cars/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/67/trunk/app/views/new_cars/_form.html.erb
+END
+car_comparison_ajax.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/head/!svn/ver/60/trunk/app/views/new_cars/car_comparison_ajax.html.erb
+END

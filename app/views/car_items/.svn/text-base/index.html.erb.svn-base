@@ -1,0 +1,89 @@
+<%= pluralize_helper(@vendor.car_items.uniq.size,'car item','exists') %> <br />
+
+<div id="contentDv">
+
+<%= render :partial => "/shared/search" %>
+
+<div class="mdListing">
+<h3><%= @vendor.name %><span>(<%= @vendor.car_items.uniq.size %> Listings)</span></h3>
+
+<!--
+<div class="pageLinks">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">Sort by :
+    <select>
+    <option>Default</option>
+    </select>
+    </td>
+    <td align="center">Back 1 2 3 4 5 .... 11 Next</td>
+    <td align="right"><select>
+    <option>Default</option>
+    </select>
+    Result / Page
+    </td>
+  </tr>
+</table>
+</div>
+-->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="mdList">
+  <tr>
+    <th colspan="2" align="left" scope="col">List of Items</th>
+    <th width="14%" scope="col">Condition</th>
+    <th width="8%" scope="col">Price</th>
+    <th width="14%" scope="col">Availability</th>
+  </tr>
+<% for car_item in @car_items %>
+  <tr valign="top">
+    <td width="14%">
+      <% unless car_item.pictures.empty? %>
+        <%= image_tag  car_item.pictures.first.photo.url(:thumb), :alt => 'No image for this car item!' %>
+      <% end %></td>
+    <td width="50%">
+    <div>
+    <h4><%= link_to car_item.name, vendor_car_item_path(car_item.vendor, car_item) %></h4>
+    <p>Posted by: <%= link_to car_item.vendor.name, vendor_path(car_item.vendor) %></p>
+    <p><%= car_item.vendor.description %></p>
+    <p class="postedDate"><!--<span class="viewsSpan">174 views</span> |--> Posted: <%= car_item.created_at.strftime("%d %b %Y") %> | Updated: <%= car_item.updated_at.strftime("%d %b %Y") %></p>
+    </div>
+    </td>
+    <td align="center"><img src="/images/icons/star.gif" align="absmiddle" /><%= car_item.condition %></td>
+    <td align="center" class="priceTd"><%= currencify(car_item.price) %><br />
+      <span>onwards</span>
+    </td>
+    <td align="center" class="availableTd"><% if  car_item.availability %>
+      Available
+    <% else %>
+      Not Available
+    <% end %>
+    </td>
+  </tr>
+<% end %>
+  <%= will_paginate @car_items %>
+</table>
+
+<%= link_to 'Create Another Car item', new_vendor_car_item_path  %>
+
+<!--
+<div class="pageLinks">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">Sort by :
+    <select>
+    <option>Default</option>
+    </select>
+    </td>
+    <td align="center">Back 1 2 3 4 5 .... 11 Next</td>
+    <td align="right"><select>
+    <option>Default</option>
+    </select>
+    Result / Page
+    </td>
+  </tr>
+</table>
+</div>
+-->
+</div>
+  <div id="searchRight"><a href="#"><img src="/images/banner.jpg" alt="Ad Banner" /></a></div>
+</div>

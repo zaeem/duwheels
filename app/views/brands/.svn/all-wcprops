@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/head/!svn/ver/70/trunk/app/views/brands
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/70/trunk/app/views/brands/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/head/!svn/ver/19/trunk/app/views/brands/new.html.erb
+END

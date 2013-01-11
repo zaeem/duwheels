@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $('input#vendor_id_').change(function(){
+        $('#selected_vendors').val('');
+        for (var i = 0;i< <%= @vendors.size %>;++i){
+          if ($('input#vendor_id_')[i].checked){
+            $('#selected_vendors').val($('#selected_vendors').val() + $('input#vendor_id_')[i].value +'space');
+          }
+        }
+    });
+    
+    $('[type="button"]').click(function(){
+      $('#feature_merchant_form').submit();
+    });
+    
+  });
+</script>
+
+<% form_tag(feature_a_merchant_admins_path, :method => "post", :id => "feature_merchant_form") do %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Featured</th>
+  </tr>
+  <% for vendor in @vendors %>
+  <tr>
+    <td><label><%= vendor.name %></label></td>
+    <td><input type="checkbox" id="vendor_id_" name="vendor_id_<%= vendor.id %>" value="<%= vendor.id %>" /></td>
+  </tr>
+  <% end %>
+  <input type="hidden" value="" name="selected_vendors" id="selected_vendors" />
+</table>
+<input type="button" value="Feature Them !" />
+<% end %>
+
+<p><%= link_to 'Back To Admin Page', admins_path %></p>

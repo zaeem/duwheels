@@ -1,0 +1,210 @@
+<div id="mdColLeft">
+
+<div class="mdHotDeals">
+<h3><span>Car Accessories</span></h3>
+<ul>
+<% if @car_items_in_car_accessories.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_car_accessories.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>Car Performance Parts</span></h3>
+<ul>
+<% if @car_items_in_car_performances.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_car_performances.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>Cosmetic Enhancement Items</span></h3>
+<ul>
+<% if @car_items_in_cosmetic_enhancements.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_cosmetic_enhancements.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+  
+<div class="mdHotDeals">
+<h3><span>Tyres and Rims</span></h3>
+<ul>
+<% if @car_items_in_tyres_and_rims.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_tyres_and_rims.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>In Car Entertainment</span></h3>
+<ul>
+<% if @car_items_in_car_entertainments.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_car_entertainments.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>Car Grooming</span></h3>
+<ul>
+<% if @car_items_in_car_groomings.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_car_groomings.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>Repair & Maintenance</span></h3>
+<ul>
+<% if @car_items_in_repair_maintenances.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_repair_maintenances.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>Misc Car-related Items</span></h3>
+<ul>
+    <% if @car_items_in_car_relateds.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_car_relateds.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals">
+<h3><span>Car Rental</span></h3>
+<ul>
+<% if @car_items_in_car_rentals.empty? %>
+  <li>
+    No Hot Deal Found in this category !
+  </li>
+<% else %>
+<% for car_item in @car_items_in_car_rentals.uniq[0,10] %>
+<li>
+<% if car_item.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car_item.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href="/vendors/<%= car_item.vendor_id %>/car_items/<%= car_item.id %>"><%= car_item.name %></a><br />
+<%= currencify(car_item.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+</div>

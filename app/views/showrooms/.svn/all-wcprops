@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/head/!svn/ver/71/trunk/app/views/showrooms
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/68/trunk/app/views/showrooms/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/70/trunk/app/views/showrooms/index.html.erb
+END
+admin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/53/trunk/app/views/showrooms/admin.html.erb
+END
+home.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/67/trunk/app/views/showrooms/home.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/head/!svn/ver/49/trunk/app/views/showrooms/new.html.erb
+END
+used_car_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/head/!svn/ver/69/trunk/app/views/showrooms/used_car_details.html.erb
+END
+used_car_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/70/trunk/app/views/showrooms/used_car_edit.html.erb
+END
+used_car_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/69/trunk/app/views/showrooms/used_car_new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/head/!svn/ver/71/trunk/app/views/showrooms/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/head/!svn/ver/62/trunk/app/views/showrooms/_form.html.erb
+END
+vendor_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/69/trunk/app/views/showrooms/vendor_details.html.erb
+END
+vendor_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/69/trunk/app/views/showrooms/vendor_edit.html.erb
+END

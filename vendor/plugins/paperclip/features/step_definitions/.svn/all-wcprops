@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/step_definitions
+END
+html_steps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/step_definitions/html_steps.rb
+END
+s3_steps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/step_definitions/s3_steps.rb
+END
+rails_steps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/step_definitions/rails_steps.rb
+END
+web_steps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/features/step_definitions/web_steps.rb
+END

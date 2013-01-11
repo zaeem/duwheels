@@ -1,0 +1,47 @@
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+<!--
+
+  var global_longitude = 0.0;
+  var global_latitude = 0.0;
+  if (google.loader.ClientLocation) {
+    var loc = google.loader.ClientLocation;
+    if (loc.latitude){
+      global_longitude = loc.longitude;
+      global_latitude = loc.latitude;
+    }
+  }
+
+  $(document).ready(function(){
+    var map = new GMap2(document.getElementById('map'));
+    var markers = [];
+    var marker = null;
+    <% if object.gmaps.nil? || object.gmaps == false %>
+      var point = new GLatLng(global_latitude, global_longitude);
+    <% else %>
+      var point = new GLatLng(<%= object.latitude.to_f %>, <%= object.longitude.to_f %>);
+    <% end %>
+    map.setCenter(point, 14);
+    map.setUIToDefault();
+    marker = new GMarker(point, { dragCrossMove:true, draggable:true } );
+    map.addOverlay(marker);
+    markers[0] = marker;
+
+    $(markers).each(function(i,marker){
+      GEvent.addListener(marker,"click", function(){
+        map.panTo(marker.getLatLng());
+        marker.getPoint();
+      });
+    });
+
+    $('input[class="inputBtn"]').click(function(){
+      $('#<%= object_type %>_latitude').val(marker.getLatLng().lat());
+      $('#<%= object_type %>_longitude').val(marker.getLatLng().lng());
+      $('#<%= object_type %>_gmaps').val('true');
+    });
+
+  });
+
+//-->
+</script>

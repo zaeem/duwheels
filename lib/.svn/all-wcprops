@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/head/!svn/ver/2/trunk/lib
+END
+deal_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/head/!svn/ver/2/trunk/lib/deal_manager.rb
+END
+authenticated_test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/head/!svn/ver/2/trunk/lib/authenticated_test_helper.rb
+END
+authenticated_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/head/!svn/ver/2/trunk/lib/authenticated_system.rb
+END
+token_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/head/!svn/ver/2/trunk/lib/token_manager.rb
+END

@@ -1,0 +1,15 @@
+<%= pluralize_helper(@part_categories.size,'part category','exists') %> <br />
+
+<div id="contentDv">
+<div id="mdCategory">
+<h3>Categories</h3>
+<ul>
+<% for part_category in @part_categories %>
+<li><a href="/vendors/?category=<%= part_category.id %>"><%= part_category.name %></a>
+  <span><%= link_to 'Edit', edit_part_category_path(part_category) %></span>
+</li>
+<% end %>
+</ul>
+</div>
+</div>
+<p><%= link_to 'Back To Admin Page', admins_path %></p>

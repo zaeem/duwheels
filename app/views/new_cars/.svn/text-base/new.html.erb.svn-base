@@ -1,0 +1,10 @@
+<% set_title "Create Used Car Ad" %>
+
+<div id="container">
+  <div id="mainTtl" >
+    <h1>Post New Car Ad</h1>
+  </div>
+  <%= render :partial => "form" %>
+  <div id="rightAd"><a href="#"><img src="/images/banner.jpg" alt="banner" /></a></div>
+</div>
+

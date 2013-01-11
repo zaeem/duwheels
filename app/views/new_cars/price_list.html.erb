@@ -1,0 +1,68 @@
+<div id="mdColLeft">
+
+
+<div class="mdHotDeals" style="margin-bottom: 180px;">
+<h3><span>Adam</span><!--<%= link_to "View All", hotdeals_path %>--></h3>
+<ul>
+<% if @adam[0,15].empty? %>
+  No car with make Adam found.
+<% else %>
+<% for car in @adam[0,15] %>
+<li>
+<% if car.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href=""><%= car.model %></a><br />
+<%= currencify(car.asking_price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+  
+<div class="mdHotDeals" style="margin-bottom: 180px;">
+<h3><span>Audi</span><!--<%= link_to "View All", hotdeals_path %>--></h3>
+<ul>
+<% if @audi[0,15].empty? %>
+  No car with make Audi found.
+<% else %>
+<% for car in @audi[0,15] %>
+<li>
+<% if car.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href=""><%= car.model %></a><br />
+<%= currencify(car.asking_price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals" style="margin-bottom: 180px;">
+<h3><span>Cadillac</span><!--<%= link_to "View All", hotdeals_path %>--></h3>
+<ul>
+<% if @cadillac[0,15].empty? %>
+  No car with make Cadillac found.
+<% else %>
+<% for car in @cadillac[0,15] %>
+<li>
+<% if car.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="hot deal" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car.pictures.first.photo.url(:thumb), :alt => "Hot Deal", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href=""><%= car.model %></a><br />
+<%= currencify(car.asking_price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+
+</div>

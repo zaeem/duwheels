@@ -1,0 +1,22 @@
+<% set_title "Create Car Part Brand" %>
+<div id="mainTtl" >
+  <h1 >Create Car Part Brand</h1>
+</div>
+<div class="clr"></div>
+<%= error_messages_for :brand %>
+<% form_for :brand, :url => brands_path do |f| %>
+<br />
+<table width = "100%" class="sign-up-tbl" >
+
+    <tr>
+      <td><label for="name">Name</label></td>
+    </tr>
+
+    <tr>
+      <td><%= f.text_field :name %></td>
+    </tr>
+
+    <tr><td></td></tr>
+    <tr><td><%= submit_tag 'Create' %></td></tr>
+</table>
+<% end %>

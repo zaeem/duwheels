@@ -1,0 +1,38 @@
+html, body {
+    background-image: url(/images/bg_body.jpg);
+}
+
+#pagewrap {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+    margin: 0 auto;
+    padding: 10px;
+    width: 900px;
+
+    /* logo */
+    background: white url(/images/logo.jpg) no-repeat;
+    padding-top: 72px;
+}
+
+.user { text-align: right; }
+
+/*h2 {
+font-family:Arial;
+font-size:3em;
+font-weight:bold;
+padding:0 50px 20px;
+}*/
+
+.rating {
+    background: url(/images/stars.png) no-repeat;
+    height: 26px;
+    overflow: hidden;
+    text-indent: -1000px;
+}
+
+.star-5 { width: 115px; }
+.star-4 { width: 92px; }
+.star-3 { width: 69px; }
+.star-2 { width: 46px; }
+.star-1 { width: 23px; }

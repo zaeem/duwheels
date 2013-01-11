@@ -1,0 +1,9 @@
+#class AddPartCategoryIdColumnToVendors < ActiveRecord::Migration
+#  def self.up
+#    add_column :vendors, :part_category_id, :integer
+#  end
+#
+#  def self.down
+#    remove_column :vendors, :part_category_id
+#  end
+#end

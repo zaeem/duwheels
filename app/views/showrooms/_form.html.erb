@@ -1,0 +1,30 @@
+<h1>Editing user</h1>
+
+<%= error_messages_for :user %>
+
+<% form_for(@showroom) do |f| %>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+  
+  <p>
+    <b>Vendor</b><br />
+    <%= f.select :vendor_id, @vendors %>
+  </p>
+
+  <p>
+    <b>Vendor logo</b><br />
+    <%= f.file_field :photo %>
+  </p>
+
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>

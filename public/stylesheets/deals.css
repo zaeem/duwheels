@@ -1,0 +1,2370 @@
+ul.form_errors li {
+  color: #d01e5e;
+  clear: left;
+  padding: 0; }
+
+.formError {
+  font-weight: normal;
+  font-size: 12px; }
+
+.error_notification {
+  background: #ff81c3;
+  padding: 5px 10px;
+  color: #a0002a;
+  font-size: 1.2em; }
+
+strong.error {
+  color: #d31b5d; }
+
+.has_errors input, .has_errors textarea {
+  background: #fef2f2;
+  border: 1px solid #d01e5e; }
+
+.caption {
+  font-size: 11px; }
+
+body {
+  font: 62.5%/1.5 Arial, sans-serif; }
+
+h1, h2 {
+  font: bold 2em Arial; }
+
+#main h2.sample_offers a:hover {
+  text-decoration: none; }
+
+#header h2 {
+  font-size: 30px; }
+
+.page_header h1, .page_header h2 {
+  font-size: 3em; }
+
+h3 {
+  font: bold 1.8em Helvetica, Arial, sans-serif; }
+  h3.double_margin {
+    margin-bottom: 25px; }
+
+h3.greenapple {
+  color: #a2b957; }
+
+h4 {
+  font-size: 1.4em; }
+
+h5 {
+  font-size: 2.2em;
+  line-height: 1.1em; }
+
+.jobs h4, .business_faq h4 {
+  font-weight: bold; }
+
+dd, dt {
+  font-size: 1.2em; }
+
+#footer dt {
+  font-size: 1.5em; }
+
+#content .page_content ul {
+  margin-bottom: 20px;
+  list-style: disc;
+  padding-left: 25px; }
+  #content .page_content ul.no_bullets {
+    list-style: none;
+    padding-left: 0; }
+  #content .page_content ul.inline_links {
+    list-style: none;
+    padding-left: 0; }
+#content .page_content blockquote ul {
+  padding-left: 0;
+  list-style: none; }
+#content .page_content .write_up_rail ul {
+  list-style: none;
+  padding-left: 0; }
+#content .page_content .write_up_rail .details ul {
+  list-style-type: disc;
+  padding-left: 20px; }
+
+.sidebar_ad ul {
+  list-style: disc outside;
+  padding-left: 25px; }
+
+li {
+  font-size: 1.2em; }
+  li p, li li, li dd, li dt {
+    font-size: 1em; }
+  li p {
+    margin-bottom: 5px; }
+
+#gw-nav li {
+  font-size: 1em; }
+
+#header ul.login li {
+  font-size: 1.2em; }
+  #header ul.login li li {
+    font-size: 1em; }
+#header ul.login ul li.sign_out {
+  font-size: 0.84em; }
+
+p {
+  font-size: 1.2em; }
+  p small {
+    font-size: 0.84em; }
+  p.double_margin {
+    margin-bottom: 25px; }
+  p.icon_gift {
+    color: #666666; }
+  p.download_icon {
+    width: 465px;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(/images/groupon/icons/download.gif?1287080514) no-repeat 0 3px; }
+
+#header p {
+  margin-bottom: 0; }
+
+ol {
+  list-style: decimal;
+  margin-left: 17px; }
+
+small {
+  font-size: 1em;
+  color: #545454; }
+
+th p {
+  font-weight: bold; }
+
+.normal {
+  font-weight: normal; }
+
+strong, .bold {
+  font-weight: bold;
+  font-style: inherit; }
+
+em {
+  font-style: italic;
+  font-weight: inherit; }
+
+.page_content ul li {
+  font-size: 1.2em; }
+
+.strike_through {
+  text-decoration: line-through; }
+
+#announcement h1, #announcement h2, #announcement h3, #announcement h4, #announcement h5, #announcement h6, #missed_deal_announcement h1, #missed_deal_announcement h2, #missed_deal_announcement h3, #missed_deal_announcement h4, #missed_deal_announcement h5, #missed_deal_announcement h6 {
+  font-size: 1.4em;
+  font-weight: bold; }
+#announcement li, #missed_deal_announcement li {
+  font-size: 1.4em; }
+#announcement strong, #missed_deal_announcement strong {
+  font-weight: bold; }
+#announcement em, #missed_deal_announcement em {
+  font-style: italic; }
+#announcement p, #missed_deal_announcement p {
+  margin-bottom: 0; }
+#announcement#missed_deal_announcement .announcement_inner, #missed_deal_announcement#missed_deal_announcement .announcement_inner {
+  font-weight: bold; }
+  #announcement#missed_deal_announcement .announcement_inner p, #missed_deal_announcement#missed_deal_announcement .announcement_inner p {
+    padding-top: 2px;
+    color: #383838; }
+
+#rail p {
+  margin-bottom: 5px; }
+#rail em {
+  font-style: italic; }
+#rail a:hover {
+  text-decoration: underline; }
+#rail h2, #rail h3, #rail h4, #rail h5 {
+  font-family: Georgia, MS Serif;
+  padding-bottom: 8px;
+  font-size: 1.8em;
+  font-weight: normal; }
+#rail h2.past_deals {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  -khtml-text-shadow: #666666 0 -1px 1px;
+  -moz-text-shadow: #666666 0 -1px 1px;
+  text-shadow: #666666 0 -1px 1px; }
+#rail h6 {
+  font-family: Georgia, MS Serif;
+  padding-bottom: 8px;
+  font-size: 1.3em;
+  font-weight: bold; }
+#rail li h2, #rail li h3, #rail li h4, #rail li h5 {
+  font-size: 1.5em; }
+#rail dt {
+  font-weight: bold; }
+#rail dd {
+  padding-bottom: 10px; }
+#rail ul, #rail ol {
+  padding-left: 0; }
+  #rail ul li.first, #rail ol li.first {
+    margin-top: 20px; }
+  #rail ul li ul, #rail ul li ol, #rail ol li ul, #rail ol li ol {
+    margin-left: 0;
+    padding-bottom: 10px; }
+    #rail ul li ul li, #rail ul li ol li, #rail ol li ul li, #rail ol li ol li {
+      margin-left: 20px;
+      font-size: 1em;
+      padding-bottom: 0; }
+    #rail ul li ul a:hover, #rail ul li ol a:hover, #rail ol li ul a:hover, #rail ol li ol a:hover {
+      text-decoration: underline; }
+  #rail ul li.side_deal h4, #rail ol li.side_deal h4 {
+    font-size: 1.2em; }
+  #rail ul li h4, #rail ol li h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.2em; }
+#rail .box .chromed_header h3 {
+  padding: 7px 0 0 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold; }
+#rail .box ol, #rail .box ul {
+  margin: 0; }
+#rail .box ul.bullet {
+  list-style: disc; }
+  #rail .box ul.bullet li {
+    font-size: 1.2em;
+    width: auto;
+    float: none;
+    display: block;
+    background: url(/images/groupon/icons/blue_dot.gif?1287080514) no-repeat left center;
+    padding: 0 0 0 12px;
+    margin-bottom: 5px; }
+  #rail .box ul.bullet li.no_bullet {
+    background: none;
+    list-style: none;
+    padding-left: 0; }
+    #rail .box ul.bullet li.no_bullet p {
+      font-size: 1em;
+      background: none;
+      width: auto;
+      padding: 0; }
+#rail .box .button.submit {
+  margin-top: 10px; }
+#rail #area_deals .deal_details h4 {
+  font-size: 1em; }
+
+.icon_gift {
+  padding-left: 18px;
+  background: url(/images/groupon/icons/icon_gift.gif?1287080514) no-repeat; }
+  .icon_gift.for_friend {
+    background: url(/images/groupon/icons/icon_gift_blue.gif?1287080514) no-repeat left 2px;
+    padding-left: 30px;
+    line-height: 30px;
+    display: inline-block; }
+
+.for_a_friend {
+  text-align: center; }
+  .for_a_friend a {
+    font-weight: bold;
+    font-size: 16px; }
+    .for_a_friend a:hover {
+      text-decoration: none; }
+
+legend {
+  font-size: 20px;
+  font-weight: bold; }
+
+.small {
+  font-size: 10px;
+  font-weight: normal; }
+
+h2#activity_title span {
+  float: none;
+  margin: 0;
+  padding: 0; }
+h2#activity_title .beta {
+  font-size: 15px;
+  color: #76a045; }
+
+#rail ul li .callout .callout_content {
+  background: #ddedcc;
+  clear: left; }
+  #rail ul li .callout .callout_content h6 {
+    font-size: 1.1em;
+    font-family: Georgia, Helvetica, Arial, serif;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 5px; }
+  #rail ul li .callout .callout_content .callout_img {
+    width: 50px;
+    float: left;
+    padding-right: 5px; }
+  #rail ul li .callout .callout_content .callout_copy {
+    width: 155px;
+    float: left; }
+    #rail ul li .callout .callout_content .callout_copy p {
+      background-color: transparent !important;
+      width: 100% !important;
+      padding: 0 !important;
+      line-height: 1.2em; }
+      #rail ul li .callout .callout_content .callout_copy p.gift_copy {
+        margin: 3px 0 5px 0;
+        text-align: center; }
+#rail ul li .facebook_widget .callout_content {
+  background: white; }
+  #rail ul li .facebook_widget .callout_content p {
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 0 0 4px;
+    line-height: 1.2em; }
+    #rail ul li .facebook_widget .callout_content p.small {
+      padding: 0; }
+    #rail ul li .facebook_widget .callout_content p.strong {
+      padding: 0;
+      font-weight: 700; }
+  #rail ul li .facebook_widget .callout_content ul li {
+    margin: 0 2px 0 0;
+    float: left; }
+  #rail ul li .facebook_widget .callout_content a, #rail ul li .facebook_widget .callout_content a:hover {
+    text-decoration: none; }
+  #rail ul li .facebook_widget .callout_content iframe {
+    margin-bottom: 10px; }
+#rail ul li .facebook_widget .facebook_share_button {
+  border-top: 1px solid #dddddd; }
+  #rail ul li .facebook_widget .facebook_share_button a {
+    float: right; }
+    #rail ul li .facebook_widget .facebook_share_button a img {
+      margin-top: 10px;
+      float: right; }
+
+.deal {
+  position: relative;
+  border: 2px solid #76a045;
+  padding: 25px 10px 0 10px;
+  margin-bottom: 20px;
+  background: white;
+  clear: both; }
+  .deal .return_link {
+    font-size: 1.4em;
+    font-weight: bold; }
+  .deal h2 {
+    font-family: Arial;
+    font-weight: bold;
+    padding: 0 50px 20px;
+    font-size: 3em; }
+    .deal h2 span {
+      display: inline;
+      float: left;
+      color: #0981be;
+      padding-right: 10px; }
+    .deal h2 a {
+      color: #333333; }
+      .deal h2 a:hover {
+        text-decoration: none; }
+  .deal .primary {
+    width: 220px;
+    display: inline;
+    float: left;
+    margin-right: 18px; }
+  .deal .secondary {
+    width: 440px;
+    float: right; }
+    .deal .secondary .fine_print, .deal .secondary .highlights {
+      display: inline;
+      float: left;
+      padding-top: 10px; }
+    .deal .secondary .fine_print {
+      margin-right: 10px;
+      border: none;
+      background: none; }
+    .deal .secondary .highlights {
+      background: none;
+      border: none; }
+  .deal #price_tag {
+    height: 92px;
+    margin-left: -67px;
+    position: relative;
+    width: 287px;
+    z-index: 10; }
+  .deal #price_tag_inner {
+    height: 92px;
+    width: 287px;
+    background: url(/images/price_tag.png) no-repeat; }
+  .deal #amount {
+    color: white;
+    font-size: 3.2em;
+    left: 48px;
+    line-height: 1em;
+    position: absolute;
+    top: 23px;
+    z-index: 1; }
+    .deal #amount .price_label {
+      display: block;
+      font-size: 14px;
+      line-height: 0.9em; }
+  .deal .long {
+    top: 19px; }
+    .deal .long #amount {
+      font-size: 2.8em; }
+  .deal .multideal #amount {
+    top: 12px; }
+  .deal #buy_btn {
+    background: url(/images/buy.png) no-repeat;
+    display: block;
+    height: 67px;
+    left: 136px;
+    line-height: 1000em;
+    overflow: hidden;
+    position: absolute;
+    top: 6px;
+    width: 149px; }
+  .deal .multideal #buy_btn {
+    background-image: url(/images/groupon/buttons/buy-multideal.png?1287080514); }
+  .deal #remaining_time_container, .deal #number_sold_container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ddedcc;
+    background-position: right center;
+    border: 1px solid #98c267; }
+  .deal #remaining_time_container ul {
+    display: inline;
+    float: left;
+    width: 140px; }
+    .deal #remaining_time_container ul li {
+      font-size: 1.4em;
+      font-weight: bold; }
+      .deal #remaining_time_container ul li h5 {
+        font-size: 1em;
+        font-weight: normal; }
+  .deal #remaining_time_container img {
+    display: inline;
+    float: left;
+    margin: 10px 15px 0 0; }
+  .deal #remaining_time_container h5 {
+    font-size: 1.4em;
+    font-family: Arial, sans-serif; }
+  .deal #number_sold_container {
+    margin-bottom: 10px;
+    position: relative; }
+    .deal #number_sold_container img.sold_out, .deal #number_sold_container span.sold_out {
+      position: absolute;
+      top: 10px;
+      left: -20px;
+      z-index: 1; }
+    .deal #number_sold_container p {
+      text-align: center; }
+    .deal #number_sold_container .tipometer {
+      position: relative;
+      width: 198px;
+      height: 50px;
+      margin: 10px 0 5px 0; }
+      .deal #number_sold_container .tipometer span {
+        position: absolute;
+        top: 28px;
+        width: 50px;
+        height: 18px;
+        font-size: 1.8em;
+        font-weight: bold; }
+        .deal #number_sold_container .tipometer span.min {
+          text-align: left;
+          left: 0; }
+        .deal #number_sold_container .tipometer span.max {
+          right: 0;
+          text-align: right; }
+      .deal #number_sold_container .tipometer .tipping_point {
+        position: absolute;
+        top: 0;
+        left: 45px;
+        width: 14px;
+        height: 13px;
+        background: url(/images/groupon/icons/tipometer/tipping_point.gif?1287080514) no-repeat top left;
+        z-index: 2; }
+      .deal #number_sold_container .tipometer .progress_bar {
+        position: absolute;
+        top: 15px;
+        float: left;
+        width: 198px;
+        background: url(/images/groupon/backgrounds/tipometer_bg.gif?1287080514) no-repeat top left;
+        height: 15px;
+        padding: 0 2px; }
+        .deal #number_sold_container .tipometer .progress_bar .pre_tipped {
+          float: left;
+          height: 7px;
+          margin-top: 2px;
+          background: url(/images/groupon/icons/tipometer/pre_tipped.gif?1287080514) no-repeat top right; }
+          .deal #number_sold_container .tipometer .progress_bar .pre_tipped.left_end_cap {
+            background: url(/images/groupon/icons/tipometer/not_empty_pre_tipped.gif?1287080514) no-repeat top left;
+            width: 4px; }
+        .deal #number_sold_container .tipometer .progress_bar .post_tipped {
+          float: left;
+          height: 7px;
+          margin-top: 2px;
+          background: url(/images/groupon/icons/tipometer/post_tipped.gif?1287080514) no-repeat top right; }
+          .deal #number_sold_container .tipometer .progress_bar .post_tipped.left_end_cap {
+            background: url(/images/groupon/icons/tipometer/not_empty_post_tipped.gif?1287080514) no-repeat top left;
+            width: 4px; }
+          .deal #number_sold_container .tipometer .progress_bar .post_tipped.complete {
+            background-position: -7px 0; }
+          .deal #number_sold_container .tipometer .progress_bar .post_tipped.right_end_cap {
+            background: url(/images/groupon/icons/tipometer/right_end_cap_tipped.gif?1287080514) no-repeat top right;
+            width: 4px; }
+        .deal #number_sold_container .tipometer .progress_bar .tipped {
+          float: left;
+          height: 7px;
+          margin-top: 2px;
+          background: url(/images/groupon/icons/tipometer/tipped.gif?1287080514) no-repeat top right;
+          overflow: hidden; }
+          .deal #number_sold_container .tipometer .progress_bar .tipped.full {
+            background-position: 0 -7px; }
+          .deal #number_sold_container .tipometer .progress_bar .tipped.right_end_cap {
+            background: url(/images/groupon/icons/tipometer/right_end_cap_tipped.gif?1287080514) no-repeat top right;
+            width: 4px; }
+    .deal #number_sold_container .tipped_check_mark {
+      padding-top: 0;
+      text-align: center; }
+      .deal #number_sold_container .tipped_check_mark span, .deal #number_sold_container .tipped_check_mark .status {
+        font-weight: bold;
+        font-size: 1.6em; }
+      .deal #number_sold_container .tipped_check_mark span img {
+        position: relative;
+        top: 7px;
+        left: -9px; }
+    .deal #number_sold_container .tipped_at p {
+      text-align: center;
+      padding-top: 5px; }
+    .deal #number_sold_container table.status {
+      margin: 0 auto;
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 1.2em; }
+      .deal #number_sold_container table.status.sold_out {
+        margin-top: 100px; }
+      .deal #number_sold_container table.status tr td.left {
+        text-align: right; }
+      .deal #number_sold_container table.status tr td.right {
+        padding-left: 10px; }
+      .deal #number_sold_container table.status tr td.full {
+        font-size: 0.6em; }
+      .deal #number_sold_container table.status tr.zero_sum td.full {
+        font-size: 1em; }
+      .deal #number_sold_container table.status tr.limited td.full {
+        text-align: center; }
+      .deal #number_sold_container table.status .terms {
+        color: #98c267; }
+    .deal #number_sold_container .tipping {
+      text-align: center;
+      font-size: 1.2em; }
+    .deal #number_sold_container .fb_friends_who_bought {
+      text-align: center; }
+      .deal #number_sold_container .fb_friends_who_bought p#fwb_count {
+        margin: 0 auto;
+        width: auto;
+        font-size: 11px;
+        height: 20px;
+        line-height: 15px; }
+        .deal #number_sold_container .fb_friends_who_bought p#fwb_count .fb_logo {
+          width: 18px;
+          height: 14px;
+          background: transparent url(/images/facebook/like-sprite.png?1287080514) no-repeat 0px -46px;
+          display: inline-block; }
+      .deal #number_sold_container .fb_friends_who_bought ul li {
+        display: inline-block;
+        margin: 1px; }
+        .deal #number_sold_container .fb_friends_who_bought ul li img {
+          width: 30px;
+          height: 30px; }
+  .deal .primary {
+    position: relative; }
+    .deal .primary #bought {
+      top: 26px;
+      right: 8px; }
+    .deal .primary .summary {
+      font-size: 1.4em;
+      width: 60px;
+      margin-top: 3px; }
+    .deal .primary .unavailable_deal_message, .deal .primary .order_fulfilled_message {
+      position: absolute;
+      left: 130px;
+      z-index: 1;
+      color: white;
+      margin-right: 10px; }
+    .deal .primary .unavailable_deal_message {
+      background: url(/images/groupon/buttons/disabled.png?1287080514) no-repeat left top;
+      color: #c8e4eb;
+      font-size: 2em;
+      font-weight: bold;
+      height: 44px;
+      line-height: 1;
+      padding: 23px 10px 0;
+      text-align: center;
+      text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+      top: 6px;
+      width: 124px; }
+      .deal .primary .unavailable_deal_message.expired {
+        font-size: 1.8em;
+        height: 51px;
+        padding-top: 16px; }
+    .deal .primary .order_fulfilled_message {
+      top: 10px;
+      font-size: 1.4em; }
+  .deal #deal_discount, .deal #for_a_friend {
+    background: #cfeef6;
+    border: 1px solid #64c8e2;
+      border-bottom: none;
+      border-top: none; }
+  .deal #deal_discount {
+    margin-top: -12px;
+    padding: 10px 0;
+    position: relative;
+    z-index: 5; }
+    .deal #deal_discount dl {
+      display: inline;
+      float: left;
+      width: 61px;
+      font-weight: bold;
+      text-align: center; }
+      .deal #deal_discount dl dt, .deal #deal_discount dl dd {
+        text-align: center; }
+      .deal #deal_discount dl dt {
+        font-size: 1.2em; }
+      .deal #deal_discount dl dd {
+        font-size: 1.8em;
+        line-height: 1em; }
+      .deal #deal_discount dl.discount {
+        width: 76px; }
+  .deal #for_a_friend {
+    border-bottom: 1px solid #64c8e2;
+    border-top: 1px solid #64c8e2;
+    padding: 5px 0 0 0;
+    position: relative;
+    text-align: center; }
+    .deal #for_a_friend a {
+      font-weight: bold;
+      font-size: 16px; }
+  .deal .photos {
+    width: 440px;
+    height: auto; }
+  .deal .fine_print, .deal .highlights {
+    height: auto;
+    background: #eae8e3;
+    padding: 10px; }
+    .deal .fine_print h3, .deal .highlights h3 {
+      padding-bottom: 3px; }
+  .deal .fine_print {
+    width: 198px; }
+  .deal .highlights {
+    width: 188px; }
+    .deal .highlights ul {
+      padding-left: 15px;
+      list-style-type: disc;
+      list-style-position: outside; }
+      .deal .highlights ul li em {
+        font-style: italic; }
+
+.deal_options div.title {
+  font-size: 1.2em;
+  font-weight: bold; }
+.deal_options table.pledges {
+  width: 100%; }
+  .deal_options table.pledges tr td {
+    padding: 5px 5px 5px 10px; }
+  .deal_options table.pledges tr td.description {
+    text-align: left; }
+    .deal_options table.pledges tr td.description a.title {
+      font-weight: bold;
+      font-size: 1.4em;
+      line-height: 16px; }
+    .deal_options table.pledges tr td.description .details {
+      font-size: 1.2em;
+      line-height: 1;
+      color: #666666;
+      padding: 3px 0 0 0; }
+      .deal_options table.pledges tr td.description .details em {
+        color: #333333;
+        font-weight: bold; }
+      .deal_options table.pledges tr td.description .details .expiration_date {
+        padding: 3px 0 0 0;
+        font-size: 10px;
+        color: #666666; }
+  .deal_options table.pledges tr td.status {
+    width: 100px;
+    text-align: right;
+    color: #666666; }
+    .deal_options table.pledges tr td.status div {
+      font-size: 1.4em;
+      line-height: 1.2; }
+  .deal_options table.pledges tr td.purchase {
+    width: 80px;
+    text-align: center; }
+    .deal_options table.pledges tr td.purchase a.buy_button {
+      padding-left: 5px;
+      display: block;
+      text-decoration: none;
+      color: white;
+      width: 75px;
+      height: 34px;
+      border-left: 2px solid #cccccc;
+      line-height: 1.8;
+      margin: auto; }
+      .deal_options table.pledges tr td.purchase a.buy_button span {
+        vertical-align: middle; }
+      .deal_options table.pledges tr td.purchase a.buy_button span.amount {
+        font-size: 1.8em;
+        font-weight: bold; }
+      .deal_options table.pledges tr td.purchase a.buy_button span.symbol {
+        font-size: 1.2em; }
+  .deal_options table.pledges tr.sold_out a, .deal_options table.pledges tr.sold_out a:hover, .deal_options table.pledges tr.sold_out div {
+    color: #999999;
+    text-decoration: none;
+    cursor: default; }
+  .deal_options table.pledges tr.sold_out td.description .details, .deal_options table.pledges tr.sold_out td.description .details em, .deal_options table.pledges tr.sold_out td.description .details .expiration_date small {
+    color: #999999; }
+  .deal_options table.pledges tr.sold_out td.status div.sold_out {
+    color: #ed5824;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em; }
+  .deal_options table.pledges tr.even {
+    background-color: #f0f2f1; }
+    .deal_options table.pledges tr.even td.purchase a.buy_button {
+      background: url(/images/groupon/buttons/multideal_option_price_greybg.jpg?1287080514) no-repeat center right; }
+  .deal_options table.pledges tr.even.sold_out td.purchase a.buy_button {
+    background: url(/images/groupon/buttons/multideal_option_price_disabled_greybg.jpg?1287080514) no-repeat center right; }
+  .deal_options table.pledges tr.odd {
+    background-color: white; }
+    .deal_options table.pledges tr.odd td.purchase a.buy_button {
+      background: url(/images/groupon/buttons/multideal_option_price_whitebg.jpg?1287080514) no-repeat center right; }
+  .deal_options table.pledges tr.odd.sold_out td.purchase a.buy_button {
+    background: url(/images/groupon/buttons/multideal_option_price_disabled_whitebg.jpg?1287080514) no-repeat center right; }
+
+@font-face {
+  font-family: "Pictos";
+  src: url("/stylesheets/fonts/pictos-web.eot");
+  src: local("â˜º"), url("/stylesheets/fonts/pictos-web.woff") format("woff"), url("/stylesheets/fonts/pictos-web.ttf") format("truetype"), url("/stylesheets/fonts/pictos-web.svg#webfontphKv1xv9") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.clearleft {
+  clear: left; }
+
+.layer2 {
+  z-index: 2; }
+
+.pagination .current {
+  color: #a2b957; }
+
+.drill_table {
+  border-collapse: collapse; }
+  .drill_table tr.odd {
+    background: #f8f8f8; }
+  .drill_table th {
+    font-weight: bold; }
+  .drill_table th, .drill_table td {
+    padding: 3px 10px;
+    font-size: 1em; }
+
+table.with_row_borders td, table.with_row_borders th {
+  border-bottom: 1px solid #daeaca; }
+
+a {
+  color: #0981be;
+  outline: none;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+.page_header {
+  clear: left;
+  background: white;
+  padding: 0 0 10px 0; }
+  .page_header h1, .page_header h2, .page_header h3 {
+    border-bottom: 1px solid #daeaca;
+    padding-bottom: 0.4em; }
+    .page_header h1.no_border, .page_header h2.no_border, .page_header h3.no_border {
+      border-bottom: none; }
+      .page_header h1.no_border img, .page_header h2.no_border img, .page_header h3.no_border img {
+        float: none; }
+  .page_header p.border {
+    border-bottom: 1px solid #daeaca;
+    padding-bottom: 5px; }
+  .page_header h1, .page_header h2, .page_header h3, .page_header p, .page_header .breadcrumb {
+    padding: 0 10px; }
+  .page_header h1, .page_header h2 {
+    overflow: hidden; }
+    .page_header h1 img, .page_header h1 span, .page_header h2 img, .page_header h2 span {
+      float: left; }
+    .page_header h1 span, .page_header h2 span {
+      width: 553px;
+      padding-left: 15px; }
+  .page_header .breadcrumb {
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    font-weight: bold; }
+
+.page_content {
+  padding: 0 10px;
+  width: auto;
+  float: none;
+  display: block;
+  overflow: hidden; }
+
+.page_content.remove_padding {
+  padding: 0; }
+
+.page_content.bottom_padding {
+  padding-bottom: 10px; }
+
+a:hover {
+  text-decoration: underline; }
+
+#main .doc .page_content {
+  padding: 0 10px;
+  width: auto;
+  float: none;
+  display: block;
+  overflow: hidden; }
+#main .doc .page_content.remove_padding {
+  padding: 0; }
+#main .doc .page_content.bottom_padding {
+  padding-bottom: 10px; }
+#main .doc a:hover {
+  text-decoration: underline; }
+
+p {
+  margin-bottom: 20px; }
+  p.no_bottom_margin {
+    margin-bottom: 0; }
+  p.location_note {
+    margin-bottom: 5px; }
+
+table p {
+  margin-bottom: 0; }
+
+h3 {
+  margin-bottom: 10px; }
+  h3.no_margin {
+    margin-bottom: 0; }
+
+blockquote ul li {
+  padding-left: 20px;
+  background: url(/images/groupon/icons/quote.gif?1287080514) no-repeat top left; }
+
+.groupon_table {
+  width: 100%; }
+  .groupon_table th {
+    font-weight: bold;
+    font-size: 1.2em; }
+    .groupon_table th .td_pad {
+      border-bottom: 1px solid #ddedcc;
+      margin-bottom: 5px; }
+      .groupon_table th .td_pad.last {
+        padding-right: 15px; }
+
+.inline_links li {
+  float: left; }
+  .inline_links li a {
+    float: left;
+    display: block;
+    padding: 0 5px 0 0;
+    border-right: 1px solid #9e9e9e;
+    line-height: normal;
+    margin-right: 5px; }
+.inline_links li.last a {
+  border-right: none;
+  margin-right: none; }
+
+.icon_check {
+  padding-left: 18px;
+  background: url(/images/groupon/icons/check_green_whitebg.gif?1287080514) no-repeat left 2px;
+  margin-bottom: 5px; }
+
+.icon_alert {
+  padding-left: 18px;
+  background: url(/images/groupon/icons/alert_whitebg.gif?1287080514) no-repeat left 2px;
+  margin-bottom: 5px; }
+
+.td_pad {
+  padding: 10px 0 10px 15px; }
+
+table .odd {
+  background: #ddedcc; }
+
+.waiting {
+  background: url(/images/groupon/backgrounds/ajax_loader.gif?1287080514) no-repeat center right; }
+
+ul.floated li {
+  float: left; }
+
+#ratings {
+  margin-right: 10px; }
+  #ratings a {
+    font-size: 12px; }
+  #ratings small a {
+    font-size: 10px; }
+
+.filter_list {
+  top: 15px;
+  right: 12px;
+  margin-left: 12px; }
+  .filter_list li {
+    float: left;
+    margin: 0 2px 0 0; }
+    .filter_list li.active a {
+      background: #f0f0f0;
+      border: 0 solid #f0f0f0;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      color: black;
+      font-weight: 700; }
+      .filter_list li.active a:hover {
+        text-decoration: none; }
+    .filter_list li.label {
+      padding: 3px 5px 2px 0;
+      font-size: 1em;
+      margin-right: 0; }
+    .filter_list li a {
+      display: block;
+      float: left;
+      padding: 2px 5px; }
+
+.border_spacer {
+  border-top: 1px solid #ddedcc;
+  height: 1px;
+  margin: 0;
+  padding-bottom: 15px;
+  clear: both; }
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: block;
+  background: url(/images/groupon/icons/close.png?1287080514) no-repeat right;
+  padding-right: 18px;
+  font-size: 10px;
+  color: #303030; }
+
+#announcement .close {
+  background: url(/images/groupon/icons/close_announcements.gif?1287080514) no-repeat right; }
+
+.move_right {
+  margin-left: 8px; }
+
+.text_center {
+  text-align: center; }
+
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  .clearfix {
+    display: block; }
+  .clearfix .left {
+    float: left;
+    width: auto; }
+  .clearfix .right {
+    float: right;
+    width: auto; }
+
+.float33 {
+  float: left;
+  width: 33%; }
+
+.float50 {
+  float: left;
+  width: 49%; }
+  .float50.with_left_border {
+    border-left: 1px solid #daeaca; }
+
+.float50_right {
+  float: right;
+  width: 49%; }
+
+.float70 {
+  float: left;
+  width: 69%; }
+  .float70.with_left_border {
+    border-left: 1px solid #daeaca; }
+
+.float30_right {
+  float: right;
+  width: 29%; }
+
+.hidden_content {
+  background: white;
+  border: 2px solid white;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px; }
+  .hidden_content form {
+    padding: 8px; }
+
+.hidden_content_toggler {
+  background: url(/images/groupon/icons/blue_arrow.gif?1287080514) no-repeat 0 0.5em;
+  padding-left: 12px; }
+
+.text_right {
+  text-align: right; }
+
+#new_icon {
+  width: 27px;
+  height: 26px;
+  position: absolute;
+  right: -9px;
+  top: -5px;
+  z-index: 99; }
+
+a.with_image_and_centered {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.existing_customer {
+  overflow: hidden;
+  background: #ddedcc;
+  padding-top: 10px; }
+
+.fbconnect_login_button {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.quickie_login {
+  background: #ddedcc;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px 0; }
+
+#login_banner h3 {
+  margin-bottom: 20px; }
+
+.admin_actions {
+  padding: 5px 0 0 50px;
+  display: inline-block; }
+
+.loading {
+  background: url(/images/icons/spinner.gif?1287080514) no-repeat left;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 16px; }
+
+#content .dashboard, .dashboard {
+  margin-left: 9px;
+  width: 662px;
+  margin-left: 20px;
+  overflow: hidden;
+  display: inline-block; }
+  #content .dashboard img, #content .dashboard span, .dashboard img, .dashboard span {
+    display: inline;
+    float: left; }
+    #content .dashboard img.chrome, #content .dashboard span.chrome, .dashboard img.chrome, .dashboard span.chrome {
+      display: inline;
+      float: right;
+      margin-left: 0; }
+  #content .dashboard h4, .dashboard h4 {
+    display: inline;
+    float: left;
+    font-family: Georgia, serif; }
+  #content .dashboard ul, .dashboard ul {
+    border: 2px solid #76a045;
+    border-bottom: none;
+    -moz-border-radius-topleft: 8px;
+    -webkit-border-top-left-radius: 8px;
+    border-top-left: 8px;
+    -moz-border-radius-topright: 8px;
+    -webkit-border-top-right-radius: 8px;
+    border-top-right: 8px;
+    width: auto;
+    padding: 0 10px;
+    background: #ddedcc; }
+    #content .dashboard ul li, .dashboard ul li {
+      float: left;
+      padding-left: 0;
+      padding-right: 0;
+      white-space: nowrap; }
+      #content .dashboard ul li.first, .dashboard ul li.first {
+        padding-left: 0px; }
+      #content .dashboard ul li.last, .dashboard ul li.last {
+        padding-right: 0px; }
+    #content .dashboard ul li, .dashboard ul li {
+      padding: 0 8px 0 0;
+      font-size: 1em; }
+      #content .dashboard ul li a, .dashboard ul li a {
+        color: black;
+        display: inline;
+        float: left; }
+        #content .dashboard ul li a:hover, .dashboard ul li a:hover {
+          color: #0981be; }
+        #content .dashboard ul li a:hover, .dashboard ul li a:hover {
+          text-decoration: underline; }
+  #content .dashboard p, .dashboard p {
+    float: left;
+    width: auto;
+    height: 20px;
+    padding: 8px 0 0 0;
+    font-size: 1em;
+    background: #ddedcc;
+    border-top: 2px solid #76a045; }
+    #content .dashboard p a, .dashboard p a {
+      color: black; }
+      #content .dashboard p a:hover, .dashboard p a:hover {
+        color: #0981be; }
+      #content .dashboard p a:hover, .dashboard p a:hover {
+        text-decoration: underline; }
+  #content .dashboard.tabbed, .dashboard.tabbed {
+    z-index: 2;
+    position: relative;
+    top: 2px; }
+    #content .dashboard.tabbed ul, .dashboard.tabbed ul {
+      background: none;
+      border: none;
+      padding: 0 5px 0 0;
+      overflow: none; }
+      #content .dashboard.tabbed ul li, .dashboard.tabbed ul li {
+        padding: 0 10px 0 0;
+        margin-right: 2px;
+        background: url(/images/groupon/corners/tab_gright.png?1287080514) no-repeat right top; }
+        #content .dashboard.tabbed ul li a, .dashboard.tabbed ul li a {
+          line-height: 25px;
+          padding-top: 3px;
+          border-top: 2px solid #76a045;
+          border-bottom: 2px solid #76a045;
+          background: #ddedcc;
+          font-size: 1.2em; }
+        #content .dashboard.tabbed ul li .chrome_left, .dashboard.tabbed ul li .chrome_left {
+          float: left;
+          width: 11px;
+          height: 30px; }
+        #content .dashboard.tabbed ul li .chrome_left, .dashboard.tabbed ul li .chrome_left {
+          background: url(/images/groupon/corners/tab_gleft.png?1287080514) no-repeat 0 0; }
+        #content .dashboard.tabbed ul li.current, .dashboard.tabbed ul li.current {
+          background-image: url(/images/groupon/corners/tab_wright.png?1287080514);
+          border: none; }
+          #content .dashboard.tabbed ul li.current .chrome_left, .dashboard.tabbed ul li.current .chrome_left {
+            height: 32px; }
+          #content .dashboard.tabbed ul li.current .chrome_left, .dashboard.tabbed ul li.current .chrome_left {
+            background: url(/images/groupon/corners/tab_wleft.png?1287080514) no-repeat 0 0; }
+          #content .dashboard.tabbed ul li.current a, .dashboard.tabbed ul li.current a {
+            background: white;
+            border-bottom: 2px solid white; }
+  #content .dashboard, .dashboard {
+    display: block; }
+  #content .dashboard ul, .dashboard ul {
+    float: left;
+    position: relative;
+    overflow: visible; }
+    #content .dashboard ul li, .dashboard ul li {
+      padding-top: 2px; }
+  #content .dashboard .rounded_right, .dashboard .rounded_right {
+    display: none; }
+
+#content .tabbed {
+  background: none; }
+
+#content .write_up {
+  clear: left; }
+  #content .write_up .article, #content .write_up .write_up_rail {
+    float: left;
+    padding-top: 20px; }
+  #content .write_up .article {
+    width: 468px;
+    padding-right: 10px; }
+    #content .write_up .article blockquote {
+      margin-bottom: 10px;
+      color: #969696;
+      font-weight: bold;
+      font-size: 1em; }
+      #content .write_up .article blockquote ul {
+        padding: 0 40px 0 20px; }
+        #content .write_up .article blockquote ul li {
+          margin-bottom: 10px; }
+  #content .write_up .btn_discussion_writeup_join {
+    float: right;
+    clear: both; }
+    #content .write_up .btn_discussion_writeup_join .btn_cta {
+      display: block; }
+    #content .write_up .btn_discussion_writeup_join .comment_number {
+      float: right; }
+  #content .write_up .write_up_rail {
+    width: 184px;
+    padding-left: 10px; }
+    #content .write_up .write_up_rail .company {
+      padding-bottom: 20px; }
+
+#meetup-wrap {
+  width: 190px;
+  background: url(/images/groupon/sprites/deal_page_sprite.gif?1287080514) no-repeat 0 -44px;
+  padding-top: 64px; }
+  #meetup-wrap #meetup-run {
+    background: url(/images/groupon/backgrounds/meetup-run.jpg?1287080514) repeat-y;
+    padding: 5px 7px 0 7px; }
+    #meetup-wrap #meetup-run h4 {
+      line-height: 1.1em;
+      margin-bottom: 10px; }
+    #meetup-wrap #meetup-run p {
+      margin: 0;
+      text-align: center; }
+  #meetup-wrap #meetup-footer {
+    background: url(/images/groupon/sprites/deal_page_sprite.gif?1287080514) no-repeat 0 -108px;
+    height: 24px; }
+
+#groupon_says {
+  width: 660px;
+  padding: 20px 10px;
+  border: 2px solid #76a045;
+  background: white url(/images/groupon/groupon_says/cat.png?1287080514) no-repeat 410px 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+  #groupon_says h2.title {
+    text-indent: -9999em;
+    background: white url(/images/groupon/groupon_says/groupon_says.gif?1287080514) no-repeat -10px bottom;
+    height: 40px;
+    width: 400px;
+    margin-bottom: -7px; }
+  #groupon_says h3 {
+    padding: 10px 0 0 10px;
+    margin-left: -10px;
+    z-index: 0; }
+    #groupon_says h3.divider {
+      width: 380px; }
+  #groupon_says h4.feelings {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px -10px 10px;
+    padding: 10px;
+    border-top: 1px solid #c5e2c6; }
+  #groupon_says p {
+    margin-bottom: 10px !important; }
+  #groupon_says #challenge {
+    border-top: 1px solid #c5e2c6;
+    padding: 0 105px 0 10px;
+    margin: 10px -10px;
+    min-height: 90px;
+    background: white url(/images/groupon/groupon_says/challenge.gif?1287080514) no-repeat 580px 10px; }
+    #groupon_says #challenge p.challenge {
+      font-size: 14px;
+      padding: 10px 0 0; }
+    #groupon_says #challenge p.caption {
+      font-family: georgia;
+      font-size: 11px;
+      color: #a0a0a0;
+      font-style: italic;
+      margin: 0;
+      padding: 0 10px 5px 0; }
+  #groupon_says .cat {
+    float: right;
+    height: 180px;
+    width: 260px; }
+  #groupon_says ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #333333; }
+    #groupon_says ul li strong {
+      color: #333333; }
+  #groupon_says img#trophy {
+    float: left;
+    margin: 0 -60px 0 10px;
+    z-index: 99 !important;
+    display: block;
+    position: relative; }
+  #groupon_says blockquote {
+    padding: 10px 16px;
+    margin: 15px 0;
+    overflow: visible;
+    font-weight: normal !important;
+    font-style: italic;
+    font-size: 11px;
+    color: #303030 !important;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px; }
+    #groupon_says blockquote ul li {
+      list-style: none;
+      margin-bottom: 10px; }
+    #groupon_says blockquote.winner {
+      background-color: #deedcc;
+      float: left;
+      position: relative;
+      display: block;
+      z-index: 0 !important;
+      padding-left: 70px;
+      margin-bottom: 40px; }
+    #groupon_says blockquote h4 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 10px;
+      color: #b0aea6;
+      font-style: normal; }
+    #groupon_says blockquote p {
+      background: #deedcc url(/images/groupon/groupon_says/quote.png?1287080514) no-repeat left 2px;
+      padding: 0 0 0 14px;
+      margin: 0 !important;
+      width: 545px; }
+      #groupon_says blockquote p.winner {
+        background: none;
+        font-size: 11px;
+        font-style: normal;
+        margin: 0 14px !important;
+        padding: 0;
+        float: left;
+        line-height: 11px; }
+  #groupon_says hr {
+    border: 0 none;
+    border-bottom: 1px solid #c5e2c6;
+    margin: 10px -20px 30px; }
+
+.groupon_voice {
+  width: 466px;
+  margin: 110px 0 5px;
+  padding-bottom: 20px;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -moz-box-shadow: #bcbcbc 2px 2px 1px ;
+  -webkit-box-shadow: #bcbcbc 2px 2px 1px ;
+  box-shadow: #bcbcbc 2px 2px 1px ;
+  position: relative;
+  z-index: 99;
+  background-color: white;
+  display: inline-block; }
+  .groupon_voice h2 {
+    text-indent: -9999em;
+    background: url(/images/groupon/groupon_says/groupon_says_deal.gif?1287080514) no-repeat;
+    margin: -34px 10px 0;
+    height: 45px; }
+  .groupon_voice h3 {
+    margin-top: 22px !important; }
+    .groupon_voice h3 a {
+      color: #333333; }
+  .groupon_voice #challenge {
+    border-top: 1px solid #c5e2c6;
+    padding: 0 90px 0 10px;
+    margin: 10px -10px;
+    min-height: 80px;
+    background: white url(/images/groupon/groupon_says/challenge.gif?1287080514) no-repeat 375px center; }
+    .groupon_voice #challenge p.challenge {
+      font-size: 14px;
+      padding: 10px 0 0;
+      margin-bottom: 5px; }
+    .groupon_voice #challenge p.caption {
+      font-family: georgia;
+      font-size: 11px;
+      color: #a0a0a0;
+      font-style: italic;
+      margin: 0;
+      padding: 0 10px 5px 0; }
+  .groupon_voice p.feelings {
+    font-weight: bold;
+    margin-left: 10px; }
+  .groupon_voice hr {
+    border: 0px none;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid white;
+    margin: 0 0 20px; }
+  .groupon_voice .groupon_voice_top {
+    background: url(/images/groupon/groupon_says/talking_cat.png?1287080514) no-repeat 260px 4px;
+    padding: 100px 10px 10px;
+    margin-top: -114px; }
+    .groupon_voice .groupon_voice_top ul li {
+      color: #333333; }
+      .groupon_voice .groupon_voice_top ul li strong {
+        color: #333333; }
+    .groupon_voice .groupon_voice_top blockquote {
+      font-weight: normal !important; }
+  .groupon_voice ul.groupon_share {
+    margin-bottom: 0 !important;
+    padding-left: 5px !important;
+    overflow: hidden;
+    display: inline-block;
+    overflow: visible; }
+    .groupon_voice ul.groupon_share {
+      display: block; }
+    .groupon_voice ul.groupon_share li {
+      margin: 0 5px;
+      float: right;
+      list-style: none; }
+      .groupon_voice ul.groupon_share li.submit_your_answer {
+        float: left; }
+      .groupon_voice ul.groupon_share li.twitter {
+        width: 17px;
+        height: 20px;
+        background: transparent url(/images/groupon/sprites/share_sprite.png?1287080514) no-repeat left center; }
+        .groupon_voice ul.groupon_share li.twitter a {
+          text-indent: -9999px;
+          display: block; }
+
+.groupon_voice_winner {
+  position: relative;
+  display: block;
+  z-index: 1;
+  width: 448px;
+  margin: -20px 0 10px;
+  padding: 20px 10px 10px;
+  background: #ddedcc;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -moz-box-shadow: #cccccc 1px 1px 2px ;
+  -webkit-box-shadow: #cccccc 1px 1px 2px ;
+  box-shadow: #cccccc 1px 1px 2px ; }
+  .groupon_voice_winner div {
+    background: transparent url(/images/groupon/groupon_says/trophy.png?1287080514) no-repeat left 10px;
+    padding: 10px 40px 10px 80px;
+    min-height: 100px; }
+    .groupon_voice_winner div p {
+      font-size: 11px;
+      margin-bottom: 5px; }
+    .groupon_voice_winner div blockquote {
+      background: transparent url(/images/groupon/groupon_says/quote.png?1287080514) no-repeat left top;
+      padding-left: 16px;
+      font-weight: normal !important;
+      font-style: italic;
+      font-size: 11px !important;
+      color: #303030 !important; }
+
+.page_content {
+  overflow: visible; }
+
+.container_16 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px; }
+
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16 {
+  display: inline;
+  float: left;
+  margin-left: 0;
+  margin-right: 20px; }
+
+.last {
+  margin-right: 0; }
+
+.grid_1 {
+  width: 37.25px; }
+
+.grid_2 {
+  width: 95.5px; }
+
+.grid_3 {
+  width: 153.75px; }
+
+.grid_4 {
+  width: 212px; }
+
+.grid_5 {
+  width: 270.25px; }
+
+.grid_6 {
+  width: 328.5px; }
+
+.grid_7 {
+  width: 386.75px; }
+
+.grid_8 {
+  width: 445px; }
+
+.grid_9 {
+  width: 503.25px; }
+
+.grid_10 {
+  width: 561.5px; }
+
+.grid_11 {
+  width: 619.75px; }
+
+.grid_12 {
+  margin-right: 0;
+  width: 678px; }
+
+input.grid_1, textarea.grid_1 {
+  width: 29.25px; }
+
+input.grid_2, textarea.grid_2 {
+  width: 87.5px; }
+
+input.grid_3, textarea.grid_3 {
+  width: 145.75px; }
+
+input.grid_4, textarea.grid_4 {
+  width: 204px; }
+
+input.grid_5, textarea.grid_5 {
+  width: 262.25px; }
+
+input.grid_6, textarea.grid_6 {
+  width: 320.5px; }
+
+input.grid_7, textarea.grid_7 {
+  width: 378.75px; }
+
+input.grid_8, textarea.grid_8 {
+  width: 437px; }
+
+input.grid_9, textarea.grid_9 {
+  width: 495.25px; }
+
+input.grid_10, textarea.grid_10 {
+  width: 553.5px; }
+
+input.grid_11, textarea.grid_11 {
+  width: 611.75px; }
+
+input.grid_12, textarea.grid_12 {
+  width: 670px; }
+
+.float50 {
+  float: left;
+  width: 49%; }
+
+.float50_right {
+  float: right;
+  width: 49%; }
+
+.clear {
+  clear: both; }
+
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+div.confirmation {
+  position: relative;
+  z-index: 10001; }
+  div.confirmation .formError {
+    font-size: 14px; }
+  div.confirmation #cancel_order_btn {
+    position: absolute;
+    bottom: 20px;
+    z-index: 100;
+    width: 702px; }
+    div.confirmation #cancel_order_btn .pad_thai {
+      padding: 0 2px; }
+
+#fine_print {
+  font-size: 0.7em;
+  margin: 10px 0;
+  font-weight: normal;
+  padding: 5px; }
+  #fine_print h3 {
+    font-size: 1.2em;
+    margin: 5px 2px 10px 0; }
+  #fine_print ul {
+    color: #4c4c4c;
+    font-size: 0.8em;
+    font-weight: normal;
+    list-style: disc;
+    padding-left: 15px; }
+
+#complete_purchase_container .box_content {
+  padding-bottom: 100px; }
+  #complete_purchase_container .box_content #order-accept-terms-check {
+    margin-bottom: 15px;
+    padding-top: 10px; }
+
+.pad_left {
+  padding-left: 10px; }
+
+.js_enabled #complete_purchase_container .box_content {
+  padding-bottom: 30px; }
+.js_enabled #cancel_order_btn {
+  display: none; }
+
+.show_cancel_button #complete_purchase_container .box_content {
+  padding-bottom: 100px; }
+
+.show_cancel_button #cancel_order_btn {
+  display: block; }
+
+.cc_form_fields .float50 .field label, .cc_form_fields .float50 .expiration label {
+  float: left;
+  width: 100%; }
+.cc_form_fields .float50 .field #billing_record_cvv, .cc_form_fields .float50 .field #billing_record_cvv, .cc_form_fields .float50 .expiration #billing_record_cvv, .cc_form_fields .float50 .expiration #billing_record_cvv {
+  width: 45px; }
+.cc_form_fields .float50 .field #billing_record_zip, .cc_form_fields .float50 .field #billing_record_zip, .cc_form_fields .float50 .expiration #billing_record_zip, .cc_form_fields .float50 .expiration #billing_record_zip {
+  width: 120px; }
+.cc_form_fields .float50 .field #billing_record_country_and_state, .cc_form_fields .float50 .field #billing_record_country_and_state, .cc_form_fields .float50 .expiration #billing_record_country_and_state, .cc_form_fields .float50 .expiration #billing_record_country_and_state {
+  width: 130px; }
+.cc_form_fields .float50 .field #whats_this, .cc_form_fields .float50 .expiration #whats_this {
+  margin-left: 8px; }
+.cc_form_fields .float50 .expiration {
+  clear: left; }
+  .cc_form_fields .float50 .expiration label {
+    margin-bottom: 5px; }
+  .cc_form_fields .float50 .expiration select {
+    margin-right: 5px; }
+
+#order_shipping_country_and_state {
+  width: 130px; }
+
+#order_shipping_zip {
+  width: 120px; }
+
+#credits_cancel_order_tray, #credit_cards_cancel_order_tray {
+  clear: both; }
+  #credits_cancel_order_tray span, #credit_cards_cancel_order_tray span {
+    float: left;
+    padding: 10px 0 0 15px;
+    font-size: 1.2em; }
+
+#credits {
+  padding-top: 20px;
+  padding-bottom: 200px; }
+
+a.cancel_order_control {
+  float: left;
+  clear: left;
+  padding: 15px 0 10px 15px;
+  font-size: 1.2em; }
+
+.confirmation .your_purchase .the_breakdown td {
+  vertical-align: top; }
+.confirmation .your_purchase .the_breakdown .discount_line_item td {
+  border-top: none; }
+.confirmation .your_purchase .the_breakdown .discount_line_item .discount_price {
+  text-indent: -0.75em;
+  color: #86ad53;
+  font-size: 1em; }
+.confirmation .your_purchase .the_breakdown .discount_line_item p {
+  margin-bottom: 0; }
+  .confirmation .your_purchase .the_breakdown .discount_line_item p small {
+    color: #afafaf;
+    font-size: 11px; }
+.confirmation .your_purchase .the_breakdown td.pad_right p {
+  padding-right: 10px; }
+.confirmation .your_purchase .the_breakdown .discount_line_item .right, .confirmation .your_purchase .the_breakdown .total .right {
+  padding-right: 75px; }
+.confirmation .your_purchase .the_breakdown td.with_border {
+  border-top: 1px solid #daeaca; }
+.confirmation .your_purchase .the_breakdown .total td {
+  padding-top: 10px;
+  border-top: 1px solid #76a045; }
+.confirmation .your_purchase .the_breakdown .total p {
+  font-size: 1.3em;
+  margin-bottom: 0; }
+  .confirmation .your_purchase .the_breakdown .total p small {
+    font-size: 11px;
+    color: #afafaf; }
+.confirmation .your_purchase .the_breakdown .interleaved_message p {
+  font-size: 11px;
+  font-weight: normal;
+  margin-right: 10px;
+  padding: 4px;
+  background: #deedcc;
+  float: right; }
+
+form.default div.field.billing_record_billing_record_id.radio label {
+  width: 252px; }
+
+#gift_details {
+  background: #f4f4f4; }
+  #gift_details .close {
+    background: url(/images/groupon/icons/close_grey.gif?1287080514) no-repeat;
+    cursor: pointer;
+    padding-right: 0;
+    width: 16px;
+    height: 17px;
+    overflow: hidden;
+    line-height: 1000em;
+    top: 5px; }
+  #gift_details .pad_thai {
+    padding: 5px 5px 5px 25px;
+    background: #f4f4f4 url(/images/groupon/icons/icon_gift_grey.gif?1287080514) no-repeat 5px 5px;
+    position: relative; }
+  #gift_details p {
+    font-weight: normal; }
+
+.gift_cards_modal label {
+  margin-bottom: 0; }
+.gift_cards_modal .modal_main {
+  background-image: none;
+  padding: 20px 10px; }
+.gift_cards_modal .modal_footer {
+  padding-top: 5px; }
+.gift_cards_modal .modal_close {
+  float: left;
+  display: block;
+  margin-left: 5px;
+  font-size: 1.2em; }
+.gift_cards_modal #gift_details_save_btn {
+  display: block;
+  float: left;
+  background: url(/images/groupon/buttons/save_green.gif?1287080514) no-repeat;
+  width: 63px;
+  height: 23px;
+  margin-left: 10px;
+  overflow: hidden;
+  line-height: 1000em; }
+
+.billing_record_submit {
+  float: left;
+  background: url(/images/groupon/buttons/save_card.gif?1287080514) no-repeat top left;
+  width: 99px;
+  height: 30px;
+  text-indent: -10000px;
+  line-height: 1em;
+  border: none; }
+  .billing_record_submit.disabled {
+    opacity: 0.5; }
+
+.cancel_billing_record_edit {
+  margin-top: 10px; }
+
+span.or, a.cancel {
+  padding-left: 10px; }
+
+a.cancel {
+  padding-top: 0;
+  font-weight: bold; }
+  a.cancel:hover {
+    text-decoration: underline; }
+
+#btn_update_total {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #0981be;
+  float: none;
+  font-size: 11px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+  width: auto; }
+  #btn_update_total:hover {
+    text-decoration: underline; }
+  body.js_enabled.rewards_beta_program .sweet_stache #btn_update_total {
+    display: none; }
+
+.check #order_use_reward_points {
+  margin-bottom: 0; }
+
+.fb_prompt .formError {
+  color: #d31b5d; }
+
+.formError {
+  color: #d31b5d; }
+
+#order-share-purchases-check .reward_points {
+  color: #76a045; }
+
+.recent .category_text, .all .category_text, .follow .category_text {
+  padding-top: 10px; }
+  .recent .category_text p, .all .category_text p, .follow .category_text p {
+    float: none;
+    padding: 0; }
+
+.admin {
+  float: left;
+  width: 960px;
+  background: #f8f8f8; }
+
+.deals .admin_index .campaign_avatar {
+  width: 50px; }
+
+.confirmation input, .confirmation select, .confirmation textarea, .confirmation #your_purchase, .gift_cards input, .gift_cards select, .gift_cards textarea, .gift_cards #your_purchase {
+  font-family: Helvetica, Arial, sans-serif; }
+.confirmation img.chrome, .confirmation span.chrome, .gift_cards img.chrome, .gift_cards span.chrome {
+  display: block;
+  float: left; }
+  .confirmation img.chrome.top, .confirmation span.chrome.top, .gift_cards img.chrome.top, .gift_cards span.chrome.top {
+    margin-top: 20px; }
+.confirmation .deal_summary, .gift_cards .deal_summary {
+  width: 956px;
+  display: inline;
+  float: left;
+  margin-top: 20px;
+  border: 2px dashed #325c01;
+  background: white; }
+  .confirmation .deal_summary h2, .gift_cards .deal_summary h2 {
+    padding: 10px;
+    border-bottom: 1px solid #f8f8f8;
+    text-align: center; }
+.confirmation .buttons .button, .gift_cards .buttons .button {
+  display: inline;
+  float: left;
+  padding-left: 0;
+  width: 208px;
+  height: 38px;
+  background: url(/images/groupon/buttons/checkout_sprite.gif?1287080514) no-repeat; }
+  .confirmation .buttons .button.complete, .confirmation .buttons .button.update, .gift_cards .buttons .button.complete, .gift_cards .buttons .button.update {
+    background-position: 0 0;
+    margin-right: 6px;
+    width: 208px;
+    border: none; }
+    .confirmation .buttons .button.complete.disabled, .confirmation .buttons .button.update.disabled, .gift_cards .buttons .button.complete.disabled, .gift_cards .buttons .button.update.disabled {
+      opacity: 0.5;
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      filter: alpha(opacity=50); }
+  .confirmation .buttons .button.complete, .confirmation .buttons .button.update, .gift_cards .buttons .button.complete, .gift_cards .buttons .button.update {
+    padding-top: 35px;
+    color: white; }
+  .confirmation .buttons .button.update, .gift_cards .buttons .button.update {
+    background-position: 0 -40px;
+    float: left;
+    display: inline; }
+.confirmation .buttons .cancel-order, .gift_cards .buttons .cancel-order {
+  background: url(/images/groupon/buttons/checkout_sprite.gif?1287080514) no-repeat 0 -80px;
+  padding-top: 0;
+  width: 208px;
+  height: 38px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  line-height: 1em;
+  text-indent: -10000px; }
+.confirmation .page_header h2, .gift_cards .page_header h2 {
+  border-bottom: none; }
+.confirmation .your_purchase h2, .gift_cards .your_purchase h2 {
+  margin-bottom: 20px;
+  padding: 0 10px; }
+.confirmation .your_purchase .error_notification, .gift_cards .your_purchase .error_notification {
+  background: #ff81c3;
+  padding: 5px 10px;
+  color: #a0002a;
+  font-size: 1.2em; }
+.confirmation .your_purchase table, .gift_cards .your_purchase table {
+  display: inline;
+  float: left;
+  width: 100%;
+  font-family: "Helvetica";
+  font-size: 1.2em;
+  color: black; }
+  .confirmation .your_purchase table td, .confirmation .your_purchase table td.with_border, .gift_cards .your_purchase table td, .gift_cards .your_purchase table td.with_border {
+    border-top: 1px solid #daeaca; }
+  .confirmation .your_purchase table td.description, .confirmation .your_purchase table th.description, .gift_cards .your_purchase table td.description, .gift_cards .your_purchase table th.description {
+    width: 384px; }
+    .confirmation .your_purchase table td.description select, .confirmation .your_purchase table th.description select, .gift_cards .your_purchase table td.description select, .gift_cards .your_purchase table th.description select {
+      display: block;
+      width: 100%;
+      font-size: 15px;
+      margin-bottom: 4px;
+      padding: 5px 2px 5px 5px;
+      border: 1px solid #cccccc;
+      line-height: 26px; }
+  .confirmation .your_purchase table td.quantity, .confirmation .your_purchase table td.description, .gift_cards .your_purchase table td.quantity, .gift_cards .your_purchase table td.description {
+    padding-top: 10px; }
+  .confirmation .your_purchase table td, .gift_cards .your_purchase table td {
+    vertical-align: top;
+    padding-top: 18px; }
+    .confirmation .your_purchase table td.quantity, .gift_cards .your_purchase table td.quantity {
+      width: 85px; }
+      .confirmation .your_purchase table td.quantity.fixed, .gift_cards .your_purchase table td.quantity.fixed {
+        text-align: center;
+        padding: 0; }
+      .confirmation .your_purchase table td.quantity input, .gift_cards .your_purchase table td.quantity input {
+        float: left;
+        width: 32px;
+        height: 26px;
+        font-size: 1.2em;
+        padding-top: 2px;
+        margin-left: 5px;
+        text-align: center; }
+      .confirmation .your_purchase table td.quantity span.update, .gift_cards .your_purchase table td.quantity span.update {
+        float: left;
+        clear: left;
+        width: 70px;
+        padding-top: 2px;
+        padding-left: 0; }
+        .confirmation .your_purchase table td.quantity span.update a, .gift_cards .your_purchase table td.quantity span.update a {
+          font-size: 0.6em; }
+          .confirmation .your_purchase table td.quantity span.update a:hover, .gift_cards .your_purchase table td.quantity span.update a:hover {
+            text-decoration: underline; }
+    .confirmation .your_purchase table td.price, .gift_cards .your_purchase table td.price {
+      width: 155px; }
+      .confirmation .your_purchase table td.price span, .gift_cards .your_purchase table td.price span {
+        float: left; }
+        .confirmation .your_purchase table td.price span.times, .confirmation .your_purchase table td.price span.equal, .gift_cards .your_purchase table td.price span.times, .gift_cards .your_purchase table td.price span.equal {
+          color: #666666; }
+        .confirmation .your_purchase table td.price span.times, .gift_cards .your_purchase table td.price span.times {
+          padding-right: 35px;
+          padding-top: 3px;
+          font-size: 0.8em; }
+        .confirmation .your_purchase table td.price span.equal, .gift_cards .your_purchase table td.price span.equal {
+          padding-left: 35px; }
+    .confirmation .your_purchase table td.total, .gift_cards .your_purchase table td.total {
+      width: 100px;
+      padding-top: 15px; }
+      .confirmation .your_purchase table td.total span, .gift_cards .your_purchase table td.total span {
+        float: left;
+        font-size: 1.3em; }
+      .confirmation .your_purchase table td.total img, .gift_cards .your_purchase table td.total img {
+        float: right;
+        margin-right: 10px; }
+  .confirmation .your_purchase table td, .gift_cards .your_purchase table td {
+    font-weight: bold;
+    font-size: 1.4em; }
+    .confirmation .your_purchase table td p, .gift_cards .your_purchase table td p {
+      font-size: 0.75em; }
+    .confirmation .your_purchase table td #applied_points, .gift_cards .your_purchase table td #applied_points {
+      width: 100%;
+      padding-top: 5px;
+      float: right; }
+      .confirmation .your_purchase table td #applied_points .applied_credit, .gift_cards .your_purchase table td #applied_points .applied_credit {
+        float: left;
+        font-size: 1em; }
+        .confirmation .your_purchase table td #applied_points .applied_credit .hyphen, .gift_cards .your_purchase table td #applied_points .applied_credit .hyphen {
+          float: none;
+          padding: 0 40px 0 30px;
+          color: #666666; }
+      .confirmation .your_purchase table td #applied_points #applied_points_amount, .confirmation .your_purchase table td #applied_points .dollar_sign, .gift_cards .your_purchase table td #applied_points #applied_points_amount, .gift_cards .your_purchase table td #applied_points .dollar_sign {
+        float: left; }
+      .confirmation .your_purchase table td #applied_points .credit_remaining, .gift_cards .your_purchase table td #applied_points .credit_remaining {
+        clear: left;
+        width: auto;
+        font-size: 0.7em;
+        font-weight: normal;
+        color: #444444; }
+        .confirmation .your_purchase table td #applied_points .credit_remaining span, .gift_cards .your_purchase table td #applied_points .credit_remaining span {
+          float: left;
+          font-size: 1em;
+          padding-bottom: 0.4em; }
+      .confirmation .your_purchase table td #applied_points .you_pay, .gift_cards .your_purchase table td #applied_points .you_pay {
+        clear: left;
+        width: auto;
+        padding: 10px 15px 5px 15px;
+        margin: 10px 30px 0 0;
+        background: #deedcc;
+        border: 1px solid #76a045; }
+        .confirmation .your_purchase table td #applied_points .you_pay p span, .gift_cards .your_purchase table td #applied_points .you_pay p span {
+          float: left; }
+          .confirmation .your_purchase table td #applied_points .you_pay p span#remaining_payment_amount, .gift_cards .your_purchase table td #applied_points .you_pay p span#remaining_payment_amount {
+            padding-right: 0.4em; }
+  .confirmation .your_purchase table th, .confirmation .your_purchase table th.description, .gift_cards .your_purchase table th, .gift_cards .your_purchase table th.description {
+    padding-bottom: 0;
+    font-weight: bold; }
+    .confirmation .your_purchase table th.price, .confirmation .your_purchase table th.description.price, .gift_cards .your_purchase table th.price, .gift_cards .your_purchase table th.description.price {
+      width: 110px;
+      padding-left: 42px; }
+.confirmation #your_purchase h2, .gift_cards #your_purchase h2 {
+  padding: 0 10px;
+  margin-bottom: 10px; }
+.confirmation #your_purchase .error_notification, .gift_cards #your_purchase .error_notification {
+  background: #ff81c3;
+  padding: 5px 10px;
+  color: #a0002a;
+  font-size: 1.2em; }
+.confirmation #your_purchase table#subtotal, .gift_cards #your_purchase table#subtotal {
+  font-size: 12px;
+  width: 100%; }
+  .confirmation #your_purchase table#subtotal p, .confirmation #your_purchase table#subtotal label, .confirmation #your_purchase table#subtotal .field, .gift_cards #your_purchase table#subtotal p, .gift_cards #your_purchase table#subtotal label, .gift_cards #your_purchase table#subtotal .field {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0; }
+  .confirmation #your_purchase table#subtotal label, .gift_cards #your_purchase table#subtotal label {
+    font-weight: bold; }
+  .confirmation #your_purchase table#subtotal .description, .confirmation #your_purchase table#subtotal .discount_container, .gift_cards #your_purchase table#subtotal .description, .gift_cards #your_purchase table#subtotal .discount_container {
+    text-align: left; }
+  .confirmation #your_purchase table#subtotal #reward_points_applied, .gift_cards #your_purchase table#subtotal #reward_points_applied {
+    margin-left: 17px; }
+  .confirmation #your_purchase table#subtotal tr.line_item, .confirmation #your_purchase table#subtotal tr th, .gift_cards #your_purchase table#subtotal tr.line_item, .gift_cards #your_purchase table#subtotal tr th {
+    border-bottom: 1px solid #daeaca; }
+  .confirmation #your_purchase table#subtotal tr.total, .gift_cards #your_purchase table#subtotal tr.total {
+    border-top: 1px solid #76a045; }
+  .confirmation #your_purchase table#subtotal tr th, .confirmation #your_purchase table#subtotal tr td, .gift_cards #your_purchase table#subtotal tr th, .gift_cards #your_purchase table#subtotal tr td {
+    padding: 10px;
+    text-align: center; }
+    .confirmation #your_purchase table#subtotal tr th.quantity, .confirmation #your_purchase table#subtotal tr td.quantity, .gift_cards #your_purchase table#subtotal tr th.quantity, .gift_cards #your_purchase table#subtotal tr td.quantity {
+      width: 60px; }
+    .confirmation #your_purchase table#subtotal tr th.times, .confirmation #your_purchase table#subtotal tr th.equals, .confirmation #your_purchase table#subtotal tr td.times, .confirmation #your_purchase table#subtotal tr td.equals, .gift_cards #your_purchase table#subtotal tr th.times, .gift_cards #your_purchase table#subtotal tr th.equals, .gift_cards #your_purchase table#subtotal tr td.times, .gift_cards #your_purchase table#subtotal tr td.equals {
+      color: #666666;
+      width: 20px; }
+    .confirmation #your_purchase table#subtotal tr th.total, .confirmation #your_purchase table#subtotal tr td.total, .gift_cards #your_purchase table#subtotal tr th.total, .gift_cards #your_purchase table#subtotal tr td.total {
+      padding-right: 20px;
+      text-align: right;
+      width: 100px; }
+  .confirmation #your_purchase table#subtotal tr th, .gift_cards #your_purchase table#subtotal tr th {
+    font-weight: bold;
+    padding-bottom: 0;
+    padding-top: 0;
+    vertical-align: bottom; }
+    .confirmation #your_purchase table#subtotal tr th.total, .gift_cards #your_purchase table#subtotal tr th.total {
+      text-indent: 0; }
+  .confirmation #your_purchase table#subtotal tr td, .gift_cards #your_purchase table#subtotal tr td {
+    vertical-align: top; }
+    .confirmation #your_purchase table#subtotal tr td.total, .gift_cards #your_purchase table#subtotal tr td.total {
+      font-size: 1.667em;
+      font-weight: bold; }
+  .confirmation #your_purchase table#subtotal tr.line_item, .confirmation #your_purchase table#subtotal tr.total, .gift_cards #your_purchase table#subtotal tr.line_item, .gift_cards #your_purchase table#subtotal tr.total {
+    font-size: 1.5em;
+    font-weight: bold; }
+    .confirmation #your_purchase table#subtotal tr.line_item td.total, .confirmation #your_purchase table#subtotal tr.total td.total, .gift_cards #your_purchase table#subtotal tr.line_item td.total, .gift_cards #your_purchase table#subtotal tr.total td.total {
+      font-size: 1.111em; }
+  .confirmation #your_purchase table#subtotal tr.line_item td.description select, .gift_cards #your_purchase table#subtotal tr.line_item td.description select {
+    border: 1px solid #cccccc;
+    display: block;
+    font-size: 0.833em;
+    font-weight: bold;
+    line-height: 26px;
+    margin-bottom: 4px;
+    padding: 5px 2px 5px 5px;
+    width: 100%; }
+  .confirmation #your_purchase table#subtotal tr.line_item td.description p.icon_gift, .confirmation #your_purchase table#subtotal tr.line_item td.description #gift_details, .gift_cards #your_purchase table#subtotal tr.line_item td.description p.icon_gift, .gift_cards #your_purchase table#subtotal tr.line_item td.description #gift_details {
+    font-size: 0.65em; }
+  .confirmation #your_purchase table#subtotal tr.line_item td.quantity input, .gift_cards #your_purchase table#subtotal tr.line_item td.quantity input {
+    float: none;
+    margin: 0; }
+  .confirmation #your_purchase table#subtotal tr.line_item td.quantity #order_amount, .gift_cards #your_purchase table#subtotal tr.line_item td.quantity #order_amount {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center; }
+  .confirmation #your_purchase table#subtotal tr.discount_line_item .discount, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount {
+    display: inline-block;
+    background: no-repeat left center;
+    float: right;
+    padding-left: 46px; }
+    .confirmation #your_purchase table#subtotal tr.discount_line_item .discount:after, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount:after {
+      content: " ";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+    .confirmation #your_purchase table#subtotal tr.discount_line_item .discount, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount {
+      display: block; }
+    .confirmation #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background: #ddedcc;
+      padding: 5px 5px 5px 15px;
+      width: 260px; }
+      .confirmation #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check {
+        display: inline-block;
+        overflow: visible; }
+        .confirmation #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check:after, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check:after {
+          content: " ";
+          display: block;
+          height: 0;
+          clear: both;
+          overflow: hidden;
+          visibility: hidden; }
+        .confirmation #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check {
+          display: block; }
+        .confirmation #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check input, .gift_cards #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner .check input {
+          margin-top: 2px; }
+  .confirmation #your_purchase table#subtotal tr.discount_line_item.points .discount, .gift_cards #your_purchase table#subtotal tr.discount_line_item.points .discount {
+    background-image: url(/images/groupon/icons/icon_groupon_bucks.gif?1287080514); }
+  .confirmation #your_purchase table#subtotal tr.discount_line_item.reward_points .discount, .gift_cards #your_purchase table#subtotal tr.discount_line_item.reward_points .discount {
+    background-image: url(/images/groupon/icons/icon_groupon_rewards_single_gs.gif?1287080514);
+    background-position: 5px center; }
+  .confirmation #your_purchase table#subtotal tr.discount_line_item .notes, .gift_cards #your_purchase table#subtotal tr.discount_line_item .notes {
+    color: #333333;
+    padding-top: 5px; }
+    body.js_enabled .confirmation #your_purchase table#subtotal tr.discount_line_item .notes, body.js_enabled .gift_cards #your_purchase table#subtotal tr.discount_line_item .notes {
+      display: none; }
+  .confirmation #your_purchase table#subtotal tr.discount_line_item td.total, .gift_cards #your_purchase table#subtotal tr.discount_line_item td.total {
+    padding-top: 20px; }
+  .confirmation #your_purchase table#subtotal .disabled .discount_price, .gift_cards #your_purchase table#subtotal .disabled .discount_price {
+    color: silver; }
+  .confirmation #your_purchase table#subtotal tr.total td, .gift_cards #your_purchase table#subtotal tr.total td {
+    background: #ddedcc;
+    padding-bottom: 0; }
+.confirmation .checkout .fb_prompt_thanks, .gift_cards .checkout .fb_prompt_thanks {
+  border-bottom: 1px solid #daeaca;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold; }
+.confirmation .checkout .fb_prompt, .gift_cards .checkout .fb_prompt {
+  border-bottom: 1px solid #daeaca;
+  padding-bottom: 10px;
+  font-size: 1.2em; }
+  .confirmation .checkout .fb_prompt .headline, .gift_cards .checkout .fb_prompt .headline {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    font-weight: bold; }
+  .confirmation .checkout .fb_prompt span.error, .gift_cards .checkout .fb_prompt span.error {
+    color: red; }
+  .confirmation .checkout .fb_prompt .prompt_label, .confirmation .checkout .fb_prompt .prompt_fields, .gift_cards .checkout .fb_prompt .prompt_label, .gift_cards .checkout .fb_prompt .prompt_fields {
+    font-weight: bold; }
+  .confirmation .checkout .fb_prompt .prompt_fields .FB_ElementReady a, .gift_cards .checkout .fb_prompt .prompt_fields .FB_ElementReady a {
+    font-size: 1.2em;
+    padding-bottom: 10px; }
+  .confirmation .checkout .fb_prompt .prompt_fields input, .gift_cards .checkout .fb_prompt .prompt_fields input {
+    width: 200px; }
+  .confirmation .checkout .fb_prompt .prompt_fields a img.ib, .gift_cards .checkout .fb_prompt .prompt_fields a img.ib {
+    position: relative;
+    top: 6px; }
+.confirmation .checkout .cancel, .gift_cards .checkout .cancel {
+  font-size: 1.4em; }
+.confirmation .error_notification, .gift_cards .error_notification {
+  background: #ff81c3;
+  padding: 5px 10px;
+  color: #a0002a;
+  font-size: 1.2em; }
+.confirmation .add_new_card, .gift_cards .add_new_card {
+  margin: 10px 0 20px 0; }
+.confirmation .billing_record_selection, .gift_cards .billing_record_selection {
+  border-bottom: 1px solid #daeaca; }
+  .confirmation .billing_record_selection .cc_form, .gift_cards .billing_record_selection .cc_form {
+    padding: 0 0 0 20px;
+    margin: 0 0 10px 0;
+    border-left: 16px solid #e7e7e7; }
+    .confirmation .billing_record_selection .cc_form h4, .gift_cards .billing_record_selection .cc_form h4 {
+      font-size: 1.8em;
+      padding-bottom: 10px; }
+  .confirmation .billing_record_selection table th, .gift_cards .billing_record_selection table th {
+    font-weight: bold;
+    padding: 5px 0 3px 0; }
+  .confirmation .billing_record_selection table tbody tr td .cc_form.active, .gift_cards .billing_record_selection table tbody tr td .cc_form.active {
+    float: left;
+    overflow: hidden; }
+    .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .primary, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .primary {
+      float: left;
+      width: 299px;
+      overflow: hidden; }
+      .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .primary .field, .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .primary .label, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .primary .field, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .primary .label {
+        width: 299px; }
+    .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary {
+      width: 269px;
+      float: left;
+      overflow: hidden;
+      padding-left: 30px; }
+      .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .field, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .field {
+        width: 260px; }
+        .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .field input, .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .field label, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .field input, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .field label {
+          width: 252px; }
+      .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip {
+        float: left;
+        overflow: hidden;
+        width: 260px; }
+        .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state {
+          float: left;
+          width: 150px;
+          overflow: hidden; }
+          .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state .billing_record_country_and_state, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state .billing_record_country_and_state {
+            float: left;
+            width: 150px; }
+            .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state .billing_record_country_and_state label, .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state .billing_record_country_and_state select, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state .billing_record_country_and_state label, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .state .billing_record_country_and_state select {
+              width: 150px; }
+        .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip {
+          float: left;
+          overflow: hidden;
+          width: 110px; }
+          .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip .billing_record_zip, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip .billing_record_zip {
+            width: 110px; }
+            .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip .billing_record_zip label, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip .billing_record_zip label {
+              width: 110px; }
+            .confirmation .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip .billing_record_zip #billing_record_zip, .gift_cards .billing_record_selection table tbody tr td .cc_form.active .cc_form_fields .secondary .state_and_zip .zip .billing_record_zip #billing_record_zip {
+              width: 102px; }
+  .confirmation .billing_record_selection th, .confirmation .billing_record_selection td, .gift_cards .billing_record_selection th, .gift_cards .billing_record_selection td {
+    vertical-align: top; }
+    .confirmation .billing_record_selection th.card, .confirmation .billing_record_selection td.card, .gift_cards .billing_record_selection th.card, .gift_cards .billing_record_selection td.card {
+      width: 270px; }
+    .confirmation .billing_record_selection th.number, .confirmation .billing_record_selection td.number, .gift_cards .billing_record_selection th.number, .gift_cards .billing_record_selection td.number {
+      width: 222px; }
+    .confirmation .billing_record_selection th.actions, .confirmation .billing_record_selection td.actions, .gift_cards .billing_record_selection th.actions, .gift_cards .billing_record_selection td.actions {
+      width: 196px; }
+      .confirmation .billing_record_selection th.actions a, .confirmation .billing_record_selection td.actions a, .gift_cards .billing_record_selection th.actions a, .gift_cards .billing_record_selection td.actions a {
+        float: left;
+        width: 50%; }
+        .confirmation .billing_record_selection th.actions a:hover, .confirmation .billing_record_selection td.actions a:hover, .gift_cards .billing_record_selection th.actions a:hover, .gift_cards .billing_record_selection td.actions a:hover {
+          text-decoration: underline; }
+.confirmation #gift_card_save_action, .confirmation #gift_card_save_and_send_action, .gift_cards #gift_card_save_action, .gift_cards #gift_card_save_and_send_action {
+  background: url(/images/groupon/buttons/sprite_save_send.gif?1287080514) no-repeat; }
+.confirmation #gift_card_save_and_send_action, .gift_cards #gift_card_save_and_send_action {
+  background-position: 0 -30px; }
+
+#reward_offer_confirmation #your_purchase table#subtotal tr.discount_line_item .discount .discount_inner {
+  width: 100px; }
+
+.share a.sprite {
+  display: block;
+  background: url(/images/groupon/sprites/share_sprite.png?1287080514) no-repeat;
+  width: 17px;
+  height: 18px;
+  margin: 1px 0 0;
+  text-indent: -9999em; }
+  .share a.sprite.fb {
+    background-position: 0 -171px; }
+  .share a.sprite.tw {
+    background-position: 0 0; }
+  .share a.sprite.email {
+    background-position: -51px 0; }
+.share .fb_like {
+  height: 18px; }
+
+.deal_summary {
+  width: 702px; }
+
+.buyable {
+  height: auto !important;
+  min-height: 100px;
+  height: 100px; }
+
+.deals .follow form {
+  float: left; }
+
+.details_write_up .write_up {
+  float: left; }
+  .details_write_up .write_up div.campaign_pitch, .details_write_up .write_up #campaign_pitch {
+    float: none; }
+  .details_write_up .write_up p.help_text {
+    border: 1px solid #cccccc;
+    background: beige;
+    padding: 5px;
+    width: 565px;
+    margin-top: 3px;
+    color: #666666; }
+    .details_write_up .write_up p.help_text em {
+      color: #333333; }
+
+#my_preferences .page_header h3 {
+  border-bottom: none;
+  margin-bottom: 0px; }
+#my_preferences .page_header .demographics-header-piece {
+  float: left; }
+
+.modal_demographics_collection {
+  clear: both;
+  padding: 10px;
+  margin: 15px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #c7ddad;
+  background: #ddedcc url(/images/groupon/demographics/lil_green_g.png?1287080514) 8px center no-repeat; }
+  .modal_demographics_collection .demographic_description .error_container {
+    margin: 5px 0; }
+  .modal_demographics_collection .demographic_description h3 {
+    border-bottom: 1px solid #c7ddad; }
+  .modal_demographics_collection .demographic_description p {
+    position: absolute; }
+  .modal_demographics_collection form {
+    overflow: hidden;
+    padding-top: 3px; }
+    .modal_demographics_collection form .field {
+      margin-bottom: 10px; }
+    .modal_demographics_collection form .fieldWithErrors input {
+      border: 1px solid red; }
+    .modal_demographics_collection form div.personalize {
+      float: right;
+      width: 205px; }
+      .modal_demographics_collection form div.personalize #spinner {
+        float: left;
+        margin: 8px; }
+      .modal_demographics_collection form div.personalize input#demographic_submit_button {
+        float: left;
+        display: block;
+        border: none; }
+    .modal_demographics_collection form fieldset {
+      width: 205px;
+      float: left;
+      margin-left: 50px; }
+      .modal_demographics_collection form fieldset input.prompting_field {
+        width: 90px;
+        margin-bottom: 5px; }
+      .modal_demographics_collection form fieldset select {
+        width: 98px;
+        margin-bottom: 5px; }
+      .modal_demographics_collection form fieldset label.field_type {
+        font-weight: bold;
+        padding-right: 5px;
+        font-size: 12px;
+        display: block;
+        text-align: right;
+        float: left;
+        width: 95px; }
+      .modal_demographics_collection form fieldset label.inline {
+        font-size: 11px;
+        padding: 0 5px 0 0;
+        display: inline;
+        float: none; }
+
+#rail ul li.side_deal .page_content a, #rail ul li.side_deal .page_content a:hover {
+  text-decoration: none;
+  cursor: pointer; }
+
+#rail ul.more_great_deals {
+  border: 2px solid #86ac57;
+  background-color: white;
+  margin: 20px 0; }
+  #rail ul.more_great_deals li {
+    margin: 0;
+    padding: 0; }
+  #rail ul.more_great_deals li.header {
+    background-color: #e3f0d6;
+    text-align: center;
+    padding: 7px; }
+    #rail ul.more_great_deals li.header h3 {
+      font-weight: bold;
+      font-family: Georgia, MS Serif;
+      font-size: 12px;
+      padding: 0;
+      margin: 0; }
+  #rail ul.more_great_deals li.area_deal {
+    font-size: 13px;
+    line-height: 17px;
+    margin: 12px 0;
+    padding: 12px 5px 0 16px;
+    border-top: 2px solid #ddedcd; }
+    #rail ul.more_great_deals li.area_deal img {
+      border: none;
+      vertical-align: top;
+      margin-right: 4px;
+      margin-left: -5px; }
+    #rail ul.more_great_deals li.area_deal a {
+      text-decoration: none; }
+    #rail ul.more_great_deals li.area_deal a.title {
+      color: black; }
+  #rail ul.more_great_deals li.ad {
+    border-top: 2px solid #ddedcd;
+    padding: 7px 7px 7px 16px; }
+  #rail ul.more_great_deals li.side_deal {
+    margin: 7px; }
+    #rail ul.more_great_deals li.side_deal a {
+      text-decoration: none; }
+    #rail ul.more_great_deals li.side_deal h4 a, #rail ul.more_great_deals li.side_deal h4 a:hover {
+      color: black;
+      font-weight: normal;
+      font-size: 16px;
+      text-decoration: none; }
+    #rail ul.more_great_deals li.side_deal a.sidedeal img {
+      float: right; }
+    #rail ul.more_great_deals li.side_deal .campaign_value {
+      background-color: #d7f1f7;
+      color: #839aa0;
+      margin-left: 9px;
+      font-size: 10px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      width: 70px; }
+    #rail ul.more_great_deals li.side_deal .view_it {
+      margin-top: 5px; }
+    #rail ul.more_great_deals li.side_deal .view_it img {
+      border: none;
+      margin: 5px -8px 0 9px; }
+    #rail ul.more_great_deals li.side_deal .price_tag {
+      background: url(/images/groupon/price_tag_medium.png?1287080514) #5ebfda;
+      height: 23px;
+      width: 79px; }
+      #rail ul.more_great_deals li.side_deal .price_tag h6 {
+        font-weight: normal;
+        font-family: Arial, sans-serif;
+        line-height: 23px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        padding-left: 5px; }

@@ -1,0 +1,1 @@
+page.replace_html @id_name, :partial => 'car_detail', :object => [@new_car1, @elementId]

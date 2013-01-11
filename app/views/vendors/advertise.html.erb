@@ -1,0 +1,96 @@
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  $('#report_error_form').submit(function(){
+
+    if ($('#name').val() == ''){
+      $('#name').css('border','red 2px solid');
+    } else {
+      $('#name').css('border','');
+    }
+
+    if ($('#email').val() == ''){
+      $('#email').css('border','red 2px solid');
+    } else {
+      $('#email').css('border','');
+    }
+
+    if ($('#phone').val() == ''){
+      $('#phone').css('border','red 2px solid');
+    } else {
+      $('#phone').css('border','');
+    }
+
+    if ($('#organisation').val() == ''){
+      $('#organisation').css('border','red 2px solid');
+    } else {
+      $('#organisation').css('border','');
+    }
+
+    if ($('#remark').val() == "      "){
+      $('#remark').css('border','red 2px solid');
+    } else {
+      $('#remark').css('border','');
+    }
+
+    if ($('#phone').val() == '' || $('#email').val() == '' || $('#name').val() == '' || $('#remark').val() == "      " || $('#organisation').val() == ''){
+      return false;
+    } else {
+      return true;
+    }
+
+  });
+
+});
+
+</script>
+
+<h3>Advertise With Us</h3>
+<% form_tag(report_error_vendors_path, :id => "report_error_form", :method => "post") do %>
+<br />
+<br />
+<table>
+  <tr>
+    <td>Name</td>
+    <td>
+      <input type="text" class="textFld" name="name" id="name" style="width: 270px;" />
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Organisation</td>
+    <td>
+      <input type="text" class="textFld" name="organisation" id="organisation" style="width: 270px;" />
+    </td>
+  </tr>
+
+  <tr>
+    <td>Email</td>
+    <td>
+      <input  class="textFld" name="email" id="email"  style="width: 270px;" />
+    </td>
+  </tr>
+
+  <tr>
+    <td>Phone</td>
+    <td><input type="text" class="textFld" name="phone" id="phone" style="width: 270px;" /></td>
+  </tr>
+
+  <tr>
+    <td>Remark(s)</td>
+    <td>
+      <textarea class="description" name="remark" id="remark" cols="20" rows="4"  style="width: 270px;">
+      </textarea>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>
+      <input type="image" src="/images/buttons/submit-btn.jpg" />
+    </td>
+  </tr>
+</table>
+<% end %>
+

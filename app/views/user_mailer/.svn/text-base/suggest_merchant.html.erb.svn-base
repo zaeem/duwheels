@@ -1,0 +1,9 @@
+Dear Admin,
+           A merchant has been suggested by a user of your Website with following
+information:
+  Merchant's name : <%= @name %>
+  Category : <%= @category %>
+  Phone : <%= @phone %>
+  Comments about this merchant : <%= @comments %>
+
+Thanks

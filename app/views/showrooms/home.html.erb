@@ -1,0 +1,45 @@
+<%= pluralize_helper(@showrooms.size,'showroom','has been found') %> <br />
+
+<% if @showrooms.empty? %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#searchContainer').hide();
+    $('#postUsedCarButton').html('<img src="/images/buttons/postAd-btn2.jpg" />');
+  });
+</script>
+<% end %>
+
+<div id="searchContainer">
+<div id="searchCenter">
+<% for showroom in @showrooms %>
+  <div class="searchResult">
+    <table border="0" cellpadding="0" cellspacing="0" class="searchRecord">
+      <tr>
+        <td width="70%"><h3><%= link_to showroom.title, showroom_path(showroom) %></h3></td>
+        <td width="30%"><div class="price"><%= showroom.name %></div></td>
+      </tr>
+      <tr>
+        <td>
+          <%= link_to 'Go to showroom',  showroom_path(showroom) %>
+        </td>
+        <td align="right" valign="middle">
+          <a href="/showrooms/<%= showroom.id %>" class="carPic">
+          <% if showroom.photo_file_name.nil? %>
+            <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="100px" height="75px" />
+          <% else %>
+            <%= image_tag showroom.photo.url(:thumb), :alt => 'No logo for this showroom' %>
+          <% end %>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dateTd"><%= showroom.created_at.strftime("%B %d,%Y") %></td>
+      </tr>
+    </table>
+  </div>
+<% end %>
+</div>
+</div>
+
+<p></p>

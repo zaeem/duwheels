@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/head/!svn/ver/63/trunk/db/migrate
+END
+20101216065536_create_comments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/2/trunk/db/migrate/20101216065536_create_comments.rb
+END
+20110225055639_create_reviews.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/23/trunk/db/migrate/20110225055639_create_reviews.rb
+END
+20110310054553_add_and_drop_type_columns_from_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/head/!svn/ver/43/trunk/db/migrate/20110310054553_add_and_drop_type_columns_from_vendors.rb
+END
+20110329104202_add_new_car_id_column_to_reviews.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/head/!svn/ver/53/trunk/db/migrate/20110329104202_add_new_car_id_column_to_reviews.rb
+END
+20110225064447_add_columns_to_review.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/head/!svn/ver/23/trunk/db/migrate/20110225064447_add_columns_to_review.rb
+END
+20110128070855_add_user_id_column_to_used_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/head/!svn/ver/2/trunk/db/migrate/20110128070855_add_user_id_column_to_used_cars.rb
+END
+20110218193655_remove_columns_from_vendors_brands.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/head/!svn/ver/19/trunk/db/migrate/20110218193655_remove_columns_from_vendors_brands.rb
+END
+20101216131252_create_ads.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/2/trunk/db/migrate/20101216131252_create_ads.rb
+END
+20110202135900_create_brands.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/2/trunk/db/migrate/20110202135900_create_brands.rb
+END
+20110322070331_add_user_id_column_to_vendor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/head/!svn/ver/52/trunk/db/migrate/20110322070331_add_user_id_column_to_vendor.rb
+END
+20110201085839_add_registration_city_column_to_used_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/head/!svn/ver/2/trunk/db/migrate/20110201085839_add_registration_city_column_to_used_cars.rb
+END
+20110203080326_create_part_categories_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/head/!svn/ver/2/trunk/db/migrate/20110203080326_create_part_categories_vendors.rb
+END
+20110331043957_create_makes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/57/trunk/db/migrate/20110331043957_create_makes.rb
+END
+20110203080824_create_vendors_brands.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/db/migrate/20110203080824_create_vendors_brands.rb
+END
+20110310051016_add_part_category_id_column_to_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/head/!svn/ver/43/trunk/db/migrate/20110310051016_add_part_category_id_column_to_vendors.rb
+END
+20101218043434_create_used_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/head/!svn/ver/2/trunk/db/migrate/20101218043434_create_used_cars.rb
+END
+20110317095518_create_showrooms.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/head/!svn/ver/49/trunk/db/migrate/20110317095518_create_showrooms.rb
+END
+20110202135830_create_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/2/trunk/db/migrate/20110202135830_create_vendors.rb
+END
+20110329065644_create_new_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/head/!svn/ver/53/trunk/db/migrate/20110329065644_create_new_cars.rb
+END
+20110202135958_create_car_items.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/head/!svn/ver/2/trunk/db/migrate/20110202135958_create_car_items.rb
+END
+20110218203908_create_brands_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/head/!svn/ver/19/trunk/db/migrate/20110218203908_create_brands_vendors.rb
+END
+20110218203722_drop_table_vendors_brands.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/head/!svn/ver/19/trunk/db/migrate/20110218203722_drop_table_vendors_brands.rb
+END
+20110218105343_remove_paper_clip_from_car_items.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/head/!svn/ver/19/trunk/db/migrate/20110218105343_remove_paper_clip_from_car_items.rb
+END
+20110329105519_add_new_car_id_column_to_pictures.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/head/!svn/ver/53/trunk/db/migrate/20110329105519_add_new_car_id_column_to_pictures.rb
+END
+20110221095044_add_g_map_to_vendor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/head/!svn/ver/23/trunk/db/migrate/20110221095044_add_g_map_to_vendor.rb
+END
+20110218190131_remove_columns_from_part_categories_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/head/!svn/ver/19/trunk/db/migrate/20110218190131_remove_columns_from_part_categories_vendors.rb
+END
+20101216065623_create_abstract_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/db/migrate/20101216065623_create_abstract_users.rb
+END
+20110128110539_add_is_activated_column_to_used_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/head/!svn/ver/2/trunk/db/migrate/20110128110539_add_is_activated_column_to_used_cars.rb
+END
+20110310082552_add_deal_type_column_to_car_items.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/head/!svn/ver/43/trunk/db/migrate/20110310082552_add_deal_type_column_to_car_items.rb
+END
+20110309125927_add_type_column_to_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/head/!svn/ver/43/trunk/db/migrate/20110309125927_add_type_column_to_vendors.rb
+END
+20110315135300_create_regions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/49/trunk/db/migrate/20110315135300_create_regions.rb
+END
+20110209064720_create_pictures.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/2/trunk/db/migrate/20110209064720_create_pictures.rb
+END
+20110204095318_add_brand_id_column_to_car_items.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/head/!svn/ver/2/trunk/db/migrate/20110204095318_add_brand_id_column_to_car_items.rb
+END
+20110405124334_add_paper_clip_to_showroom.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/head/!svn/ver/62/trunk/db/migrate/20110405124334_add_paper_clip_to_showroom.rb
+END
+20110225105933_add_g_map_columns_to_used_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/head/!svn/ver/23/trunk/db/migrate/20110225105933_add_g_map_columns_to_used_cars.rb
+END
+20110209062841_remove_paper_clip_from_used_car.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/head/!svn/ver/2/trunk/db/migrate/20110209062841_remove_paper_clip_from_used_car.rb
+END
+20101216064058_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/head/!svn/ver/2/trunk/db/migrate/20101216064058_create_users.rb
+END
+20110202135126_create_part_categories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/head/!svn/ver/2/trunk/db/migrate/20110202135126_create_part_categories.rb
+END
+20110331045842_create_car_models.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/57/trunk/db/migrate/20110331045842_create_car_models.rb
+END
+20101218113851_add_paper_clip_to_used_car.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/head/!svn/ver/63/trunk/db/migrate/20101218113851_add_paper_clip_to_used_car.rb
+END
+20101216065634_create_anonymous_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/head/!svn/ver/2/trunk/db/migrate/20101216065634_create_anonymous_users.rb
+END
+20110405125304_add_title_column_to_showroom.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/head/!svn/ver/62/trunk/db/migrate/20110405125304_add_title_column_to_showroom.rb
+END
+20110303113209_add_vendor_id_column_to_pictures.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/head/!svn/ver/41/trunk/db/migrate/20110303113209_add_vendor_id_column_to_pictures.rb
+END
+20110225092919_add_model_year_column_to_used_cars.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/head/!svn/ver/23/trunk/db/migrate/20110225092919_add_model_year_column_to_used_cars.rb
+END
+20110218204734_remove_columns_from_brands_vendors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/head/!svn/ver/19/trunk/db/migrate/20110218204734_remove_columns_from_brands_vendors.rb
+END

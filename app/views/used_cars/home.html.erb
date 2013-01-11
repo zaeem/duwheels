@@ -1,0 +1,471 @@
+<% unless flash[:error].blank? %>
+<div class="errorExplanation"><%= flash[:error] %></div>
+<div class="clr"></div>
+<% end %>
+
+<%= render :partial => "/shared/makes_and_models" %>
+
+<% content_for :popup_menu_javascript do %>
+<script type="text/javascript">
+<!--
+  function MM_swapImgRestore(){
+    var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+  }
+  function MM_findObj(n, d){
+    var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+    if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+    for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+    if(!x && d.getElementById) x=d.getElementById(n); return x;
+  }
+  function MM_swapImage(){
+    var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+  }
+  function showMenu(id){
+    document.getElementById(id).style.display='block';
+  }
+  function hideMenu(id){
+    document.getElementById(id).style.display='none';
+  }
+  function MM_preloadImages(){
+    var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+  }
+  window.onload = init();
+  function init(){
+    MM_preloadImages('/images/buttons/accessories-over.jpg','/images/buttons/performance-over.jpg','/images/buttons/cosmatic-over.jpg','/images/buttons/grooming-over.jpg','/images/buttons/maintanance-over.jpg','/images/buttons/sales-over.jpg','/images/buttons/generalinfo-over.jpg','/images/buttons/hot-deals-over.jpg');
+  }
+  ( function($) {
+  $(document).ready(function(){
+    $('#keyword').click(function(){
+      if ($('#keyword').val() == 'Company name, product or brand'){
+        $('#keyword').val('');
+      }
+    });
+    $('#keyword').focusout(function(){
+      if ($('#keyword').val() == ''){
+        $('#keyword').val('Company name, product or brand');
+      }
+    });
+    $('a#select_catogory').click(function(){
+      if ($(this).text() == 'Audio System'){
+        $('#keyword').val('Audio System - In Car Entertainment');
+      }else{
+        $('#keyword').val($(this).text());
+      }
+    });
+  });
+  } ) ( jQuery );
+//-->
+</script>
+<% end %>
+
+<% content_for :slider_Style_and_jquery do %>
+  <%= stylesheet_link_tag "slider" %>
+  <%= stylesheet_link_tag "jquery-ui-1.7.2.custom" %>
+  <%= javascript_include_tag "jquery-ui-1.7.2.custom.min" %>
+
+<script type="text/javascript">
+  $(function() {
+    //vars
+    var conveyor = $(".content-conveyor", $("#sliderContent")), item = $(".item", $("#sliderContent"));
+    var conveyor2 = $(".content-conveyor", $("#sliderContent2")), item2 = $(".item", $("#sliderContent2"));
+
+    //set length of conveyor
+    conveyor.css("width", item.length * parseInt(item.css("width")));
+    //set length of conveyor
+    conveyor2.css("width", item2.length * parseInt(item2.css("width")));
+
+    //config
+    var sliderOpts = {
+      max: (item.length * parseInt(item.css("width"))) - parseInt($(".viewer", $("#sliderContent")).css("width")),
+      slide: function(e, ui) {
+        conveyor.css("left", "-" + ui.value + "px");
+      }
+    };
+    //config
+    var sliderOpts2 = { max: (item2.length * parseInt(item2.css("width"))) - parseInt($(".viewer", $("#sliderContent2")).css("width")),
+      slide: function(e, ui){0
+        conveyor2.css("left", "-" + ui.value + "px");
+      }
+    };
+    //create slider
+    $("#slider").slider(sliderOpts);
+    //create slider
+    $("#slider2").slider(sliderOpts2);
+  });
+</script>
+<% end %>
+
+<div class="threeBox">
+
+  <div class="newCarBox">
+    <% form_for(@car_search, :url => search_new_cars_path, :method => "get", :html => { :multipart => true }) do |f| %>
+      <form action="">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <th colspan="2" scope="col">New Cars Search</th>
+          </tr>
+          <tr>
+            <td class="lableTd">Make :</td>
+            <td><%= f.select :make, @makes, {}, :onchange => "updateModels(this.value, document.getElementById('new_car_model'))", :class => 'lstBx' %></td>
+          </tr>
+          <tr>
+            <td class="lableTd">Model :</td>
+            <td>
+              <select name="new_car_model" id="new_car_model" class="lstBx">
+              <option>--Any--</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="lableTd">Price :</td>
+            <td>
+              <select name="new_car_price_from" id="new_car_price_from" class="lstBx2">
+                <option>--Any--</option>
+                <option>100,000</option>
+                <option>200,000</option>
+                <option>300,000</option>
+                <option>400,000</option>
+                <option>500,000</option>
+                <option>600,000</option>
+                <option>700,000</option>
+                <option>800,000</option>
+                <option>900,000</option>
+                <option>1,000,000</option>
+                <option>1,500,000</option>
+              </select> To: 
+              <select name="new_car_price_to" id="new_car_price_to" class="lstBx2">
+                <option>--Any--</option>
+                <option>200,000</option>
+                <option>300,000</option>
+                <option>400,000</option>
+                <option>500,000</option>
+                <option>600,000</option>
+                <option>700,000</option>
+                <option>800,000</option>
+                <option>900,000</option>
+                <option>1,000,000</option>
+                <option>1,500,000</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="lableTd">City :</td>
+            <td>
+              <select name="new_car_city" id="new_car_city" class="lstBx">
+                <option>--Any--</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><input type="image" src="/images/buttons/searchBtn.jpg" /></td>
+          </tr>
+        </table>
+      </form>
+    <% end %>
+  </div>
+  
+  <div class="usedCarBox">
+    <% form_for(@car_search, :url => search_used_cars_path, :method => "get", :html => { :multipart => true }) do |f| %>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th colspan="2" scope="col">Used Cars Search</th>
+        </tr>
+        <tr>
+          <td class="lableTd">Make :</td>
+          <td>
+            <%= f.select :make, @makes, {}, :onchange => "updateModels(this.value, document.getElementById('used_car_model'))", :class => 'lstBx' %>
+          </td>
+        </tr>
+        <tr>
+          <td class="lableTd">Model :</td>
+          <td>
+            <select id="used_car_model" name="used_car_model" class="lstBx" >
+            <option>--Any--</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="lableTd">Price :</td>
+          <td>
+            <select name="used_car_price_from" id="used_car_price_from" class="lstBx2">
+              <option>--Any--</option>
+              <option>100,000</option>
+              <option>200,000</option>
+              <option>300,000</option>
+              <option>400,000</option>
+              <option>500,000</option>
+              <option>600,000</option>
+              <option>700,000</option>
+              <option>800,000</option>
+              <option>900,000</option>
+              <option>1,000,000</option>
+              <option>1,500,000</option>
+            </select> To:
+            <select name="used_car_price_to" id="used_car_price_to" class="lstBx2">
+              <option>--Any--</option>
+              <option>200,000</option>
+              <option>300,000</option>
+              <option>400,000</option>
+              <option>500,000</option>
+              <option>600,000</option>
+              <option>700,000</option>
+              <option>800,000</option>
+              <option>900,000</option>
+              <option>1,000,000</option>
+              <option>1,500,000</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="lableTd">City :</td>
+          <td>
+            <select name="used_car_city" id="used_car_city" class="lstBx">
+              <option>--Any--</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type="image" src="/images/buttons/searchBtn.jpg" /></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+  
+  <div class="motorCarBox">
+    <% form_tag(vendors_path, :method => "get") do %>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th colspan="2" scope="col">Motor Directory Search</th>
+        </tr>
+        <tr>
+          <td class="lableTd">Keyword :</td>
+          <td><input type="text" class="txtBx" name="keyword" id="keyword" value="Company name, product or brand" /></td>
+        </tr>
+        <tr>
+          <td class="lableTd">Category :</td>
+          <td>
+            <select name="category"  class="lstBx">
+              <option selected>Any Category</option>
+              <% for part_category in @part_categories %>
+                <option value="<%= part_category.id %>"><%= part_category.name %></option>
+              <% end %>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="lableTd">Location :</td>
+          <td>
+            <%= render :partial => "areas", :locals => { :class_name => "lstBx" } %>
+            <input type="hidden" value="Any Distance" name="select_distance" id="select_distance" />
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type="image" onmouseover="showMenu('categryDv');" onmouseout="hideMenu('categryDv');" src="/images/buttons/categryBtn.jpg" /></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+
+</div>
+
+  <!--<div class="fourBoxes">
+    <a href="/used_cars/new"><img src="/images/buttons/postad-btn.jpg" /></a>
+    <a href=""><img src="/images/buttons/showroom-btn.jpg" /></a>
+    <a href="/vendors/new"><img src="/images/buttons/business-btn.jpg" /></a>
+    <a href=""><img src="/images/buttons/adverise-btn.jpg" /></a>
+  </div>-->
+  <div class="fourBoxes">
+    <%= link_to "Sell Your Car Now", new_used_car_path, :class => "sellCarLink" %>
+    <%= link_to "Create Showroom", new_vendor_path, :class => "showroomLink" %>
+    <%= link_to "Register Business", new_vendor_path, :class => "rgstBznsLink" %>
+    <%= link_to "Advertise with us", advertise_vendors_path, :class => "advertiseLink" %>
+  </div>
+
+  <div class="sliderDv" style="height:250px;">
+    <h3>Featured New Cars<p><label><%= @new_cars_count %> new cars</label> available!</p></h3>
+    <div id="sliderContent" class="ui-corner-all" >
+      <!--<h2>Used Cars</h2>-->
+      <div class="viewer ui-corner-all">
+        <div class="content-conveyor ui-helper-clearfix">
+          <% for vehicle in @new_cars %>
+            <a href="/new_cars/<%= vehicle.id %>">
+              <div class="item" >
+                <!--<h2>Omega Nebula</h2>-->
+                <% if vehicle.pictures.empty? %>
+                <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="100px" height="75px" />
+                <% else %>
+                <%= image_tag vehicle.pictures.first.photo.url(:thumb), :alt => 'No Image found' %>
+                <% end %>
+                <dl class="details ui-helper-clearfix">
+                  <h5><%= vehicle.make %></h5>
+                  <h6><%= vehicle.model %></h6>
+                  <h4><%= currency_helper(vehicle.asking_price) %></h4>
+                </dl>
+              </div>
+            </a>
+          <% end %>
+        </div>
+      </div>
+      <div id="slider"></div>
+    </div>
+  </div>
+
+  <div class="forumsDv">
+    <h3>Recent Forums &gt;&gt;</h3>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="forumLst">
+      <h4>First Car Forum</h4>
+      <span class="replies">18 Replies</span> <span>&nbsp;|&nbsp;</span> <span>Last Post: <strong>Faheem</strong>22:12:00PM</span></div>
+    <div class="viewforumDv"><a href="#">View Forums &gt;&gt;</a></div>
+  </div>
+
+  <div class="sliderDv" style="height:250px;">
+    <h3>Featured Used Cars <p><label><%= @used_cars_count %> used cars</label> available!</p></h3>
+    <div id="sliderContent2" class="ui-corner-all">
+      <!--<h2>Used Cars</h2>-->
+      <div class="viewer ui-corner-all">
+        <div class="content-conveyor ui-helper-clearfix" >
+          <% for vehicle in @vehicles %>
+          <a href="/used_cars/<%= vehicle.id %>">
+          <div class="item" >
+            <!--<h2>Omega Nebula</h2>-->
+            <% if vehicle.pictures.empty? %>
+              <img src="/images/no_photo_available.jpg" alt="No Photo Available" width="100px" height="75px" />
+            <% else %>
+              <%= image_tag vehicle.pictures.first.photo.url(:thumb), :alt => 'No Image found' %>
+            <% end %>
+            <dl class="details ui-helper-clearfix">
+              <h5><%= vehicle.make %></h5>
+              <h6><%= vehicle.model %></h6>
+              <h4><%= currency_helper(vehicle.asking_price) %></h4>
+            </dl>
+          </div>
+          </a>
+          <% end %>
+        </div>
+      </div>
+      <div id="slider2"></div>
+    </div>
+  </div>
+<!--<div style="clear:both; height:50px;"></div>-->
+
+  <div id ="categryDv" onmouseover="showMenu('categryDv');" onmouseout="hideMenu('categryDv');" style="display:none;" class="categryDv">
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesAccessories'); " onmouseover="MM_swapImage('Image27','','images/buttons/accessories-over.jpg',1);showMenu('sbCtgriesAccessories');">                         <img src="images/buttons/accessories.jpg" name="Image27" width="104" height="104" border="0" id="Image27" /></a>
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesPerformance'); " onmouseover="MM_swapImage('Image28','','images/buttons/performance-over.jpg',1);showMenu('sbCtgriesPerformance');">                         <img src="images/buttons/performance.jpg" name="Image28" width="104" height="104" border="0" id="Image28" /></a>
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesCosmatic');    " onmouseover="MM_swapImage('Image29','','images/buttons/cosmatic-over.jpg',1);   showMenu('sbCtgriesCosmatic');   ">                         <img src="images/buttons/cosmatic.jpg"    name="Image29" width="104" height="104" border="0" id="Image29" /></a>
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesGrooming');    " onmouseover="MM_swapImage('Image30','','images/buttons/grooming-over.jpg',1);   showMenu('sbCtgriesGrooming');   " style="margin-right:0;" ><img src="images/buttons/grooming.jpg"    name="Image30" width="104" height="104" border="0" id="Image30" /></a>
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesMaintanance'); " onmouseover="MM_swapImage('Image31','','images/buttons/maintanance-over.jpg',1);showMenu('sbCtgriesMaintanance');">                         <img src="images/buttons/maintanance.jpg" name="Image31" width="104" height="104" border="0" id="Image31" /></a>
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesSales');       " onmouseover="MM_swapImage('Image32','','images/buttons/sales-over.jpg',1);      showMenu('sbCtgriesSales');      ">                         <img src="images/buttons/sales.jpg"       name="Image32" width="104" height="104" border="0" id="Image32" /></a>
+    <a href="#" onmouseout="MM_swapImgRestore();hideMenu('sbCtgriesGeneralInfo'); " onmouseover="MM_swapImage('Image33','','images/buttons/generalinfo-over.jpg',1);showMenu('sbCtgriesGeneralInfo');">                         <img src="images/buttons/generalinfo.jpg" name="Image33" width="104" height="104" border="0" id="Image33" /></a>
+    <a href="/hotdeals" onmouseout="MM_swapImgRestore();                                  " onmouseover="MM_swapImage('Image34','','images/buttons/hot-deals-over.jpg',1);                                   " style="margin-right:0;" ><img src="images/buttons/hot-deals.jpg"   name="Image34" width="104" height="104" border="0" id="Image34" /></a>
+  </div>
+
+  <div id="sbCtgriesAccessories" onmouseover="showMenu('categryDv');showMenu('sbCtgriesAccessories');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesAccessories');" class="sbCtgries" style="display:none;">
+  <p>Search all categories in <strong>“Accessories”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Security System</a></li>
+      <li><a id="select_catogory">Audio System</a></li>
+      <li><a id="select_catogory">Accessories Retail</a></li>
+      <li><a id="select_catogory">Car Mats</a></li>
+      <li><a id="select_catogory">Keys & Remote</a></li>
+      <li><a id="select_catogory">Tracking & Navigation</a></li>
+    </ul>
+  </div>
+  <div id="sbCtgriesPerformance" onmouseover="showMenu('categryDv');showMenu('sbCtgriesPerformance');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesPerformance');" class="sbCtgries" style="display:none;right:500px;">
+  <p>Search all categories in <strong>“Performance”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Tires & Rims</a></li>
+      <li><a id="select_catogory">Power Enhancement</a></li>
+      <li><a id="select_catogory">Racing Equipment</a></li>
+      <li><a id="select_catogory">CNG Workshop</a></li>
+      <li><a id="select_catogory">Handling & Safety</a></li>
+    </ul>
+  </div>
+  <div id="sbCtgriesCosmatic" onmouseover="showMenu('categryDv');showMenu('sbCtgriesCosmatic');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesCosmatic');" class="sbCtgries" style="display:none;right:380px;">
+  <p>Search all categories in <strong>“Cosmetic”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Solar Films & Tinting</a></li>
+      <li><a id="select_catogory">Bodykits & Parts</a></li>
+      <li><a id="select_catogory">Decals and Stickers</a></li>
+    </ul>
+  </div>
+  <div id="sbCtgriesGrooming" onmouseover="showMenu('categryDv');showMenu('sbCtgriesGrooming');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesGrooming');" class="sbCtgries" style="display:none;right:260px;">
+    <p>Search all categories in <strong>“Grooming”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Car Care Products</a></li>
+      <li><a id="select_catogory">Car Grooming - Wash & Polish</a></li>
+      <li><a id="select_catogory">Paint Protection</a></li>
+      <li><a id="select_catogory">Mobile Car Grooming</a></li>
+    </ul>
+  </div>
+  <div id="sbCtgriesMaintanance" onmouseover="showMenu('categryDv');showMenu('sbCtgriesMaintanance');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesMaintanance');" class="sbCtgries" style="display:none;top:457px;">
+  <p>Search all categories in <strong>“Maintenance & Repair”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Repair and Servicing</a></li>
+      <li><a id="select_catogory">Air Conditioning</a></li>
+      <li><a id="select_catogory">Car Parts Stockists</a></li>
+      <li><a id="select_catogory">Towing Service</a></li>
+      <li><a id="select_catogory">Spray Painting</a></li>
+      <li><a id="select_catogory">Windscreen Repair</a></li>
+    </ul>
+  </div>
+  <div id="sbCtgriesSales" onmouseover="showMenu('categryDv');showMenu('sbCtgriesSales');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesSales');" class="sbCtgries" style="display:none;top:457px;right:500px;">
+  <p>Search all categories in <strong>“Car Sale & Rental”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Used Car Dealers</a></li>
+      <li><a id="select_catogory">New Car Dealers</a></li>
+      <li><a id="select_catogory">Chauffeur & Limousine Service</a></li>
+      <li><a id="select_catogory">Commercial Vehicle Rental</a></li>
+    </ul>
+  </div>
+  <div id="sbCtgriesGeneralInfo" onmouseover="showMenu('categryDv');showMenu('sbCtgriesGeneralInfo');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesGeneralInfo');" class="sbCtgries" style="display:none;top:457px;right:380px;">
+    <p>Search all categories in <strong>“General Info”</strong> or select a subcategory</p>
+    <ul>
+      <li><a id="select_catogory">Motor Insurance Companies</a></li>
+      <li><a id="select_catogory">Finance Companies & Banks</a></li>
+      <li><a id="select_catogory">Evaluation Centres</a></li>
+      <li><a id="select_catogory">Inspection Centres</a></li>
+    </ul>
+  </div>
+
+  
+  
+  <!--<div id="sbCtgriesHotDeals" onmouseover="showMenu('categryDv');showMenu('sbCtgriesHotDeals');" onmouseout="hideMenu('categryDv');hideMenu('sbCtgriesHotDeals');" class="sbCtgries" style="display:none;top:457px;right:260px;">
+  <p>Search all categories in <strong>“Hot Deals”</strong> or select a subcategory</p>
+    <ul>
+      <li><a href="#">Security System</a></li>
+      <li><a href="#">Audio System</a></li>
+      <li><a href="#">Accessories Retail</a></li>
+      <li><a href="#">Car Mats</a></li>
+      <li><a href="#">Keys & Remots</a></li>
+      <li><a href="#">Tracking & Navigation</a></li>
+    </ul>
+  </div>
+-->

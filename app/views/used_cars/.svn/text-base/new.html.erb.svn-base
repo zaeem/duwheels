@@ -1,0 +1,28 @@
+<% set_title "Create Used Car Ad" %>
+
+<script type="text/javascript">
+<!--
+
+  $(document).ready(function(){
+
+    updateModels($('#used_car_make').val(), document.getElementById('used_car_model'));
+    <% if @used_car.model? %>
+      $('#used_car_model').val('<%= @used_car.model %>');
+    <% end %>
+
+  });
+
+//-->
+</script>
+
+<div id="container">
+  <div id="mainTtl" >
+    <h1>Post Used Car Ad</h1>
+  </div>
+
+  <%= render :partial => "form" %>
+
+  <div id="rightAd"><a href="#"><img src="/images/banner.jpg" /></a></div>
+</div>
+
+<%= render :partial => "/shared/location", :locals => {:object => @used_car, :object_type => 'used_car'} %>

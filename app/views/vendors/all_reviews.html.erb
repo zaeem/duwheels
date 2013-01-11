@@ -1,0 +1,71 @@
+<%#= review.created_at.strftime(" %a %m/%Y") %>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('img#ratingStarImages0').attr("src","/images/blank.png");
+    $('img#ratingStarImages1').attr("src","/images/1star.png");
+    $('img#ratingStarImages2').attr("src","/images/2star.png");
+    $('img#ratingStarImages3').attr("src","/images/3star.png");
+    $('img#ratingStarImages4').attr("src","/images/4star.png");
+    $('img#ratingStarImages5').attr("src","/images/5star.png");
+  });
+
+</script>
+
+<div id="contentDv">
+<div class="mrchntLeftCol">
+  <div class="mrchntDetailDv">
+<div id="usedCarReviews">
+  <div class="reviewTitle">
+    <h3 style="float:left; width:50%; margin-top:0px; padding-top: 5px;padding-bottom: 0px;margin-bottom:0px;background-image:none;"><%= @reviews.uniq.size %> Reviews</h3>
+    <%= link_to '<img src="/images/buttons/sbmit-review-btn.jpg" alt="submit a review button" />', new_review_path(:used_car_id => @reviews[0].used_car_id) %>
+  </div>
+  <!--
+  <div class="reviewFilters">
+    <p class="sortP">Sort by
+    <select>
+      <option>Date</option>
+      <option>Day</option>
+      <option>Records</option>
+    </select>
+    </p>
+    <p class="reviewResults">
+    <select>
+      <option>10</option>
+      <option>15</option>
+      <option>25</option>
+    </select>
+    Results / Page
+    </p>
+  </div>
+  -->
+<% if @reviews.empty? %>
+  No Reviews till now!
+<% else %>
+  <% for review in @reviews %>
+    <div class="reviews">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th width="7%" rowspan="3" align="left" valign="top" scope="col">
+            <a href=""><img src="/images/reviews.jpg" alt="userPic" /></a>
+          </th>
+          <th width="78%" align="left" scope="col"><a href="#" class="RevTtl"><%= review.title %></a></th>
+          <th width="15%" align="right" scope="col"><img id="ratingStarImages<%= review.rating %>" src="" alt="rating star" /></th>
+        </tr>
+        <tr>
+          <td colspan="2"><%= review.body %></td>
+        </tr>
+        <tr>
+          <td class="reviewDate"><%= review.created_at.strftime("%B %d,%Y") %></td>
+          <td align="right"><a href=""></a></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+  <%= will_paginate @reviews %>
+<% end %>
+</div>
+</div>
+</div>
+</div>

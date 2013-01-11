@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test
+END
+paperclip_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/paperclip_test.rb
+END
+processor_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/processor_test.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/helper.rb
+END
+style_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/style_test.rb
+END
+integration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/integration_test.rb
+END
+iostream_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/iostream_test.rb
+END
+thumbnail_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/thumbnail_test.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/database.yml
+END
+upfile_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/upfile_test.rb
+END
+storage_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/storage_test.rb
+END
+command_line_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/command_line_test.rb
+END
+attachment_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/attachment_test.rb
+END
+interpolations_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/interpolations_test.rb
+END
+geometry_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/head/!svn/ver/2/trunk/vendor/plugins/paperclip/test/geometry_test.rb
+END

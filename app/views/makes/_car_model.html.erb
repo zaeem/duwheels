@@ -1,0 +1,6 @@
+<% fields_for 'make[car_model_attributes][]', car_model do |car_model_form| %>
+<p>
+  <%= car_model_form.text_field :name %>
+</p>
+<% end %>
+

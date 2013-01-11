@@ -1,0 +1,104 @@
+<% if current_user %>
+  <% if current_user.id == @showroom.vendor.user.id %>
+    <%#= debug current_user %>
+    <%#= debug @showroom.vendor %>
+    <%#= link_to "Showroom Admin Page", admin_showroom_path(@showroom) %>
+  <% end %>
+<% end %>
+<br />
+<h1><%= @showroom.name %></h1>
+
+<table>
+  <tr>
+    <td>Merchant name</td>
+    <td><%= @showroom.vendor.name %></td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td><%= @showroom.vendor.address %></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><%= @showroom.vendor.phone %></td>
+  </tr>
+  <tr>
+    <td>Cell number</td>
+    <td><%= @showroom.vendor.user.cell_no %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><%= @showroom.vendor.user.email %></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td><%= @showroom.vendor.description %></td>
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'Detail page of Merchant', vendor_details_showroom_path(@showroom.vendor) %>
+<br />
+<% if current_user %>
+  <% if current_user.id == @showroom.vendor.user.id %>
+<%= link_to 'Add Used Car', used_car_new_showrooms_path(:showroom_id => @showroom.id) %>
+<br />
+<%= link_to 'Edit Merchant Detail', vendor_edit_showroom_path(@showroom.vendor, :showroom_id => @showroom.id) %>
+<br />
+<%= link_to 'Edit Showroom', edit_showroom_path(@showroom) %>
+  <% end %>
+<% end %>
+<div id="mdColLeft">
+  
+<div class="mdHotDeals" style="margin-bottom: 180px;">
+<h3><span>Used cars</span><!--<%= link_to "View All", hotdeals_path %>--></h3>
+<ul>
+<% if @showroom.vendor.user.used_cars.active_cars[0,15].empty? %>
+  No used car found.
+<% else %>
+<% for car in @showroom.vendor.user.used_cars.active_cars[0,15] %>
+<li>
+
+<% if car.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="used cars" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car.pictures.first.photo.url(:thumb), :alt => "used cars", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href=""><%= car.model %></a><br />
+<%= currencify(car.asking_price) %>
+<%= link_to "Go to details", used_car_details_showroom_path(car, :showroom_id => @showroom.id) %><% if current_user %>
+<% if current_user.id == @showroom.vendor.user.id %> |
+<%= link_to "Edit", used_car_edit_showroom_path(car, :showroom_id => @showroom.id) %> |
+<%= link_to "Destroy", used_car_destroy_showroom_path(car, :showroom_id => @showroom.id), :confirm => 'Are you sure?' %>
+<% end %>
+<% end %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<div class="mdHotDeals" style="margin-bottom: 180px;">
+<h3><span>Car Items</span><!--<%= link_to "View All", hotdeals_path %>--></h3>
+<ul>
+<% if @showroom.vendor.car_items[0,15].empty? %>
+  No car item found.
+<% else %>
+<% for car in @showroom.vendor.car_items[0,15] %>
+<li>
+<% if car.pictures.empty? %>
+<img src="/images/hot-deals.JPG" alt="car item" style="width: 52px;height: 44px;" />
+<% else %>
+<%= image_tag car.pictures.first.photo.url(:thumb), :alt => "car item", :id => 'primaryImage', :size => '52x44' %>
+<% end %>
+<a href=""><%= car.name %></a><br />
+<%= currencify(car.price) %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+</div>
+
+

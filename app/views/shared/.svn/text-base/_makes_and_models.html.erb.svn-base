@@ -1,0 +1,807 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<script type="text/javascript">
+<% @makes = [["--Any--",""],["Adam","Adam"],["Alfa Romeo", "Alfa-Romeo"],["Audi","Audi"],["BMW","BMW"],
+  ["Buick","Buick"], ["Cadillac","Cadillac"], ["Changan","Changan"], ["Chery","Chery"],
+  ["Chevrolet","Chevrolet"], ["Chrysler","Chrysler"], ["Citroen","Citroen"], ["Classic Cars","Classic-Cars"],
+  ["Daewoo","Daewoo"], ["Daihatsu","Daihatsu"], ["Datsun","Datsun"], ["Dodge","Dodge"], ["Ferrari","Ferrari"],
+  ["Fiat","Fiat"], ["Ford","Ford"], ["Geely","Geely"], ["GMC","GMC"], ["Hino","Hino"], ["Honda","Honda"],
+  ["Hummer","Hummer"], ["Hyundai","Hyundai"], ["Isuzu","Isuzu"], ["Jaguar","Jaguar"], ["Jeep","Jeep"],
+  ["Kia","Kia"], ["Land Rover","Land-Rover"], ["Lexus","Lexus"], ["Lincoln","Lincoln"], ["Mazda","Mazda"],
+  ["Mercedes Benz","Mercedes-Benz"], ["MG","MG"], ["MINI","MINI"], ["Mitsubishi","Mitsubishi"],
+  ["Moto Guzzi", "moto-guzzi"], ["Nissan","Nissan"], ["Oldsmobile","Oldsmobile"], ["Opel","Opel"],
+  ["Others","Others"], ["Peugeot","Peugeot"], ["Plymouth","Plymouth"], ["Pontiac","Pontiac"],
+  ["Porsche","Porsche"], ["proton","Proton"], ["Range Rover", "Range-Rover"], ["Renault","Renault"],
+  ["Roma","Roma"], ["Rover","Rover"], ["Royal Enfield", "royal-enfield"], ["Saab","Saab"], ["Scion","Scion"],
+  ["Skoda","Skoda"], ["smart","SMART"], ["SsangYong","SsangYong"], ["Subaru","Subaru"], ["Suzuki","Suzuki"],
+  ["Toyota","Toyota"], ["Vauxhall","Vauxhall"], ["Volkswagen","Volkswagen"], ["Volvo","Volvo"]] %>
+
+<% @models = "" %>
+
+  var myArray = new Array();
+  myArray["BMW"] = new Array();
+  var i=0;
+  myArray["BMW"][i]="3 Series,3-Series";
+  i++;
+  myArray["BMW"][i]="5 Series,5-Series";
+  i++;
+  myArray["BMW"][i]="7 Series,7-Series";
+  i++;
+  myArray["BMW"][i]="6 Series,6-Series";
+  i++;
+  myArray["BMW"][i]="8 Series,8-Series";
+  i++;
+  myArray["BMW"][i]="M Series,M-Series";
+  i++;
+  myArray["BMW"][i]="Other,Any-Model";
+  i++;
+  myArray["BMW"][i]="X Series,X-Series";
+  i++;
+  myArray["BMW"][i]="Z Series,Z-Series";
+  i++;
+
+  myArray["Porsche"] = new Array();
+  var i=0;
+  myArray["Porsche"][i]="997||,997-";
+  i++;
+  myArray["Porsche"][i]="Boxster,Boxster";
+  i++;
+  myArray["Porsche"][i]="Carrera,Carrera";
+  i++;
+  myArray["Porsche"][i]="Cayenne,Cayenne";
+  i++;
+  myArray["Porsche"][i]="Cayman,Cayman";
+  i++;
+  myArray["Porsche"][i]="Speedster,speedster";
+  i++;
+  myArray["Porsche"][i]="Other,Any-Model-314";
+  i++;
+
+  myArray["Audi"] = new Array();
+  var i=0;
+  myArray["Audi"][i]="A4,a4";
+  i++;
+  myArray["Audi"][i]="A6,a6";
+  i++;
+  myArray["Audi"][i]="A8,a8";
+  i++;
+  myArray["Audi"][i]="Q7,q7";
+  i++;
+  myArray["Audi"][i]="Other,Any-Model-224";
+  i++;
+
+  myArray["Honda"] = new Array();
+  var i=0;
+  myArray["Honda"][i]="Accord,accord";
+  i++;
+  myArray["Honda"][i]="City,city";
+  i++;
+  myArray["Honda"][i]="Civic,Civic";
+  i++;
+  myArray["Honda"][i]="CR-V,CR-V";
+  i++;
+  myArray["Honda"][i]="Acura,Acura";
+  i++;
+  myArray["Honda"][i]="Beat,beat";
+  i++;
+  myArray["Honda"][i]="Concerto,Concerto";
+  i++;
+  myArray["Honda"][i]="CRX,CRX";
+  i++;
+  myArray["Honda"][i]="Inspire,Inspire";
+  i++;
+  myArray["Honda"][i]="Integra,Integra";
+  i++;
+  myArray["Honda"][i]="Life,Life";
+  i++;
+  myArray["Honda"][i]="Mobilio,Mobilio";
+  i++;
+  myArray["Honda"][i]="Other,Any-Model-139";
+  i++;
+  myArray["Honda"][i]="Passport,Passport";
+  i++;
+  myArray["Honda"][i]="Prelude,Prelude";
+  i++;
+  myArray["Honda"][i]="S2000,S2000";
+  i++;
+
+  myArray["Toyota"] = new Array();
+  var i=0;
+  myArray["Toyota"][i]="Altis,altis";
+  i++;
+  myArray["Toyota"][i]="Avanza,avanza";
+  i++;
+  myArray["Toyota"][i]="Camry,Camry";
+  i++;
+  myArray["Toyota"][i]="Corolla,corolla";
+  i++;
+  myArray["Toyota"][i]="Fortuner,fortuner";
+  i++;
+  myArray["Toyota"][i]="Hilux,hilux";
+  i++;
+  myArray["Toyota"][i]="Prado,Prado";
+  i++;
+  myArray["Toyota"][i]="Allion,allion";
+  i++;
+  myArray["Toyota"][i]="Altezza,altezza";
+  i++;
+  myArray["Toyota"][i]="Any Model,any-model";
+  i++;
+  myArray["Toyota"][i]="Avalon,Avalon";
+  i++;
+  myArray["Toyota"][i]="Avensis,avensis";
+  i++;
+  myArray["Toyota"][i]="Axio,axio";
+  i++;
+  myArray["Toyota"][i]="Belta,Belta";
+  i++;
+  myArray["Toyota"][i]="Carina,Carina";
+  i++;
+  myArray["Toyota"][i]="Celica,Celica";
+  i++;
+  myArray["Toyota"][i]="Chaser,chaser";
+  i++;
+  myArray["Toyota"][i]="Coaster,Coaster";
+  i++;
+  myArray["Toyota"][i]="Coaster,coaster";
+  i++;
+  myArray["Toyota"][i]="Corona,Corona";
+  i++;
+  myArray["Toyota"][i]="Cressida,Cressida";
+  i++;
+  myArray["Toyota"][i]="Crown,Crown";
+  i++;
+  myArray["Toyota"][i]="Duet,Duet";
+  i++;
+  myArray["Toyota"][i]="ECHO,ECHO";
+  i++;
+  myArray["Toyota"][i]="Estima,estima";
+  i++;
+  myArray["Toyota"][i]="Harrier,harrier";
+  i++;
+  myArray["Toyota"][i]="HiAce,HiAce";
+  i++;
+  myArray["Toyota"][i]="IST,IST";
+  i++;
+  myArray["Toyota"][i]="Land Cruiser,Land-Cruiser";
+  i++;
+  myArray["Toyota"][i]="LiteAce,LiteAce";
+  i++;
+  myArray["Toyota"][i]="Lucida,Lucida";
+  i++;
+  myArray["Toyota"][i]="Mark II,Mark-II";
+  i++;
+  myArray["Toyota"][i]="Mark X,Mark-X";
+  i++;
+  myArray["Toyota"][i]="Matrix,Matrix";
+  i++;
+  myArray["Toyota"][i]="MR2,MR2";
+  i++;
+  myArray["Toyota"][i]="Noah,noah";
+  i++;
+  myArray["Toyota"][i]="Other,Any-Model-138";
+  i++;
+  myArray["Toyota"][i]="Passo,Passo";
+  i++;
+  myArray["Toyota"][i]="Pickup,Pickup";
+  i++;
+  myArray["Toyota"][i]="Platz,Platz";
+  i++;
+  myArray["Toyota"][i]="Premio,Premio";
+  i++;
+  myArray["Toyota"][i]="Previa,Previa";
+  i++;
+  myArray["Toyota"][i]="Prius,prius";
+  i++;
+  myArray["Toyota"][i]="RAV4,RAV4";
+  i++;
+  myArray["Toyota"][i]="Rush,Rush";
+  i++;
+  myArray["Toyota"][i]="Sera,Sera";
+  i++;
+  myArray["Toyota"][i]="Sprinter,Sprinter";
+  i++;
+  myArray["Toyota"][i]="Starlet,Starlet";
+  i++;
+  myArray["Toyota"][i]="Supra,Supra";
+  i++;
+  myArray["Toyota"][i]="Surf,Surf";
+  i++;
+  myArray["Toyota"][i]="Tercel,Tercel";
+  i++;
+  myArray["Toyota"][i]="TownAce,TownAce";
+  i++;
+  myArray["Toyota"][i]="Tundra,tundra";
+  i++;
+  myArray["Toyota"][i]="Van,Van";
+  i++;
+  myArray["Toyota"][i]="Verossa,verossa";
+  i++;
+  myArray["Toyota"][i]="Vigo,Vigo";
+  i++;
+  myArray["Toyota"][i]="Vitz,Vitz";
+  i++;
+  myArray["Toyota"][i]="Will,Will";
+  i++;
+  myArray["Toyota"][i]="Yaris,Yaris";
+  i++;
+
+  myArray["Suzuki"] = new Array();
+  var i=0;
+  myArray["Suzuki"][i]="Alto,alto";
+  i++;
+  myArray["Suzuki"][i]="APV,APV";
+  i++;
+  myArray["Suzuki"][i]="Bolan,Bolan";
+  i++;
+  myArray["Suzuki"][i]="Cultus,cultus";
+  i++;
+  myArray["Suzuki"][i]="Jimny,jimny";
+  i++;
+  myArray["Suzuki"][i]="Liana,liana";
+  i++;
+  myArray["Suzuki"][i]="Mehran,mehran";
+  i++;
+  myArray["Suzuki"][i]="Ravi,Ravi";
+  i++;
+  myArray["Suzuki"][i]="Swift,swift";
+  i++;
+  myArray["Suzuki"][i]="Baleno,Baleno";
+  i++;
+  myArray["Suzuki"][i]="FX,FX";
+  i++;
+  myArray["Suzuki"][i]="Kei,Kei";
+  i++;
+  myArray["Suzuki"][i]="Khyber,Khyber";
+  i++;
+  myArray["Suzuki"][i]="Margalla,Margalla";
+  i++;
+  myArray["Suzuki"][i]="Other,Any-Model-137";
+  i++;
+  myArray["Suzuki"][i]="Potohar,Potohar";
+  i++;
+  myArray["Suzuki"][i]="Samuari,samuari";
+  i++;
+  myArray["Suzuki"][i]="Solio,Solio";
+  i++;
+  myArray["Suzuki"][i]="Vitara,Vitara";
+  i++;
+  myArray["Suzuki"][i]="Wagenor,Wagenor";
+  i++;
+
+  myArray["Chevrolet"] = new Array();
+  var i=0;
+  myArray["Chevrolet"][i]="Aveo,Aveo";
+  i++;
+  myArray["Chevrolet"][i]="Colorado,Colorado";
+  i++;
+  myArray["Chevrolet"][i]="Cruze,cruze";
+  i++;
+  myArray["Chevrolet"][i]="JOY,joy";
+  i++;
+  myArray["Chevrolet"][i]="Optra,Optra";
+  i++;
+  myArray["Chevrolet"][i]="Spark,spark";
+  i++;
+  myArray["Chevrolet"][i]="Caprice,Caprice";
+  i++;
+  myArray["Chevrolet"][i]="Exclusive,Exclusive";
+  i++;
+  myArray["Chevrolet"][i]="Other,Any-Model-95";
+  i++;
+
+
+  myArray["Mercedes-Benz"] = new Array();
+  var i=0;
+  myArray["Mercedes-Benz"][i]="C Class,C-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="CLS,cls";
+  i++;
+  myArray["Mercedes-Benz"][i]="E Class,E-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="S Class,S-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="SLK,SLK";
+  i++;
+  myArray["Mercedes-Benz"][i]="A Class,A-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="CL Class,CL-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="CLK Class,CLK-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="G Class,G-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="ML Class,ML-Class";
+  i++;
+  myArray["Mercedes-Benz"][i]="Other,Any-Model-106";
+  i++;
+  myArray["Mercedes-Benz"][i]="SL Class,SL-Class";
+  i++;
+
+  myArray["Nissan"] = new Array();
+  var i=0;
+  myArray["Nissan"][i]="CEFIRO,CEFIRO";
+  i++;
+  myArray["Nissan"][i]="Patrol,Patrol";
+  i++;
+  myArray["Nissan"][i]="Sunny,Sunny";
+  i++;
+  myArray["Nissan"][i]="X-Trail,X-Trail";
+  i++;
+  myArray["Nissan"][i]="120Y,120Y";
+  i++;
+  myArray["Nissan"][i]="350Z,350z";
+  i++;
+  myArray["Nissan"][i]="BlueBird,BlueBird";
+  i++;
+  myArray["Nissan"][i]="Cedric,Cedric";
+  i++;
+  myArray["Nissan"][i]="Figaro,Figaro";
+  i++;
+  myArray["Nissan"][i]="March,March";
+  i++;
+  myArray["Nissan"][i]="Maxima,Maxima";
+  i++;
+  myArray["Nissan"][i]="Murrano,Murrano";
+  i++;
+  myArray["Nissan"][i]="Navara,Navara";
+  i++;
+  myArray["Nissan"][i]="Other,Any-Model-109";
+  i++;
+  myArray["Nissan"][i]="PathFinder,PathFinder";
+  i++;
+  myArray["Nissan"][i]="Primera,Primera";
+  i++;
+  myArray["Nissan"][i]="Pulsar,Pulsar";
+  i++;
+  myArray["Nissan"][i]="Skyline,Skyline";
+  i++;
+
+  myArray["Daihatsu"] = new Array();
+  var i=0;
+  myArray["Daihatsu"][i]="Cuore,cuore";
+  i++;
+  myArray["Daihatsu"][i]="Terios,terios";
+  i++;
+  myArray["Daihatsu"][i]="Charade,Charade";
+  i++;
+  myArray["Daihatsu"][i]="Charmant,Charmant";
+  i++;
+  myArray["Daihatsu"][i]="Copen ,copen";
+  i++;
+  myArray["Daihatsu"][i]="Esse ,esse";
+  i++;
+  myArray["Daihatsu"][i]="Mira,Mira";
+  i++;
+  myArray["Daihatsu"][i]="Move,Move";
+  i++;
+  myArray["Daihatsu"][i]="Other,Any-Model-128";
+  i++;
+  myArray["Daihatsu"][i]="Storia,Storia";
+  i++;
+  myArray["Daihatsu"][i]="Terios Kid,Terios-Kid";
+  i++;
+
+  myArray["Mitsubishi"] = new Array();
+  var i=0;
+  myArray["Mitsubishi"][i]="Lancer,Lancer";
+  i++;
+  myArray["Mitsubishi"][i]="Pajero,Pajero";
+  i++;
+  myArray["Mitsubishi"][i]="Evo,Evo";
+  i++;
+  myArray["Mitsubishi"][i]="Galant,Galant";
+  i++;
+  myArray["Mitsubishi"][i]="L200,L200";
+  i++;
+  myArray["Mitsubishi"][i]="L300,L300";
+  i++;
+  myArray["Mitsubishi"][i]="Other,Any-Model-108";
+  i++;
+  myArray["Mitsubishi"][i]="Pajero Mini,Pajero-Mini";
+  i++;
+
+  myArray["Kia"] = new Array();
+  var i=0;
+  myArray["Kia"][i]="PICANTO,PICANTO";
+  i++;
+  myArray["Kia"][i]="RIO,RIO";
+  i++;
+  myArray["Kia"][i]="Sportage,Sportage";
+  i++;
+  myArray["Kia"][i]="Classic,Classic";
+  i++;
+  myArray["Kia"][i]="Other,Any-Model-134";
+  i++;
+  myArray["Kia"][i]="Pride,Pride";
+  i++;
+  myArray["Kia"][i]="Spectra,Spectra";
+  i++;
+
+  myArray["Chery"] = new Array();
+  var i=0;
+  myArray["Chery"][i]="QQ,qq";
+  i++;
+
+  myArray["Hyundai"] = new Array();
+  var i=0;
+  myArray["Hyundai"][i]="Santro,santro";
+  i++;
+  myArray["Hyundai"][i]="Shehzore,Shehzore";
+  i++;
+  myArray["Hyundai"][i]="Coupe,Coupe";
+  i++;
+  myArray["Hyundai"][i]="Excel,Excel";
+  i++;
+  myArray["Hyundai"][i]="Grace,Grace";
+  i++;
+  myArray["Hyundai"][i]="Other,Any-Model-130";
+  i++;
+  myArray["Hyundai"][i]="Sonata,Sonata";
+  i++;
+  myArray["Hyundai"][i]="Terracan,Terracan";
+  i++;
+
+  myArray["Datsun"] = new Array();
+  var i=0;
+  myArray["Datsun"][i]="120Y,120Y-255";
+  i++;
+  myArray["Datsun"][i]="Other,Any-Model-228";
+  i++;
+
+  myArray["Peugeot"] = new Array();
+  var i=0;
+  myArray["Peugeot"][i]="205,205";
+  i++;
+  myArray["Peugeot"][i]="Other,Any-Model-111";
+  i++;
+  myArray["Peugeot"][i]="Saga,saga";
+  i++;
+
+  myArray["Mazda"] = new Array();
+  var i=0;
+  myArray["Mazda"][i]="323,323";
+  i++;
+  myArray["Mazda"][i]="626,626";
+  i++;
+  myArray["Mazda"][i]="808,808";
+  i++;
+  myArray["Mazda"][i]="929,929";
+  i++;
+  myArray["Mazda"][i]="B2200,b2200";
+  i++;
+  myArray["Mazda"][i]="Other,Any-Model-105";
+  i++;
+  myArray["Mazda"][i]="RX 7,RX-7";
+  i++;
+  myArray["Mazda"][i]="RX 8,RX-8";
+  i++;
+
+  myArray["Volkswagen"] = new Array();
+  var i=0;
+  myArray["Volkswagen"][i]="Beetle,Beetle";
+  i++;
+  myArray["Volkswagen"][i]="Golf,Golf";
+  i++;
+  myArray["Volkswagen"][i]="Other,Any-Model-99";
+  i++;
+  myArray["Volkswagen"][i]="Passat,Passat";
+  i++;
+
+  myArray["SsangYong"] = new Array();
+  var i=0;
+  myArray["SsangYong"][i]="Chairman,Chairman";
+  i++;
+  myArray["SsangYong"][i]="Other,Any-Model-320";
+  i++;
+  myArray["SsangYong"][i]="Rexton,Rexton";
+  i++;
+  myArray["SsangYong"][i]="Stavic,Stavic";
+  i++;
+
+  myArray["Dodge"] = new Array();
+  var i=0;
+  myArray["Dodge"][i]="Charger,Charger";
+  i++;
+  myArray["Dodge"][i]="Dart,Dart";
+  i++;
+  myArray["Dodge"][i]="Other,Any-Model-176";
+  i++;
+  myArray["Dodge"][i]="Ram,Ram";
+  i++;
+  myArray["Dodge"][i]="Viper,Viper";
+  i++;
+
+  myArray["Jeep"] = new Array();
+  var i=0;
+  myArray["Jeep"][i]="Cherokee,Cherokee";
+  i++;
+  myArray["Jeep"][i]="CJ-5,CJ-5";
+  i++;
+  myArray["Jeep"][i]="CJ-7,CJ-7";
+  i++;
+  myArray["Jeep"][i]="Other,Any-Model-101";
+  i++;
+  myArray["Jeep"][i]="Wrangler,wrangler";
+  i++;
+
+  myArray["Land-Rover"] = new Array();
+  var i=0;
+  myArray["Land-Rover"][i]="Defender,Defender";
+  i++;
+  myArray["Land-Rover"][i]="Discovery,Discovery";
+  i++;
+  myArray["Land-Rover"][i]="Other,Any-Model-102";
+  i++;
+
+  myArray["Lexus"] = new Array();
+  var i=0;
+  myArray["Lexus"][i]="ES Series,ES-Series";
+  i++;
+  myArray["Lexus"][i]="GS Series,GS-Series";
+  i++;
+  myArray["Lexus"][i]="GX Series,GX-Series";
+  i++;
+  myArray["Lexus"][i]="IS Series,IS-Series";
+  i++;
+  myArray["Lexus"][i]="LS Series,LS-Series";
+  i++;
+  myArray["Lexus"][i]="LX  Series,LX--Series";
+  i++;
+  myArray["Lexus"][i]="Other,Any-Model-103";
+  i++;
+  myArray["Lexus"][i]="RX Series,RX-Series";
+  i++;
+  myArray["Lexus"][i]="SC Series,SC-Series";
+  i++;
+
+  myArray["Cadillac"] = new Array();
+  var i=0;
+  myArray["Cadillac"][i]="Escalade EXT,escalade-ext";
+  i++;
+  myArray["Cadillac"][i]="Other,Any-Model-94";
+  i++;
+
+  myArray["Roma"] = new Array();
+  var i=0;
+  myArray["Roma"][i]="Family Van,Family-Van";
+  i++;
+  myArray["Roma"][i]="Family Van Deluxe,Family-Van-Deluxe";
+  i++;
+  myArray["Roma"][i]="Mini Truck,Mini-Truck";
+  i++;
+
+  myArray["Changan"] = new Array();
+  var i=0;
+  myArray["Changan"][i]="Gilgit,Gilgit";
+  i++;
+  myArray["Changan"][i]="Kalam,Kalam";
+  i++;
+  myArray["Changan"][i]="Kalash,Kalash";
+  i++;
+
+  myArray["Hummer"] = new Array();
+  var i=0;
+  myArray["Hummer"][i]="H1,H1";
+  i++;
+  myArray["Hummer"][i]="H2,H2";
+  i++;
+  myArray["Hummer"][i]="H3,H3";
+  i++;
+
+  myArray["Rover"] = new Array();
+  var i=0;
+  myArray["Rover"][i]="Metro,Metro";
+  i++;
+  myArray["Rover"][i]="Other,Any-Model-265";
+  i++;
+
+  myArray["Daewoo"] = new Array();
+  var i=0;
+  myArray["Daewoo"][i]="Other,Any-Model-123";
+  i++;
+  myArray["Daewoo"][i]="Racer,Racer";
+  i++;
+
+  myArray["Fiat"] = new Array();
+  var i=0;
+  myArray["Fiat"][i]="Other,Any-Model-124";
+  i++;
+  myArray["Fiat"][i]="UNO,UNO";
+  i++;
+
+  myArray["GMC"] = new Array();
+  var i=0;
+  myArray["GMC"][i]="Other,Any-Model-98";
+  i++;
+
+  myArray["Isuzu"] = new Array();
+  var i=0;
+  myArray["Isuzu"][i]="Other,Any-Model-125";
+  i++;
+  myArray["Isuzu"][i]="Trooper,Trooper";
+  i++;
+
+  myArray["Jaguar"] = new Array();
+  var i=0;
+  myArray["Jaguar"][i]="Other,Any-Model-100";
+  i++;
+
+  myArray["MINI"] = new Array();
+  var i=0;
+  myArray["MINI"][i]="Other,Any-Model-107";
+  i++;
+
+  myArray["Opel"] = new Array();
+  var i=0;
+  myArray["Opel"][i]="Other,Any-Model-110";
+  i++;
+
+  myArray["Pontiac"] = new Array();
+  var i=0;
+  myArray["Pontiac"][i]="Other,Any-Model-112";
+  i++;
+
+  myArray["Renault"] = new Array();
+  var i=0;
+  myArray["Renault"][i]="Other,Any-Model-113";
+  i++;
+
+  myArray["Skoda"] = new Array();
+  var i=0;
+  myArray["Skoda"][i]="Other,Any-Model-114";
+  i++;
+
+  myArray["Subaru"] = new Array();
+  var i=0;
+  myArray["Subaru"][i]="Other,Any-Model-115";
+  i++;
+
+  myArray["Classic-Cars"] = new Array();
+  var i=0;
+  myArray["Classic-Cars"][i]="Other,Any-Model-117";
+  i++;
+
+  myArray["Others"] = new Array();
+  var i=0;
+  myArray["Others"][i]="Other,Any-Model-126";
+  i++;
+
+  myArray["Range-Rover"] = new Array();
+  var i=0;
+  myArray["Range-Rover"][i]="Other,Any-Model-156";
+  i++;
+
+  myArray["Alfa-Romeo"] = new Array();
+  var i=0;
+  myArray["Alfa-Romeo"][i]="Other,Any-Model-159";
+  i++;
+
+  myArray["Volvo"] = new Array();
+  var i=0;
+  myArray["Volvo"][i]="Other,Any-Model-160";
+  i++;
+
+  myArray["Buick"] = new Array();
+  var i=0;
+  myArray["Buick"][i]="Other,Any-Model-225";
+  i++;
+
+  myArray["Citroen"] = new Array();
+  var i=0;
+  myArray["Citroen"][i]="Other,Any-Model-226";
+  i++;
+
+  myArray["Chrysler"] = new Array();
+  var i=0;
+  myArray["Chrysler"][i]="Other,Any-Model-227";
+  i++;
+
+  myArray["Ford"] = new Array();
+  var i=0;
+  myArray["Ford"][i]="Other,Any-Model-229";
+  i++;
+  myArray["Ford"][i]="Sierra,Sierra";
+  i++;
+
+  myArray["Lincoln"] = new Array();
+  var i=0;
+  myArray["Lincoln"][i]="Other,Any-Model-230";
+  i++;
+
+  myArray["MG"] = new Array();
+  var i=0;
+  myArray["MG"][i]="Other,Any-Model-231";
+  i++;
+
+  myArray["Oldsmobile"] = new Array();
+  var i=0;
+  myArray["Oldsmobile"][i]="Other,Any-Model-232";
+  i++;
+
+  myArray["Plymouth"] = new Array();
+  var i=0;
+  myArray["Plymouth"][i]="Other,Any-Model-233";
+  i++;
+
+  myArray["Saab"] = new Array();
+  var i=0;
+  myArray["Saab"][i]="Other,Any-Model-234";
+  i++;
+
+  myArray["Hino"] = new Array();
+  var i=0;
+  myArray["Hino"][i]="Other,Any-Model-325";
+  i++;
+
+  myArray["Vauxhall"] = new Array();
+  var i=0;
+  myArray["Vauxhall"][i]="Other,Any-Model-340";
+  i++;
+
+  myArray["Scion"] = new Array();
+  var i=0;
+  myArray["Scion"][i]="Other,Any-Model-351";
+  i++;
+  myArray["Scion"][i]="tC,tC";
+  i++;
+  myArray["Scion"][i]="xA,xA";
+  i++;
+  myArray["Scion"][i]="xB,xB";
+  i++;
+
+  myArray["Ferrari"] = new Array();
+  var i=0;
+  myArray["Ferrari"][i]="Other,Any-Model-353";
+  i++;
+
+  myArray["Geely"] = new Array();
+  var i=0;
+  myArray["Geely"][i]="Other,Any-Model-371";
+  i++;
+
+  myArray["proton"] = new Array();
+  var i=0;
+  myArray["proton"][i]="Other,other";
+  i++;
+
+  myArray["Adam"] = new Array();
+  var i=0;
+  myArray["Adam"][i]="Revo,Revo";
+  i++;
+  myArray["Adam"][i]="Zabardast,Zabardast";
+  i++;
+
+  myArray["smart"] = new Array();
+  var i=0;
+  myArray["smart"][i]="Smart fortwo ,smart-fortwo";
+  i++;
+
+  myArray["moto-guzzi"] = new Array();
+  var i=0;
+
+  myArray["royal-enfield"] = new Array();
+  var i=0;
+
+  function addOption(selectbox,text,value ){
+    var optn = document.createElement("OPTION");
+    optn.text = text;
+    optn.value = value;
+    selectbox.options.add(optn);
+  }
+  function updateModels(manufacturer_name, selectedbox){
+    //selectedbox.innerHTML = "<option value=''>--Any--</option>";
+    selectedbox.options.length = 0;
+    addOption(selectedbox,'--Any--','');
+    Models = new Array();
+    for(i in myArray[manufacturer_name]){
+      Models = myArray[manufacturer_name][i].split(",");
+      addOption(selectedbox,Models[0],Models[1]);
+      //selectedbox.innerHTML += "<option value='"+Models[1]+"'>"+Models[0]+"</option>";
+    }
+  }
+
+</script>
